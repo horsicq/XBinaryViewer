@@ -21,11 +21,11 @@ VS_VERSION_INFO VERSIONINFO
 			BLOCK "040904b0"
 			BEGIN
 				VALUE "CompanyName", "ntinfo\0"
-				VALUE "FileDescription", "XHexViewer is a HEX viewer\0"
+				VALUE "FileDescription", "XBinaryViewer is a binary viewer\0"
 				VALUE "FileVersion", "0.1.0.0\0"
 				VALUE "LegalCopyright", "horsicq@gmail.com\0"
-				VALUE "OriginalFilename", "xhexviewer.exe\0"
-				VALUE "ProductName", "XHexViewer\0"
+				VALUE "OriginalFilename", "xbinaryviewer.exe\0"
+				VALUE "ProductName", "XBinaryViewer\0"
 				VALUE "ProductVersion", "0.1.0.0\0"
 			END
 		END

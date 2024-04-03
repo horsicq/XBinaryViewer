@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 include(../../dep/build_tools/cmake/deploy.cmake)
 include(GNUInstallDirs)
 
-project(xhexviewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
+project(xbinaryviewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -23,17 +23,11 @@ add_definitions(-DUSE_PDF)
 add_definitions(-DUSE_ARCHIVE)
 add_definitions(-DUSE_YARA)
 
-include(${CMAKE_CURRENT_LIST_DIR}/../../dep//XHexView/xhexview.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/Binary/binarywidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
 
-set(TS_FILES
-    ../../res/translation/xhexviewer_ar.ts
-    ../../res/translation/xhexviewer_bn.ts
-    ../../res/translation/xhexviewer_de.ts
-)
-
 set(PROJECT_SOURCES
-        ${XHEXVIEW_SOURCES}
+        ${BINARYWIDGET_SOURCES}
         ${XABOUTWIDGET_SOURCES}
         dialogabout.cpp
         dialogabout.h
@@ -52,17 +46,17 @@ set(PROJECT_SOURCES
 #qt_add_translation(QM_FILES ${TS_FILES})
 
 if(WIN32)
-    add_executable(xhexviewer WIN32
+    add_executable(xbinaryviewer WIN32
         ${PROJECT_SOURCES}
         ../../res/resource.rc
     )
 else()
-    add_executable(xhexviewer
+    add_executable(xbinaryviewer
         ${PROJECT_SOURCES}
     )
 endif()
 
-set_target_properties(xhexviewer PROPERTIES
+set_target_properties(xbinaryviewer PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -70,37 +64,37 @@ set_target_properties(xhexviewer PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(xhexviewer PRIVATE bzip2)
-target_link_libraries(xhexviewer PRIVATE lzma)
-target_link_libraries(xhexviewer PRIVATE zlib)
-target_link_libraries(xhexviewer PRIVATE capstone)
-target_link_libraries(xhexviewer PRIVATE cppfilt)
-target_link_libraries(xhexviewer PRIVATE yara)
+target_link_libraries(xbinaryviewer PRIVATE bzip2)
+target_link_libraries(xbinaryviewer PRIVATE lzma)
+target_link_libraries(xbinaryviewer PRIVATE zlib)
+target_link_libraries(xbinaryviewer PRIVATE capstone)
+target_link_libraries(xbinaryviewer PRIVATE cppfilt)
+target_link_libraries(xbinaryviewer PRIVATE yara)
 
-target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::Concurrent)
-target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::Network)
-target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::PrintSupport)
-target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::OpenGL)
-target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
-target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Concurrent)
+target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::PrintSupport)
+target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::OpenGL)
+target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
+target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Sql)
 
 if(${QT_VERSION_MAJOR} EQUAL 5)
-    target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::Script)
-    target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::ScriptTools)
+    target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Script)
+    target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::ScriptTools)
 endif()
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    target_link_libraries(xhexviewer PRIVATE Qt${QT_VERSION_MAJOR}::Qml)
+    target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Qml)
 endif()
 
 if(WIN32)
-    target_link_libraries(xhexviewer PRIVATE Wintrust)
-    target_link_libraries(xhexviewer PRIVATE Crypt32)
+    target_link_libraries(xbinaryviewer PRIVATE Wintrust)
+    target_link_libraries(xbinaryviewer PRIVATE Crypt32)
 endif()
 
 if(WIN32)
-    install (TARGETS xhexviewer DESTINATION "./")
+    install (TARGETS xbinaryviewer DESTINATION "./")
     install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION "./" OPTIONAL)
     install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION "./" OPTIONAL)
     install (DIRECTORY ../../dep/XInfoDB/info DESTINATION "./" OPTIONAL)
@@ -110,21 +104,21 @@ if(WIN32)
     deploy_qt()
     deploy_msvc()
 elseif(APPLE)
-    install(TARGETS xhexviewer
+    install(TARGETS xbinaryviewer
         BUNDLE DESTINATION .
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     )
 else()
-    install (TARGETS xhexviewer DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION ${CMAKE_INSTALL_LIBDIR}/xhexviewer OPTIONAL)
-    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION ${CMAKE_INSTALL_LIBDIR}/xhexviewer OPTIONAL)
-    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION ${CMAKE_INSTALL_LIBDIR}/xhexviewer OPTIONAL)
-    install (DIRECTORY ../../dep/XStyles/qss DESTINATION ${CMAKE_INSTALL_LIBDIR}/xhexviewer OPTIONAL)
-    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION ${CMAKE_INSTALL_LIBDIR}/xhexviewer OPTIONAL)
-    install (FILES ../../dep/signatures/crypto.db DESTINATION ${CMAKE_INSTALL_LIBDIR}/xhexviewer/signatures OPTIONAL)
+    install (TARGETS xbinaryviewer DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
+    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
+    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
+    install (DIRECTORY ../../dep/XStyles/qss DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
+    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
+    install (FILES ../../dep/signatures/crypto.db DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer/signatures OPTIONAL)
 endif()
 
 # if(${QT_VERSION_MAJOR} EQUAL 6)
-#     qt_finalize_executable(xhexviewer)
+#     qt_finalize_executable(xbinaryviewer)
 # endif()

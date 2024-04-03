@@ -209,7 +209,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
             XBinary xbinary(g_pFile);
             if (xbinary.isValid()) {
                 g_pXInfo->setData(g_pFile, xbinary.getFileType());
-                g_infoMenu.setData(g_pXInfo, g_pFile);
+                g_infoMenu.setData(g_pXInfo);
 
                 g_formatOptions.bIsImage = false;
                 g_formatOptions.nImageBase = -1;
@@ -239,7 +239,7 @@ void GuiMainWindow::closeCurrentFile()
     if (g_pXInfo) {
         delete g_pXInfo;
         g_pXInfo = nullptr;
-        g_infoMenu.clear();
+        g_infoMenu.reset();
     }
 
     if (g_pFile) {

@@ -22,7 +22,7 @@ set(X_HOMEPAGE "http://ntinfo.biz")
 set(X_ORIGINAL_FILENAME "xbinaryviewer")
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.xbinaryviewer)
+    set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.xbinaryviewer)
 endif()
 
 deploy_init()

@@ -26,6 +26,8 @@ DialogAbout::DialogAbout(QWidget *pParent) : QDialog(pParent), ui(new Ui::Dialog
 {
     ui->setupUi(this);
 
+    setWindowFlags(Qt::Window);
+
     ui->labelVersion->setText(QString("<span style=\" font-weight:600;\">%1</span>").arg(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION)));
 
     ui->labelBugreports->setText(

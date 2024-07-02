@@ -22,7 +22,7 @@
 
 #include "ui_dialogoptions.h"
 
-DialogOptions::DialogOptions(QWidget *pParent, XOptions *pOptions, XOptions::GROUPID groupId) : QDialog(pParent), ui(new Ui::DialogOptions)
+DialogOptions::DialogOptions(QWidget *pParent, XOptions *pOptions, XOptions::GROUPID groupId) : XShortcutsDialog(pParent), ui(new Ui::DialogOptions)
 {
     ui->setupUi(this);
 
@@ -59,4 +59,15 @@ DialogOptions::DialogOptions(QWidget *pParent, XOptions *pOptions, XOptions::GRO
 DialogOptions::~DialogOptions()
 {
     delete ui;
+}
+
+void DialogOptions::adjustView()
+{
+    ui->widgetOptions->adjustView();
+}
+
+void DialogOptions::setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions)
+{
+    XShortcutsDialog::setGlobal(pShortcuts, pXOptions);
+    ui->widgetOptions->setGlobal(pShortcuts, pXOptions);
 }

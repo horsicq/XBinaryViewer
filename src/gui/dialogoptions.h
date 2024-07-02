@@ -21,7 +21,6 @@
 #ifndef DIALOGOPTIONS_H
 #define DIALOGOPTIONS_H
 
-#include <QDialog>
 #include <QDir>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -36,17 +35,24 @@
 #include "xinfodboptionswidget.h"
 #include "xonlinetoolsoptionswidget.h"
 #include "xoptions.h"
+#include "xshortcutsdialog.h"
 
 namespace Ui {
 class DialogOptions;
 }
 
-class DialogOptions : public QDialog {
+class DialogOptions : public XShortcutsDialog {
     Q_OBJECT
 
 public:
     explicit DialogOptions(QWidget *pParent, XOptions *pOptions, XOptions::GROUPID groupId);
     ~DialogOptions();
+
+    virtual void adjustView();
+    virtual void setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions);
+
+protected:
+    virtual void registerShortcuts(bool bState) { Q_UNUSED(bState) }
 
 private:
     Ui::DialogOptions *ui;

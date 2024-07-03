@@ -64,7 +64,7 @@ protected:
 
 private:
     Ui::GuiMainWindow *ui;
-    XInfoMenu g_infoMenu;
+    XInfoMenu *g_pInfoMenu;
     XOptions g_xOptions;
     XShortcuts g_xShortcuts;
     FW_DEF::OPTIONS g_formatOptions;

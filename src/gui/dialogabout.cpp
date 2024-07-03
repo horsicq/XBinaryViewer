@@ -22,7 +22,7 @@
 
 #include "ui_dialogabout.h"
 
-DialogAbout::DialogAbout(QWidget *pParent) : QDialog(pParent), ui(new Ui::DialogAbout)
+DialogAbout::DialogAbout(QWidget *pParent) : XShortcutsDialog(pParent), ui(new Ui::DialogAbout)
 {
     ui->setupUi(this);
 
@@ -79,6 +79,11 @@ DialogAbout::DialogAbout(QWidget *pParent) : QDialog(pParent), ui(new Ui::Dialog
 DialogAbout::~DialogAbout()
 {
     delete ui;
+}
+
+void DialogAbout::adjustView()
+{
+    // TODO
 }
 
 void DialogAbout::on_pushButtonOK_clicked()

@@ -78,6 +78,8 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 
     g_xShortcuts.load();
 
+    g_pInfoMenu = new XInfoMenu(&g_xShortcuts, &g_xOptions);
+
     ui->widgetViewer->setGlobal(&g_xShortcuts, &g_xOptions);
 
     connect(&g_xOptions, SIGNAL(openFile(QString)), this, SLOT(processFile(QString)));
@@ -99,6 +101,7 @@ GuiMainWindow::~GuiMainWindow()
     g_xOptions.save();
     g_xShortcuts.save();
 
+    delete g_pInfoMenu;
     delete ui;
 
     XYara::finalize();
@@ -124,7 +127,7 @@ void GuiMainWindow::createMenus()
 
     pMenuFile->addAction(pActionOpen);
     pMenuFile->addMenu(g_xOptions.createRecentFilesMenu(this));
-    pMenuFile->addMenu(g_infoMenu.createMenu(this));
+    pMenuFile->addMenu(g_pInfoMenu->createMenu(this));
     pMenuFile->addAction(pActionClose);
     pMenuFile->addAction(pActionExit);
     pMenuTools->addAction(pActionDemangle);
@@ -174,6 +177,7 @@ void GuiMainWindow::actionOptionsSlot()
 void GuiMainWindow::actionAboutSlot()
 {
     DialogAbout dialogAbout(this);
+    dialogAbout.setGlobal(&g_xShortcuts, &g_xOptions);
     dialogAbout.exec();
 }
 
@@ -213,7 +217,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
             XBinary xbinary(g_pFile);
             if (xbinary.isValid()) {
                 g_pXInfo->setData(g_pFile, xbinary.getFileType());
-                g_infoMenu.setData(g_pXInfo);
+                g_pInfoMenu->setData(g_pXInfo);
 
                 g_formatOptions.bIsImage = false;
                 g_formatOptions.nImageBase = -1;
@@ -243,7 +247,7 @@ void GuiMainWindow::closeCurrentFile()
     if (g_pXInfo) {
         delete g_pXInfo;
         g_pXInfo = nullptr;
-        g_infoMenu.reset();
+        g_pInfoMenu->reset();
     }
 
     if (g_pFile) {
@@ -288,7 +292,7 @@ void GuiMainWindow::dropEvent(QDropEvent *pEvent)
 void GuiMainWindow::actionShortcutsSlot()
 {
     DialogShortcuts dialogShortcuts(this);
-
+    dialogShortcuts.setGlobal(&g_xShortcuts, &g_xOptions);
     dialogShortcuts.setData(&g_xShortcuts);
 
     dialogShortcuts.exec();
@@ -299,6 +303,7 @@ void GuiMainWindow::actionShortcutsSlot()
 void GuiMainWindow::actionDemangleSlot()
 {
     DialogDemangle dialogDemangle(this);
+    dialogDemangle.setGlobal(&g_xShortcuts, &g_xOptions);
 
     dialogDemangle.exec();
 }

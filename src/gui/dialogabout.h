@@ -21,25 +21,30 @@
 #ifndef DIALOGABOUT_H
 #define DIALOGABOUT_H
 
-#include <QDialog>
 #include <QMessageBox>
 
 #include "../global.h"
 #include "xoptions.h"
+#include "xshortcutsdialog.h"
 
 namespace Ui {
 class DialogAbout;
 }
 
-class DialogAbout : public QDialog {
+class DialogAbout : public XShortcutsDialog {
     Q_OBJECT
 
 public:
     explicit DialogAbout(QWidget *pParent = nullptr);
     ~DialogAbout();
 
+    virtual void adjustView();
+
 private slots:
     void on_pushButtonOK_clicked();
+
+protected:
+    virtual void registerShortcuts(bool bState) { Q_UNUSED(bState) }
 
 private:
     Ui::DialogAbout *ui;

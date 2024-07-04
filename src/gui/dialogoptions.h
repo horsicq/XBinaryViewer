@@ -52,7 +52,10 @@ public:
     virtual void setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions);
 
 protected:
-    virtual void registerShortcuts(bool bState) { Q_UNUSED(bState) }
+    virtual void registerShortcuts(bool bState)
+    {
+        Q_UNUSED(bState)
+    }
 
 private:
     Ui::DialogOptions *ui;

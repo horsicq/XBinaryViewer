@@ -43,7 +43,7 @@
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap resource="rsrc.qrc">:/pics/logo.png</pixmap>
+           <pixmap>:/pics/logo.png</pixmap>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -67,7 +67,7 @@
          <number>0</number>
         </property>
         <item>
-         <widget class="BinaryWidget" name="widgetViewer" native="true"/>
+         <widget class="XMainWidget" name="widgetViewer" native="true"/>
         </item>
        </layout>
       </widget>
@@ -88,14 +88,12 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>BinaryWidget</class>
+   <class>XMainWidget</class>
    <extends>QWidget</extends>
-   <header>binarywidget.h</header>
+   <header>xmainwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="rsrc.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

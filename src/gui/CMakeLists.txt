@@ -9,7 +9,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 if(WIN32)
@@ -23,11 +23,11 @@ add_definitions(-DUSE_PDF)
 add_definitions(-DUSE_ARCHIVE)
 add_definitions(-DUSE_YARA)
 
-include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/Binary/binarywidget.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/abstractwidgets.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
 
 set(PROJECT_SOURCES
-        ${BINARYWIDGET_SOURCES}
+        ${ABSTRACTWIDGETS_SOURCES}
         ${XABOUTWIDGET_SOURCES}
         dialogabout.cpp
         dialogabout.h

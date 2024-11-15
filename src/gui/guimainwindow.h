@@ -27,7 +27,7 @@
 #include <QMimeData>
 
 #include "../global.h"
-#include "binarywidget.h"
+#include "xmainwidget.h"
 #include "dialogabout.h"
 #include "dialogoptions.h"
 #include "dialogshortcuts.h"

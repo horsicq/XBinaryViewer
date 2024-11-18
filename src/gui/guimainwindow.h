@@ -67,7 +67,6 @@ private:
     XInfoMenu *g_pInfoMenu;
     XOptions g_xOptions;
     XShortcuts g_xShortcuts;
-    FW_DEF::OPTIONS g_formatOptions;
 
     QFile *g_pFile;
     XInfoDB *g_pXInfo;

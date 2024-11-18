@@ -220,10 +220,12 @@ void GuiMainWindow::processFile(const QString &sFileName)
                 g_pInfoMenu->setData(g_pXInfo);
                 g_pInfoMenu->tryToLoad();
 
-                g_formatOptions.bIsImage = false;
-                g_formatOptions.nImageBase = -1;
-                // g_formatOptions.nStartType = SBINARY::TYPE_INFO;
-                ui->widgetViewer->setData(g_pFile, g_formatOptions, 0, 0, 0);
+                FW_DEF::OPTIONS formatOptions = {};
+
+                formatOptions.bIsImage = false;
+                formatOptions.nImageBase = -1;
+                // formatOptions.nStartType = SBINARY::TYPE_INFO;
+                ui->widgetViewer->setData(g_pFile, formatOptions, 0, 0, 0);
                 ui->widgetViewer->setXInfoDB(g_pXInfo);
 
                 ui->widgetViewer->reload();

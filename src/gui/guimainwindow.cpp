@@ -218,7 +218,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
                 g_pInfoMenu->setData(g_pXInfo);
                 g_pInfoMenu->tryToLoad();
 
-                FW_DEF::OPTIONS formatOptions = {};
+                XFW_DEF::OPTIONS formatOptions = {};
 
                 formatOptions.bIsImage = false;
                 formatOptions.nImageBase = -1;

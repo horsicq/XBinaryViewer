@@ -23,11 +23,11 @@ add_definitions(-DUSE_PDF)
 add_definitions(-DUSE_ARCHIVE)
 add_definitions(-DUSE_YARA)
 
-include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/abstractwidgets.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/xformatwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
 
 set(PROJECT_SOURCES
-        ${ABSTRACTWIDGETS_SOURCES}
+        ${XFORMATWIDGET_SOURCES}
         ${XABOUTWIDGET_SOURCES}
         dialogabout.cpp
         dialogabout.h

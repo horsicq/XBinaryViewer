@@ -26,7 +26,7 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 {
     ui->setupUi(this);
 
-    //XYara::initialize();
+    // XYara::initialize();
 
     g_pFile = nullptr;
     g_pXInfo = nullptr;

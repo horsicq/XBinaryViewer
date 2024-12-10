@@ -225,6 +225,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
                 // formatOptions.nStartType = SBINARY::TYPE_INFO;
                 ui->widgetViewer->setData(g_pFile, formatOptions, 0, 0, 0);
                 ui->widgetViewer->setXInfoDB(g_pXInfo);
+                ui->widgetViewer->setGlobalHexEnable(true);
 
                 ui->widgetViewer->reload();
 

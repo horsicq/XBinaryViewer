@@ -45,6 +45,8 @@ int main(int argc, char *argv[])
         return 0;
     }
 
+    //std::max(1, 2);
+
     QApplication a(argc, argv);
     // TODO set main image
 

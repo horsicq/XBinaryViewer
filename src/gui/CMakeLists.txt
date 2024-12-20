@@ -25,6 +25,10 @@ add_definitions(-DUSE_PDF)
 add_definitions(-DUSE_ARCHIVE)
 add_definitions(-DUSE_YARA)
 
+if(WIN32)
+    add_definitions(-DNOMINMAX)
+endif()
+
 #add_definitions(-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE)
 

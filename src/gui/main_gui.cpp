@@ -26,7 +26,9 @@
 int main(int argc, char *argv[])
 {
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#endif
 #endif
 #ifdef Q_OS_MAC
 #ifndef QT_DEBUG
@@ -45,7 +47,9 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    //std::max(1, 2);
+#ifndef QT_DEBUG
+    qputenv("QT_LOGGING_RULES", "qt.*=false");
+#endif
 
     QApplication a(argc, argv);
     // TODO set main image

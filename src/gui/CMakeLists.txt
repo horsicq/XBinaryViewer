@@ -51,6 +51,11 @@ set(PROJECT_SOURCES
         rsrc.qrc
 )
 
+# foreach(loopVAR IN LISTS PROJECT_SOURCES)
+#    message("Source from a PROJECT_SOURCES: ${loopVAR}")
+#    set_property(SOURCE ${loopVAR} PROPERTY COMPILE_OPTIONS ${a_FLAGS})
+# endforeach()
+
 #qt_create_translation(QM_FILES ${PROJECT_SOURCES} ${TS_FILES})
 #qt_add_translation(QM_FILES ${TS_FILES})
 

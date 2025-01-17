@@ -27,6 +27,8 @@ endif()
 
 deploy_init()
 
+message(STATUS X_PROJECT_ARCH: ${X_PROJECT_ARCH})
+
 add_subdirectory(../dep/XCppfilt XCppfilt)
 add_subdirectory(../dep/XCapstone XCapstone)
 add_subdirectory(../dep/XArchive XArchive)

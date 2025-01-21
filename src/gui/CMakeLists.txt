@@ -32,7 +32,7 @@ endif()
 #add_definitions(-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE)
 
-x_init_translation()
+#x_init_translation()
 
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/xformatwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
@@ -62,7 +62,7 @@ set(PROJECT_SOURCES
 #qt_create_translation(QM_FILES ${PROJECT_SOURCES} ${TS_FILES})
 #qt_add_translation(QM_FILES ${TS_FILES})
 
-x_create_translation()
+#x_create_translation()
 
 if(WIN32)
     add_executable(xbinaryviewer WIN32
@@ -120,6 +120,7 @@ if(WIN32)
     install (DIRECTORY ../../dep/XStyles/qss DESTINATION "./" OPTIONAL)
     install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION "./" OPTIONAL)
     install (FILES ../../dep/signatures/crypto.db DESTINATION "./signatures" OPTIONAL)
+    install (FILES ${QM_FILES} DESTINATION "./lang" OPTIONAL)
     deploy_qt()
     deploy_msvc()
 elseif(APPLE)
@@ -136,6 +137,7 @@ else()
     install (DIRECTORY ../../dep/XStyles/qss DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
     install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
     install (FILES ../../dep/signatures/crypto.db DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer/signatures OPTIONAL)
+    install (FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer/lang OPTIONAL)
 endif()
 
 # if(${QT_VERSION_MAJOR} EQUAL 6)

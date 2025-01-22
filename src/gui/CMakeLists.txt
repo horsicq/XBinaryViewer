@@ -32,7 +32,7 @@ endif()
 #add_definitions(-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE)
 
-#x_init_translation()
+#include(../../dep/build_tools/cmake/init_translation.cmake)
 
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/xformatwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
@@ -51,7 +51,6 @@ set(PROJECT_SOURCES
         guimainwindow.h
         guimainwindow.ui
         rsrc.qrc
-        ${TS_FILES}
 )
 
 # foreach(loopVAR IN LISTS TS_FILES)
@@ -62,16 +61,18 @@ set(PROJECT_SOURCES
 #qt_create_translation(QM_FILES ${PROJECT_SOURCES} ${TS_FILES})
 #qt_add_translation(QM_FILES ${TS_FILES})
 
-#x_create_translation()
+#include(../../dep/build_tools/cmake/create_translation.cmake)
 
 if(WIN32)
     add_executable(xbinaryviewer WIN32
         ${PROJECT_SOURCES}
+        ${QM_FILES}
         ../../res/resource.rc
     )
 else()
     add_executable(xbinaryviewer
         ${PROJECT_SOURCES}
+        ${QM_FILES}
     )
 endif()
 

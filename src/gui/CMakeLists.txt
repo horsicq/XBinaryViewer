@@ -32,7 +32,9 @@ endif()
 #add_definitions(-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE)
 
-#include(../../dep/build_tools/cmake/init_translation.cmake)
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+include(../../dep/build_tools/cmake/init_translation.cmake)
+endif()
 
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/xformatwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
@@ -61,7 +63,9 @@ set(PROJECT_SOURCES
 #qt_create_translation(QM_FILES ${PROJECT_SOURCES} ${TS_FILES})
 #qt_add_translation(QM_FILES ${TS_FILES})
 
-#include(../../dep/build_tools/cmake/create_translation.cmake)
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+include(../../dep/build_tools/cmake/create_translation.cmake)
+endif()
 
 if(WIN32)
     add_executable(xbinaryviewer WIN32

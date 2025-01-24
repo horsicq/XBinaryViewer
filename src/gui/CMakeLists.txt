@@ -32,7 +32,7 @@ endif()
 #add_definitions(-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE)
 
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
+if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
 include(../../dep/build_tools/cmake/init_translation.cmake)
 endif()
 
@@ -63,7 +63,7 @@ set(PROJECT_SOURCES
 #qt_create_translation(QM_FILES ${PROJECT_SOURCES} ${TS_FILES})
 #qt_add_translation(QM_FILES ${TS_FILES})
 
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
+if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
 include(../../dep/build_tools/cmake/create_translation.cmake)
 endif()
 

@@ -225,7 +225,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
                 formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
                 // formatOptions.nStartType = SBINARY::TYPE_INFO;
                 ui->widgetViewer->setData(g_pFile, formatOptions);
-                ui->widgetViewer->setXInfoDB(g_pXInfo);
+                ui->widgetViewer->setXInfoDB(g_pXInfo, "main");
 
                 ui->widgetViewer->reload();
 

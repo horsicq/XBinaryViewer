@@ -117,6 +117,9 @@ if(WIN32)
     target_link_libraries(xbinaryviewer PRIVATE Crypt32)
 endif()
 
+find_package(Threads REQUIRED)
+target_link_libraries(xbinaryviewer PRIVATE Threads::Threads)
+
 if(WIN32)
     install (TARGETS xbinaryviewer DESTINATION "./")
     install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION "./" OPTIONAL)

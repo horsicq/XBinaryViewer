@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.10)
-include(../dep/build_tools/cmake/deploy.cmake)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
 
@@ -25,7 +24,7 @@ if(${QT_VERSION} VERSION_LESS 6.1.0)
     set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.xbinaryviewer)
 endif()
 
-deploy_init()
+include(../dep/build_tools/cmake/deploy_init.cmake)
 
 message(STATUS X_PROJECT_ARCH: ${X_PROJECT_ARCH})
 

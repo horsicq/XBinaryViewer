@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
 
-include(../../dep/build_tools/cmake/deploy.cmake)
 include(GNUInstallDirs)
 
 project(xbinaryviewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
@@ -129,8 +128,8 @@ if(WIN32)
     install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION "./" OPTIONAL)
     install (FILES ../../dep/signatures/crypto.db DESTINATION "./signatures" OPTIONAL)
     install (FILES ${QM_FILES} DESTINATION "./lang" OPTIONAL)
-    deploy_qt()
-    deploy_msvc()
+    include(../../dep/build_tools/cmake/deploy_qt_windows.cmake)
+    include(../../dep/build_tools/cmake/deploy_msvc.cmake)
 elseif(APPLE)
     install(TARGETS xbinaryviewer
         BUNDLE DESTINATION .

@@ -130,6 +130,7 @@ if(WIN32)
     install (FILES ${QM_FILES} DESTINATION "./lang" OPTIONAL)
     include(../../dep/build_tools/cmake/deploy_qt_windows.cmake)
     include(../../dep/build_tools/cmake/deploy_msvc.cmake)
+    include(../../dep/build_tools/cmake/deploy_openssl.cmake)
 elseif(APPLE)
     install(TARGETS xbinaryviewer
         BUNDLE DESTINATION .

@@ -3,7 +3,11 @@ cmake_minimum_required(VERSION 3.10)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
 
 if(${QT_VERSION_MAJOR} EQUAL 5)
-    find_package(Qt5 REQUIRED COMPONENTS Widgets Concurrent Network Script ScriptTools PrintSupport OpenGL Svg Sql LinguistTools)
+    if(${QT_VERSION} VERSION_GREATER_EQUAL 5.6.0)
+        find_package(Qt5 REQUIRED COMPONENTS Widgets Concurrent Network Script ScriptTools PrintSupport OpenGL Svg Sql LinguistTools)
+    else()
+        find_package(Qt5 REQUIRED COMPONENTS Widgets Concurrent Network Script ScriptTools PrintSupport OpenGL Svg Sql)
+    endif()
 endif()
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

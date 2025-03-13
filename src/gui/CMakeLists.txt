@@ -1,23 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 
-include(GNUInstallDirs)
-
 project(xbinaryviewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
 
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-#qt_standard_project_setup()
-
-if(WIN32)
-    set(CMAKE_EXE_LINKER_FLAGS    "${CMAKE_EXE_LINKER_FLAGS} /MANIFEST:NO")
-    set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} /MANIFEST:NO")
-    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /MANIFEST:NO")
-endif()
+include(../../dep/build_tools/cmake/cpp_standart_setup.cmake)
 
 add_definitions(-DUSE_DEX)
 add_definitions(-DUSE_PDF)
@@ -27,9 +12,6 @@ add_definitions(-DUSE_YARA)
 if(WIN32)
     add_definitions(-DNOMINMAX)
 endif()
-
-#add_definitions(-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON)
-#set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
 include(../../dep/build_tools/cmake/init_translation.cmake)
@@ -54,32 +36,31 @@ set(PROJECT_SOURCES
         rsrc.qrc
 )
 
-# foreach(loopVAR IN LISTS TS_FILES)
-#    message("Source from a TS_FILES: ${loopVAR}")
-#    # set_property(SOURCE ${loopVAR} PROPERTY COMPILE_OPTIONS ${a_FLAGS})
-# endforeach()
-
-#qt_create_translation(QM_FILES ${PROJECT_SOURCES} ${TS_FILES})
-#qt_add_translation(QM_FILES ${TS_FILES})
-
 if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
 include(../../dep/build_tools/cmake/create_translation.cmake)
 endif()
 
 if(WIN32)
-    add_executable(xbinaryviewer WIN32
+    add_executable(${PROJECT_NAME}
+        WIN32
         ${PROJECT_SOURCES}
         ${QM_FILES}
-        ../../res/resource.rc
+        ../../res/resource_icon.rc
+    )
+elseif(APPLE)
+    add_executable(${PROJECT_NAME}
+        MACOSX_BUNDLE
+        ${PROJECT_SOURCES}
+        ${QM_FILES}
     )
 else()
-    add_executable(xbinaryviewer
+    add_executable(${PROJECT_NAME}
         ${PROJECT_SOURCES}
         ${QM_FILES}
     )
 endif()
 
-set_target_properties(xbinaryviewer PROPERTIES
+set_target_properties(${PROJECT_NAME} PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -87,40 +68,44 @@ set_target_properties(xbinaryviewer PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(xbinaryviewer PRIVATE bzip2)
-target_link_libraries(xbinaryviewer PRIVATE lzma)
-target_link_libraries(xbinaryviewer PRIVATE zlib)
-target_link_libraries(xbinaryviewer PRIVATE capstone)
-target_link_libraries(xbinaryviewer PRIVATE cppfilt)
-target_link_libraries(xbinaryviewer PRIVATE yara)
+if(APPLE)
+    include(../../dep/build_tools/cmake/macdeployqt.cmake)
+endif()
 
-target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Concurrent)
-target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Network)
-target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::PrintSupport)
-target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::OpenGL)
-target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
-target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(${PROJECT_NAME} PRIVATE bzip2)
+target_link_libraries(${PROJECT_NAME} PRIVATE lzma)
+target_link_libraries(${PROJECT_NAME} PRIVATE zlib)
+target_link_libraries(${PROJECT_NAME} PRIVATE capstone)
+target_link_libraries(${PROJECT_NAME} PRIVATE cppfilt)
+target_link_libraries(${PROJECT_NAME} PRIVATE yara)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Concurrent)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::PrintSupport)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::OpenGL)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Svg)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Sql)
 
 if(${QT_VERSION_MAJOR} EQUAL 5)
-    target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Script)
-    target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::ScriptTools)
+    target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Script)
+    target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::ScriptTools)
 endif()
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    target_link_libraries(xbinaryviewer PRIVATE Qt${QT_VERSION_MAJOR}::Qml)
+    target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Qml)
 endif()
 
 if(WIN32)
-    target_link_libraries(xbinaryviewer PRIVATE Wintrust)
-    target_link_libraries(xbinaryviewer PRIVATE Crypt32)
+    target_link_libraries(${PROJECT_NAME} PRIVATE Wintrust)
+    target_link_libraries(${PROJECT_NAME} PRIVATE Crypt32)
 endif()
 
 find_package(Threads REQUIRED)
-target_link_libraries(xbinaryviewer PRIVATE Threads::Threads)
+target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
 
 if(WIN32)
-    install (TARGETS xbinaryviewer DESTINATION "./")
+    install (TARGETS ${PROJECT_NAME} DESTINATION "./")
     install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION "./" OPTIONAL)
     install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION "./" OPTIONAL)
     install (DIRECTORY ../../dep/XInfoDB/info DESTINATION "./" OPTIONAL)
@@ -132,22 +117,26 @@ if(WIN32)
     include(../../dep/build_tools/cmake/deploy_msvc.cmake)
     include(../../dep/build_tools/cmake/deploy_openssl.cmake)
 elseif(APPLE)
-    install(TARGETS xbinaryviewer
+    install(TARGETS ${PROJECT_NAME}
         BUNDLE DESTINATION .
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     )
-else()
-    install (TARGETS xbinaryviewer DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
-    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
-    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
-    install (DIRECTORY ../../dep/XStyles/qss DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
-    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
-    install (DIRECTORY ../../dep/signatures/signatures DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer OPTIONAL)
-    install (FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_LIBDIR}/xbinaryviewer/lang OPTIONAL)
-endif()
 
-# if(${QT_VERSION_MAJOR} EQUAL 6)
-#     qt_finalize_executable(xbinaryviewer)
-# endif()
+    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
+    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
+    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
+    install (DIRECTORY ../../dep/XStyles/qss DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
+    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
+    install (DIRECTORY ../../dep/signatures/signatures DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
+    install (FILES ${QM_FILES} DESTINATION DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
+else()
+    install (TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
+    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
+    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
+    install (DIRECTORY ../../dep/XStyles/qss DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
+    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
+    install (DIRECTORY ../../dep/signatures/signatures DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
+    install (FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}/lang OPTIONAL)
+endif()

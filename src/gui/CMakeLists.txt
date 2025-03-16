@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(xbinaryviewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
+project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
 
 include(../../dep/build_tools/cmake/cpp_standart_setup.cmake)
 
@@ -17,8 +17,9 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel"
 include(../../dep/build_tools/cmake/init_translation.cmake)
 endif()
 
-include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/xformatwidget.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
+include(${PROJECT_SOURCE_DIR}/../../dep/FormatWidgets/AbstractWidgets/xformatwidget.cmake)
+include(${PROJECT_SOURCE_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
+include(${PROJECT_SOURCE_DIR}/../../dep/XStyles/xstyles.cmake)
 
 set(PROJECT_SOURCES
         ${XFORMATWIDGET_SOURCES}
@@ -106,13 +107,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
 
 if(WIN32)
     install (TARGETS ${PROJECT_NAME} DESTINATION "./")
-    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION "./" OPTIONAL)
-    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION "./" OPTIONAL)
-    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION "./" OPTIONAL)
-    install (DIRECTORY ../../dep/XStyles/qss DESTINATION "./" OPTIONAL)
-    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION "./" OPTIONAL)
-    install (DIRECTORY ../../dep/signatures/signatures DESTINATION "./" OPTIONAL)
-    install (FILES ${QM_FILES} DESTINATION "./lang" OPTIONAL)
     include(../../dep/build_tools/cmake/deploy_qt_windows.cmake)
     include(../../dep/build_tools/cmake/deploy_msvc.cmake)
     include(../../dep/build_tools/cmake/deploy_openssl.cmake)
@@ -122,21 +116,6 @@ elseif(APPLE)
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     )
-
-    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION "${PROJECT_NAME}.app/Contents/Resources" OPTIONAL)
-    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION "${PROJECT_NAME}.app/Contents/Resources" OPTIONAL)
-    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION "${PROJECT_NAME}.app/Contents/Resources" OPTIONAL)
-    install (DIRECTORY ../../dep/XStyles/qss DESTINATION "${PROJECT_NAME}.app/Contents/Resources" OPTIONAL)
-    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION "${PROJECT_NAME}.app/Contents/Resources" OPTIONAL)
-    install (DIRECTORY ../../dep/signatures/signatures DESTINATION "${PROJECT_NAME}.app/Contents/Resources" OPTIONAL)
-    install (FILES ${QM_FILES} DESTINATION DESTINATION "${PROJECT_NAME}.app/Contents/Resources/Lang" OPTIONAL)
 else()
     install (TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install (DIRECTORY ../../dep/Detect-It-Easy/db DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
-    install (DIRECTORY ../../dep/Detect-It-Easy/db_custom DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
-    install (DIRECTORY ../../dep/XInfoDB/info DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
-    install (DIRECTORY ../../dep/XStyles/qss DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
-    install (DIRECTORY ../../dep/XYara/yara_rules DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
-    install (DIRECTORY ../../dep/signatures/signatures DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME} OPTIONAL)
-    install (FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}/lang OPTIONAL)
 endif()

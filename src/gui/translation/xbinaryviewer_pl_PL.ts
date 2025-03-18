@@ -944,6 +944,10 @@
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SearchStringsWidget</name>
@@ -1359,10 +1363,6 @@
         <source>Readonly</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Analyze</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>XOnlineToolsOptionsWidget</name>
@@ -1451,6 +1451,21 @@
     </message>
 </context>
 <context>
+    <name>XRegionsWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XSymbolsWidget</name>
     <message>
         <source>Form</source>
@@ -1458,6 +1473,10 @@
     </message>
     <message>
         <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

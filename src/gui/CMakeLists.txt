@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
-
 include(../../dep/build_tools/cmake/cpp_standart_setup.cmake)
 
 add_definitions(-DUSE_DEX)
@@ -70,7 +68,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 )
 
 if(APPLE)
-    include(../../dep/build_tools/cmake/macdeployqt.cmake)
+#    include(../../dep/build_tools/cmake/macdeployqt.cmake)
 endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE bzip2)

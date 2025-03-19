@@ -67,8 +67,10 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-if(APPLE)
-#    include(../../dep/build_tools/cmake/macdeployqt.cmake)
+if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
+    if(APPLE)
+        include(../../dep/build_tools/cmake/macdeployqt.cmake)
+    endif()
 endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE bzip2)

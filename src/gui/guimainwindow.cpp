@@ -212,6 +212,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
         }
 
         if (g_pFile) {
+
             XBinary xbinary(g_pFile);
             if (xbinary.isValid()) {
                 g_pInfoMenu->setData(g_pXInfo);
@@ -223,8 +224,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
                 formatOptions.nImageBase = -1;
                 formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
                 // formatOptions.nStartType = SBINARY::TYPE_INFO;
-                ui->widgetViewer->setData(g_pFile, formatOptions);
-                ui->widgetViewer->setXInfoDB(g_pXInfo);
+                ui->widgetViewer->setData(g_pFile, g_pXInfo, formatOptions);
 
                 ui->widgetViewer->reload();
 

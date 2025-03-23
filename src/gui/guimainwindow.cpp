@@ -212,7 +212,6 @@ void GuiMainWindow::processFile(const QString &sFileName)
         }
 
         if (g_pFile) {
-
             XBinary xbinary(g_pFile);
             if (xbinary.isValid()) {
                 g_pInfoMenu->setData(g_pXInfo);

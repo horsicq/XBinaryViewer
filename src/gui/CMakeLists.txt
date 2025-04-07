@@ -4,6 +4,12 @@ project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
 
 include(../../dep/build_tools/cmake/cpp_standart_setup.cmake)
 
+if(WIN32)
+    set(X_RESOURCES "./")
+else ()
+    set(X_RESOURCES ${CMAKE_INSTALL_LIBDIR}/XBinaryViewer)
+endif()
+
 set(X_RESOURCES ${CMAKE_INSTALL_LIBDIR}/XBinaryViewer)
 
 add_definitions(-DUSE_DEX)

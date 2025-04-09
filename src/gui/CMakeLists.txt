@@ -4,14 +4,6 @@ project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
 
 include(../../dep/build_tools/cmake/cpp_standart_setup.cmake)
 
-if(WIN32)
-    set(X_RESOURCES "./")
-else ()
-    set(X_RESOURCES ${CMAKE_INSTALL_LIBDIR}/XBinaryViewer)
-endif()
-
-set(X_RESOURCES ${CMAKE_INSTALL_LIBDIR}/XBinaryViewer)
-
 add_definitions(-DUSE_DEX)
 add_definitions(-DUSE_PDF)
 add_definitions(-DUSE_ARCHIVE)
@@ -63,13 +55,10 @@ elseif(APPLE)
         ${QM_FILES}
     )
 
-    set_target_properties(XBinaryViewer PROPERTIES
-        MACOSX_BUNDLE_GUI_IDENTIFIER ${BUNDLE_ID_OPTION}
-        MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-        MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-        MACOSX_BUNDLE_COPYRIGHT ${X_MAINTAINER}
-        MACOSX_BUNDLE_ICON_FILE "main.icns"
-    )
+    set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/../../res/main.icns PROPERTIES
+        MACOSX_PACKAGE_LOCATION "Resources")
+    target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../res/main.icns)
+
 else()
     add_executable(XBinaryViewer
         ${PROJECT_SOURCES}

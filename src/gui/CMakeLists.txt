@@ -17,7 +17,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel"
 include(../../dep/build_tools/cmake/init_translation.cmake)
 endif()
 
-include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/AbstractWidgets/xformatwidget.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/XAbstractWidgets/xformatwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XStyles/xstyles.cmake)
 

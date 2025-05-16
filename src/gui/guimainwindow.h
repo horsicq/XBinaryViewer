@@ -32,6 +32,7 @@
 #include "dialogoptions.h"
 #include "dialogshortcuts.h"
 #include "xinfomenu.h"
+#include "xyara.h" // TODO remove
 
 namespace Ui {
 class GuiMainWindow;

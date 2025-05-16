@@ -214,15 +214,20 @@ void GuiMainWindow::processFile(const QString &sFileName)
         if (g_pFile) {
             XBinary xbinary(g_pFile);
             if (xbinary.isValid()) {
-                g_pInfoMenu->setData(g_pXInfo);
+                g_pInfoMenu->setData(g_pXInfo, g_pFile, sFileName + ".db");
                 g_pInfoMenu->tryToLoad();
 
-                XFW_DEF::OPTIONS formatOptions = {};
+                // XFW_DEF::OPTIONS formatOptions = {};
 
+                // formatOptions.bIsImage = false;
+                // formatOptions.nImageBase = -1;
+                // formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
+                // // formatOptions.nStartType = SBINARY::TYPE_INFO;
+                XMainWidget::OPTIONS formatOptions = {};
                 formatOptions.bIsImage = false;
                 formatOptions.nImageBase = -1;
-                formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
-                // formatOptions.nStartType = SBINARY::TYPE_INFO;
+                formatOptions.bGlobalHexEnable = true;
+
                 ui->widgetViewer->setData(g_pFile, g_pXInfo, formatOptions);
 
                 ui->widgetViewer->reload();

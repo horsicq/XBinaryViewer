@@ -46,7 +46,7 @@
            <pixmap>:/pics/logo.png</pixmap>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -67,7 +67,7 @@
          <number>0</number>
         </property>
         <item>
-         <widget class="XMainWidgetAdvanced" name="widgetViewer" native="true"/>
+         <widget class="XMainWidget" name="widgetViewer" native="true"/>
         </item>
        </layout>
       </widget>
@@ -88,9 +88,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>XMainWidgetAdvanced</class>
+   <class>XMainWidget</class>
    <extends>QWidget</extends>
-   <header>xmainwidgetadvanced.h</header>
+   <header>xmainwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

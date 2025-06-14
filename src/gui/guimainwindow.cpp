@@ -211,6 +211,10 @@ void GuiMainWindow::processFile(const QString &sFileName)
             }
         }
 
+        // if (!g_pFile->open(QIODevice::ReadOnly)) {
+        //     closeCurrentFile();
+        // }
+
         if (g_pFile) {
             XBinary xbinary(g_pFile);
             if (xbinary.isValid()) {

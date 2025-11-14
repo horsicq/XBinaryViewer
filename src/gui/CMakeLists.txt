@@ -24,6 +24,7 @@ include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XStyles/xstyles.cmake)
 set(PROJECT_SOURCES
         ${XFORMATWIDGET_SOURCES}
         ${XABOUTWIDGET_SOURCES}
+        ${XSTYLES_SOURCES}
         dialogabout.cpp
         dialogabout.h
         dialogabout.ui

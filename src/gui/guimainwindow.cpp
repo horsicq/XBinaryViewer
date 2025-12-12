@@ -26,6 +26,10 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 {
     ui->setupUi(this);
 
+#ifdef USE_XSIMD
+    xsimd_init();
+#endif
+
     XYara::initialize();
 
     g_pFile = nullptr;
@@ -103,6 +107,10 @@ GuiMainWindow::~GuiMainWindow()
     delete ui;
 
     XYara::finalize();
+
+#ifdef USE_XSIMD
+    xsimd_cleanup();
+#endif
 }
 
 void GuiMainWindow::createMenus()

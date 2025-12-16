@@ -56,6 +56,12 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_xOptions.addID(XOptions::ID_FILE_SAVEBACKUP, true);
     g_xOptions.addID(XOptions::ID_FILE_SAVERECENTFILES, true);
 
+    g_xOptions.addID(XOptions::ID_FEATURE_READBUFFERSIZE, 8 * 1024);
+    g_xOptions.addID(XOptions::ID_FEATURE_FILEBUFFERSIZE, 2 * 1024 * 1024);
+    g_xOptions.addID(XOptions::ID_FEATURE_SSE2, true);
+    g_xOptions.addID(XOptions::ID_FEATURE_AVX, true);
+    g_xOptions.addID(XOptions::ID_FEATURE_AVX2, true);
+
 #ifdef Q_OS_WIN
     g_xOptions.addID(XOptions::ID_FILE_CONTEXT, "*");
 #endif

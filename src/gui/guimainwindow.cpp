@@ -58,9 +58,14 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 
     g_xOptions.addID(XOptions::ID_FEATURE_READBUFFERSIZE, 8 * 1024);
     g_xOptions.addID(XOptions::ID_FEATURE_FILEBUFFERSIZE, 2 * 1024 * 1024);
+
+#ifdef USE_XSIMD
+#ifdef Q_PROCESSOR_X86
     g_xOptions.addID(XOptions::ID_FEATURE_SSE2, true);
     g_xOptions.addID(XOptions::ID_FEATURE_AVX, true);
     g_xOptions.addID(XOptions::ID_FEATURE_AVX2, true);
+#endif
+#endif
 
 #ifdef Q_OS_WIN
     g_xOptions.addID(XOptions::ID_FILE_CONTEXT, "*");

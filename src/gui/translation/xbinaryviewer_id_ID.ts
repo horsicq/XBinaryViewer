@@ -198,10 +198,6 @@
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Cannot load database</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DiE_ScriptEngine</name>
@@ -1391,10 +1387,6 @@
         <source>Highlight</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Buffer size</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>NFDWidgetAdvanced</name>
@@ -1553,6 +1545,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Author</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Certificate</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1569,11 +1565,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Corrupted data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Crypter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cryptor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1621,6 +1629,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Licensing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Linker</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1629,11 +1641,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Malware</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Operation system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Package</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Packer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Personal data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1642,6 +1666,10 @@
     </message>
     <message>
         <source>Player</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Producer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1669,47 +1697,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Trojan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Virtual machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Virus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Trojan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Malware</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Package</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Licensing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Corrupted data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Personal data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Creator</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Producer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1805,10 +1801,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Segment</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1854,6 +1846,10 @@
     </message>
     <message>
         <source>Cannot open file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2058,6 +2054,30 @@
         <source>Cannot save file</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Searching...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 strings found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 strings found (%2 ms)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 / %2 strings (%3 ms)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 / %2 strings</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SearchValuesWidget</name>
@@ -2111,6 +2131,17 @@
     </message>
 </context>
 <context>
+    <name>XACE</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XAPK</name>
     <message>
         <source>Universal</source>
@@ -2122,6 +2153,17 @@
     </message>
     <message>
         <source>Package</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XARJ</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2401,6 +2443,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>ARM</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Multiplatform</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2442,6 +2488,25 @@
     </message>
     <message>
         <source>Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XBrotli</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2501,6 +2566,29 @@
     <name>XComboBoxEx</name>
     <message>
         <source>Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XCompressZ</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2619,10 +2707,6 @@
     <name>XDecompress</name>
     <message>
         <source>Invalid CRC</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unknown CRC type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2964,6 +3048,17 @@
     </message>
 </context>
 <context>
+    <name>XFREEARC</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XFileInfoWidget</name>
     <message>
         <source>Form</source>
@@ -3021,15 +3116,38 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid CRC</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cannot decompress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cannot create</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XGenericArchiveWidget</name>
+    <message>
+        <source>Archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compressed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Method</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3547,6 +3665,29 @@
     </message>
     <message>
         <source>Footer</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XLzo</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4140,7 +4281,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Raw image data</source>
+        <source>Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color palette (PAL)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4223,11 +4368,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Overlay</source>
+        <source>Resource</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Resource</source>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4338,6 +4483,17 @@
     </message>
 </context>
 <context>
+    <name>XSEAARC</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XSZDD</name>
     <message>
         <source>SZDD Header</source>
@@ -4355,6 +4511,10 @@
 <context>
     <name>XScanEngine</name>
     <message>
+        <source>Cannot load database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Offset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4363,7 +4523,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Last error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Recursive scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resource scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Archive scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4416,6 +4592,348 @@
     </message>
 </context>
 <context>
+    <name>XScanEngineOptionsWidget</name>
+    <message>
+        <source>Scan after open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recursive scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aggressive scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deep scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Verbose</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Heuristic scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resources</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Archives</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sort</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Format result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Profiling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>APK tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Author</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compiler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compressor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Converter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corrupted data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Document</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DOS extender</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game engine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Generic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Installer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Installer data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Licensing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Linker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Loader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Malware</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Obfuscator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Operation system</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Package</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Personal data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Platform</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Producer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protector data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ROM</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SFX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SFX data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sign tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Source code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trojan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virus</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XScanSortWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All file types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Catalog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Files (*.*);;JSON (*.json);;XML (*.xml);;CSV (*.csv);;TSV (*.tsv)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please select a directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XSevenZip</name>
     <message>
         <source>Header</source>
@@ -4435,6 +4953,14 @@
     </message>
     <message>
         <source>Unexpected end of data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot unpack data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid format data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5267,6 +5793,29 @@
     </message>
     <message>
         <source>Adler32</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XZstd</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -10,10 +10,6 @@ add_definitions(-DUSE_ARCHIVE)
 add_definitions(-DUSE_YARA)
 add_definitions(-DUSE_XSIMD)
 
-if(WIN32)
-    add_definitions(-DNOMINMAX)
-endif()
-
 if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
 include(../../dep/build_tools/cmake/init_translation.cmake)
 endif()

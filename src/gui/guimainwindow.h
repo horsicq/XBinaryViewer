@@ -27,12 +27,12 @@
 #include <QMimeData>
 
 #include "../global.h"
-#include "xmainwidget.h"
+// #include "xmainwidget.h"
 #include "dialogabout.h"
 #include "dialogoptions.h"
 #include "dialogshortcuts.h"
-#include "xinfomenu.h"
-#include "xyara.h"  // TODO remove
+// #include "xinfomenu.h"
+// #include "xyara.h"  // TODO remove
 
 namespace Ui {
 class GuiMainWindow;
@@ -65,12 +65,12 @@ protected:
 
 private:
     Ui::GuiMainWindow *ui;
-    XInfoMenu *g_pInfoMenu;
+    // XInfoMenu *g_pInfoMenu;
     XOptions g_xOptions;
     XShortcuts g_xShortcuts;
 
     QFile *g_pFile;
-    XInfoDB *g_pXInfo;
+    // XInfoDB *g_pXInfo;
 };
 
 #endif  // GUIMAINWINDOW_H

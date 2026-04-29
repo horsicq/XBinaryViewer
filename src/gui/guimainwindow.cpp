@@ -30,10 +30,10 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     xsimd_init();
 #endif
 
-    XYara::initialize();
+    // XYara::initialize();
 
     g_pFile = nullptr;
-    g_pXInfo = nullptr;
+    // g_pXInfo = nullptr;
 
     ui->stackedWidget->setCurrentIndex(0);
 
@@ -73,12 +73,12 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_xOptions.addID(XOptions::ID_SCAN_ENGINE_DIE_ENABLED, true);
     g_xOptions.addID(XOptions::ID_SCAN_ENGINE_YARA_ENABLED, true);
 
-    XScanEngineOptionsWidget::setDefaultValues(&g_xOptions);
-    SearchSignaturesOptionsWidget::setDefaultValues(&g_xOptions);
-    XHexViewOptionsWidget::setDefaultValues(&g_xOptions);
-    XDisasmViewOptionsWidget::setDefaultValues(&g_xOptions);
-    XOnlineToolsOptionsWidget::setDefaultValues(&g_xOptions);
-    XInfoDBOptionsWidget::setDefaultValues(&g_xOptions);
+    // XScanEngineOptionsWidget::setDefaultValues(&g_xOptions);
+    // SearchSignaturesOptionsWidget::setDefaultValues(&g_xOptions);
+    // XHexViewOptionsWidget::setDefaultValues(&g_xOptions);
+    // XDisasmViewOptionsWidget::setDefaultValues(&g_xOptions);
+    // XOnlineToolsOptionsWidget::setDefaultValues(&g_xOptions);
+    // XInfoDBOptionsWidget::setDefaultValues(&g_xOptions);
 
     g_xOptions.load();
 
@@ -91,9 +91,9 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 
     g_xShortcuts.load();
 
-    g_pInfoMenu = new XInfoMenu(&g_xShortcuts, &g_xOptions);
+    // g_pInfoMenu = new XInfoMenu(&g_xShortcuts, &g_xOptions);
 
-    ui->widgetViewer->setGlobal(&g_xShortcuts, &g_xOptions);
+    // ui->widgetViewer->setGlobal(&g_xShortcuts, &g_xOptions);
 
     connect(&g_xOptions, SIGNAL(openFile(QString)), this, SLOT(processFile(QString)));
 
@@ -114,10 +114,10 @@ GuiMainWindow::~GuiMainWindow()
     g_xOptions.save();
     g_xShortcuts.save();
 
-    delete g_pInfoMenu;
+    // delete g_pInfoMenu;
     delete ui;
 
-    XYara::finalize();
+    // XYara::finalize();
 
 #ifdef USE_XSIMD
     xsimd_cleanup();
@@ -144,7 +144,7 @@ void GuiMainWindow::createMenus()
 
     pMenuFile->addAction(pActionOpen);
     pMenuFile->addMenu(g_xOptions.createRecentFilesMenu(this));
-    pMenuFile->addMenu(g_pInfoMenu->createMenu(this));
+    // pMenuFile->addMenu(g_pInfoMenu->createMenu(this));
     pMenuFile->addAction(pActionClose);
     pMenuFile->addAction(pActionExit);
     pMenuTools->addAction(pActionDemangle);
@@ -200,7 +200,7 @@ void GuiMainWindow::actionAboutSlot()
 
 void GuiMainWindow::adjustView()
 {
-    ui->widgetViewer->adjustView();
+    // ui->widgetViewer->adjustView();
 
     g_xOptions.adjustStayOnTop(this);
     g_xOptions.adjustWidget(this, XOptions::ID_VIEW_FONT_CONTROLS);
@@ -220,7 +220,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
         closeCurrentFile();
 
         g_pFile = new QFile;
-        g_pXInfo = new XInfoDB;
+        // g_pXInfo = new XInfoDB;
 
         g_pFile->setFileName(sFileName);
 
@@ -237,8 +237,8 @@ void GuiMainWindow::processFile(const QString &sFileName)
         if (g_pFile) {
             XBinary xbinary(g_pFile);
             if (xbinary.isValid()) {
-                g_pInfoMenu->setData(g_pXInfo, g_pFile, sFileName + ".db");
-                g_pInfoMenu->tryToLoad();
+                // g_pInfoMenu->setData(g_pXInfo, g_pFile, sFileName + ".db");
+                // g_pInfoMenu->tryToLoad();
 
                 // XFW_DEF::OPTIONS formatOptions = {};
 
@@ -246,14 +246,16 @@ void GuiMainWindow::processFile(const QString &sFileName)
                 // formatOptions.nImageBase = -1;
                 // formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
                 // // formatOptions.nStartType = SBINARY::TYPE_INFO;
-                XMainWidget::OPTIONS formatOptions = {};
-                formatOptions.bIsImage = false;
-                formatOptions.nImageBase = -1;
-                formatOptions.bGlobalHexEnable = true;
 
-                ui->widgetViewer->setData(g_pFile, g_pXInfo, formatOptions);
 
-                ui->widgetViewer->reload();
+                // XMainWidget::OPTIONS formatOptions = {};
+                // formatOptions.bIsImage = false;
+                // formatOptions.nImageBase = -1;
+                // formatOptions.bGlobalHexEnable = true;
+
+                // ui->widgetViewer->setData(g_pFile, g_pXInfo, formatOptions);
+
+                // ui->widgetViewer->reload();
 
                 adjustView();
 
@@ -272,13 +274,13 @@ void GuiMainWindow::processFile(const QString &sFileName)
 
 void GuiMainWindow::closeCurrentFile()
 {
-    if (g_pXInfo) {
-        g_pInfoMenu->tryToSave();
+    // if (g_pXInfo) {
+    //     g_pInfoMenu->tryToSave();
 
-        delete g_pXInfo;
-        g_pXInfo = nullptr;
-        g_pInfoMenu->reset();
-    }
+    //     delete g_pXInfo;
+    //     g_pXInfo = nullptr;
+    //     g_pInfoMenu->reset();
+    // }
 
     if (g_pFile) {
         g_pFile->close();
@@ -287,7 +289,7 @@ void GuiMainWindow::closeCurrentFile()
     }
 
     ui->stackedWidget->setCurrentIndex(0);
-    ui->widgetViewer->cleanup();
+    // ui->widgetViewer->cleanup();
 
     setWindowTitle(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION));
 }
@@ -332,8 +334,8 @@ void GuiMainWindow::actionShortcutsSlot()
 
 void GuiMainWindow::actionDemangleSlot()
 {
-    DialogDemangle dialogDemangle(this);
-    dialogDemangle.setGlobal(&g_xShortcuts, &g_xOptions);
+    // DialogDemangle dialogDemangle(this);
+    // dialogDemangle.setGlobal(&g_xShortcuts, &g_xOptions);
 
-    dialogDemangle.exec();
+    // dialogDemangle.exec();
 }

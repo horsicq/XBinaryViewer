@@ -247,7 +247,6 @@ void GuiMainWindow::processFile(const QString &sFileName)
                 // formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
                 // // formatOptions.nStartType = SBINARY::TYPE_INFO;
 
-
                 // XMainWidget::OPTIONS formatOptions = {};
                 // formatOptions.bIsImage = false;
                 // formatOptions.nImageBase = -1;

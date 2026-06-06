@@ -42,8 +42,8 @@ DialogAbout::DialogAbout(QWidget *pParent) : XShortcutsDialog(pParent), ui(new U
                                      "text-decoration: underline; color:#ff0000;\">ntinfo.re@gmail.com</span></a></p></body></html>")
                                  .arg(tr("Donate")));
     ui->labelSourceCode->setText(
-        QString("<html><head/><body><p><span style=\" font-weight:600;\">%1: </span><a href=\"https://github.com/horsicq/XELFViewer\"><span style=\" "
-                "text-decoration: underline; color:#ff0000;\">https://github.com/horsicq/XELFViewer</span></a></p></body></html>")
+        QString("<html><head/><body><p><span style=\" font-weight:600;\">%1: </span><a href=\"https://github.com/horsicq/XBinaryViewer\"><span style=\" "
+                "text-decoration: underline; color:#ff0000;\">https://github.com/horsicq/XBinaryViewer</span></a></p></body></html>")
             .arg(tr("Source code")));
     ui->labelThanks->setText(
         QString("<html><head/><body>"

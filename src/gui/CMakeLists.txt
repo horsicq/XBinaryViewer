@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.18)
 
 project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
 
@@ -18,12 +18,19 @@ include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/XFWidgets/xfwidgets.cm
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XOptions/xoptionswidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XStyles/xstyles.cmake)
+# Options widgets shown in DialogOptions (Hex/Disasm/Signatures come in via xfwidgets already)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XScanEngine/xscanwidgets.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XOnlineTools/xvirustotalwidget.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XInfoDB/dialogxinfodbtransferprocess.cmake)
 
 set(PROJECT_SOURCES
         ${XFWIDGETS_SOURCES}
         ${XOPTIONSWIDGET_SOURCES}
         ${XABOUTWIDGET_SOURCES}
         ${XSTYLES_SOURCES}
+        ${XSCANWIDGETS_SOURCES}
+        ${XVIRUSTOTALWIDGET_SOURCES}
+        ${DIALOGXINFODBTRANSFERPROCESS_SOURCES}
         dialogabout.cpp
         dialogabout.h
         dialogabout.ui

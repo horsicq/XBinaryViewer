@@ -27,13 +27,13 @@
 #include <QSettings>
 
 #include "../global.h"
-// #include "searchsignaturesoptionswidget.h"
-// #include "xscanengineoptionswidget.h"
+#include "searchsignaturesoptionswidget.h"
+#include "xscanengineoptionswidget.h"
 #include "xbinary.h"
-// #include "xdisasmviewoptionswidget.h"
-// #include "xhexviewoptionswidget.h"
-// #include "xinfodboptionswidget.h"
-// #include "xonlinetoolsoptionswidget.h"
+#include "xdisasmviewoptionswidget.h"
+#include "xhexviewoptionswidget.h"
+#include "xinfodboptionswidget.h"
+#include "xonlinetoolsoptionswidget.h"
 #include "xoptions.h"
 #include "xshortcutsdialog.h"
 
@@ -59,12 +59,12 @@ protected:
 
 private:
     Ui::DialogOptions *ui;
-    // XScanEngineOptionsWidget *g_pScanEngineOptionsWidget;
-    // SearchSignaturesOptionsWidget *g_pSearchSignaturesOptionsWidget;
-    // XHexViewOptionsWidget *g_pXHexViewOptionsWidget;
-    // XDisasmViewOptionsWidget *g_pXDisasmViewOptionsWidget;
-    // XOnlineToolsOptionsWidget *g_pXOnlineToolsOptionsWidget;
-    // XInfoDBOptionsWidget *g_pXInfoDBOptionsWidget;
+    XScanEngineOptionsWidget *g_pScanEngineOptionsWidget;
+    SearchSignaturesOptionsWidget *g_pSearchSignaturesOptionsWidget;
+    XHexViewOptionsWidget *g_pXHexViewOptionsWidget;
+    XDisasmViewOptionsWidget *g_pXDisasmViewOptionsWidget;
+    XOnlineToolsOptionsWidget *g_pXOnlineToolsOptionsWidget;
+    XInfoDBOptionsWidget *g_pXInfoDBOptionsWidget;
 };
 
 #endif  // DIALOGOPTIONS_H

@@ -69,7 +69,6 @@ private:
     XOptions g_xOptions;
     XShortcuts g_xShortcuts;
 
-    QFile *g_pFile;
     // XInfoDB *g_pXInfo;
 };
 

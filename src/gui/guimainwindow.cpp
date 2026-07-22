@@ -32,7 +32,7 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 
     // XYara::initialize();
 
-    g_pFile = nullptr;
+    // g_pFile = nullptr;
     // g_pXInfo = nullptr;
 
     ui->stackedWidget->setCurrentIndex(0);
@@ -73,12 +73,12 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_xOptions.addID(XOptions::ID_SCAN_ENGINE_DIE_ENABLED, true);
     g_xOptions.addID(XOptions::ID_SCAN_ENGINE_YARA_ENABLED, true);
 
-    // XScanEngineOptionsWidget::setDefaultValues(&g_xOptions);
-    // SearchSignaturesOptionsWidget::setDefaultValues(&g_xOptions);
-    // XHexViewOptionsWidget::setDefaultValues(&g_xOptions);
-    // XDisasmViewOptionsWidget::setDefaultValues(&g_xOptions);
-    // XOnlineToolsOptionsWidget::setDefaultValues(&g_xOptions);
-    // XInfoDBOptionsWidget::setDefaultValues(&g_xOptions);
+    XScanEngineOptionsWidget::setDefaultValues(&g_xOptions);
+    SearchSignaturesOptionsWidget::setDefaultValues(&g_xOptions);
+    XHexViewOptionsWidget::setDefaultValues(&g_xOptions);
+    XDisasmViewOptionsWidget::setDefaultValues(&g_xOptions);
+    XOnlineToolsOptionsWidget::setDefaultValues(&g_xOptions);
+    XInfoDBOptionsWidget::setDefaultValues(&g_xOptions);
 
     g_xOptions.load();
 
@@ -219,53 +219,69 @@ void GuiMainWindow::processFile(const QString &sFileName)
 
         closeCurrentFile();
 
-        g_pFile = new QFile;
-        // g_pXInfo = new XInfoDB;
+        XFormats::INDATA inData = XFormats::createINDATA(XFormats::getPrefFileType(sFileName, true), sFileName);
 
-        g_pFile->setFileName(sFileName);
+        // g_pFile = new QFile;
+        // // g_pXInfo = new XInfoDB;
 
-        if (!g_pFile->open(QIODevice::ReadWrite)) {
-            if (!g_pFile->open(QIODevice::ReadOnly)) {
-                closeCurrentFile();
-            }
-        }
+        // g_pFile->setFileName(sFileName);
+
+        // if (!g_pFile->open(QIODevice::ReadWrite)) {
+        //     if (!g_pFile->open(QIODevice::ReadOnly)) {
+        //         closeCurrentFile();
+        //     }
+        // }
 
         // if (!g_pFile->open(QIODevice::ReadOnly)) {
         //     closeCurrentFile();
         // }
 
-        if (g_pFile) {
-            XBinary xbinary(g_pFile);
-            if (xbinary.isValid()) {
-                // g_pInfoMenu->setData(g_pXInfo, g_pFile, sFileName + ".db");
-                // g_pInfoMenu->tryToLoad();
+        // if (g_pFile) {
+        //     XFWidgetAdvanced::OPTIONS formatOptions = {};
 
-                // XFW_DEF::OPTIONS formatOptions = {};
+        //     ui->widgetViewer->setData(g_pFile, formatOptions);
 
-                // formatOptions.bIsImage = false;
-                // formatOptions.nImageBase = -1;
-                // formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
-                // // formatOptions.nStartType = SBINARY::TYPE_INFO;
+        //     adjustView();
 
-                // XMainWidget::OPTIONS formatOptions = {};
-                // formatOptions.bIsImage = false;
-                // formatOptions.nImageBase = -1;
-                // formatOptions.bGlobalHexEnable = true;
+        //     setWindowTitle(sFileName);
+        //     ui->stackedWidget->setCurrentIndex(1);
+        //     // XBinary xbinary(g_pFile);
+        //     // if (xbinary.isValid()) {
+        //     //     // g_pInfoMenu->setData(g_pXInfo, g_pFile, sFileName + ".db");
+        //     //     // g_pInfoMenu->tryToLoad();
 
-                // ui->widgetViewer->setData(g_pFile, g_pXInfo, formatOptions);
+        //     //     // XFW_DEF::OPTIONS formatOptions = {};
 
-                // ui->widgetViewer->reload();
+        //     //     // formatOptions.bIsImage = false;
+        //     //     // formatOptions.nImageBase = -1;
+        //     //     // formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
+        //     //     // // formatOptions.nStartType = SBINARY::TYPE_INFO;
 
-                adjustView();
+        //     //     // XMainWidget::OPTIONS formatOptions = {};
+        //     //     // formatOptions.bIsImage = false;
+        //     //     // formatOptions.nImageBase = -1;
+        //     //     // formatOptions.bGlobalHexEnable = true;
 
-                setWindowTitle(sFileName);
-                ui->stackedWidget->setCurrentIndex(1);
-            } else {
-                QMessageBox::critical(this, tr("Error"), tr("It is not a valid file"));
-            }
-        } else {
-            QMessageBox::critical(this, tr("Error"), tr("Cannot open file"));
-        }
+        //     //     // ui->widgetViewer->setData(g_pFile, g_pXInfo, formatOptions);
+
+        //     //     // ui->widgetViewer->reload();
+
+                
+        //     // } else {
+        //     //     QMessageBox::critical(this, tr("Error"), tr("It is not a valid file"));
+        //     // }
+        // } else {
+        //     QMessageBox::critical(this, tr("Error"), tr("Cannot open file"));
+        // }
+
+        XFWidgetAdvanced::OPTIONS formatOptions = {};
+
+        ui->widgetViewer->setData(inData, formatOptions);
+
+        adjustView();
+
+        setWindowTitle(sFileName);
+        ui->stackedWidget->setCurrentIndex(1);
     } else {
         QMessageBox::critical(this, tr("Error"), tr("Cannot open file"));
     }
@@ -281,11 +297,11 @@ void GuiMainWindow::closeCurrentFile()
     //     g_pInfoMenu->reset();
     // }
 
-    if (g_pFile) {
-        g_pFile->close();
-        delete g_pFile;
-        g_pFile = nullptr;
-    }
+    // if (g_pFile) {
+    //     g_pFile->close();
+    //     delete g_pFile;
+    //     g_pFile = nullptr;
+    // }
 
     ui->stackedWidget->setCurrentIndex(0);
     // ui->widgetViewer->cleanup();

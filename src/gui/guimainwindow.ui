@@ -67,7 +67,7 @@
          <number>0</number>
         </property>
         <item>
-         <widget class="XFWidget" name="widgetViewer" native="true"/>
+         <widget class="XFWidgetAdvanced" name="widgetViewer" native="true"/>
         </item>
        </layout>
       </widget>
@@ -88,9 +88,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>XFWidget</class>
+   <class>XFWidgetAdvanced</class>
    <extends>QWidget</extends>
-   <header>xfwidget.h</header>
+   <header>xfwidgetadvanced.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

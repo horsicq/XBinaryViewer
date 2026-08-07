@@ -7,6 +7,13 @@ add_definitions(-DUSE_DEX)
 add_definitions(-DUSE_PDF)
 add_definitions(-DUSE_ARCHIVE)
 
+# Windows <windows.h> defines min()/max() macros that break std::numeric_limits<>::max()
+# used in the shared Formats sources (e.g. xftree_model.cpp). The gui target gets this via
+# cpp_standart_setup.cmake; the console target must define it too.
+if(WIN32)
+    add_definitions(-DNOMINMAX)
+endif()
+
 # XCppfilt/XCapstone/XArchive/XYara/xsimd targets already exist from the
 # add_subdirectory() calls in ../CMakeLists.txt (shared with the gui target).
 include(${CMAKE_CURRENT_LIST_DIR}/../../../_mylibs/Formats/xformats.cmake)

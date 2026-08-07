@@ -93,7 +93,7 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 
     // g_pInfoMenu = new XInfoMenu(&g_xShortcuts, &g_xOptions);
 
-    // ui->widgetViewer->setGlobal(&g_xShortcuts, &g_xOptions);
+    ui->widgetViewer->setGlobal(&g_xShortcuts, &g_xOptions);
 
     connect(&g_xOptions, SIGNAL(openFile(QString)), this, SLOT(processFile(QString)));
 
@@ -200,7 +200,7 @@ void GuiMainWindow::actionAboutSlot()
 
 void GuiMainWindow::adjustView()
 {
-    // ui->widgetViewer->adjustView();
+    ui->widgetViewer->adjustView();
 
     g_xOptions.adjustStayOnTop(this);
     g_xOptions.adjustWidget(this, XOptions::ID_VIEW_FONT_CONTROLS);
@@ -304,7 +304,7 @@ void GuiMainWindow::closeCurrentFile()
     // }
 
     ui->stackedWidget->setCurrentIndex(0);
-    // ui->widgetViewer->cleanup();
+    ui->widgetViewer->clear();
 
     setWindowTitle(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION));
 }

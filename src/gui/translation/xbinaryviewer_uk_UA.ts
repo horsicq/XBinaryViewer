@@ -766,57 +766,6 @@
     </message>
 </context>
 <context>
-    <name>DialogNFDScanDirectory</name>
-    <message>
-        <source>Directory scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Subdirectories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Flags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Open directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>msec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Text documents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save result</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DialogNFDWidgetAdvanced</name>
     <message>
         <source>Close</source>
@@ -905,6 +854,14 @@
     </message>
     <message>
         <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The new size is too large.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1180,28 +1137,64 @@
     </message>
 </context>
 <context>
-    <name>DialogXStruct</name>
+    <name>DialogXScanEngineDirectory</name>
     <message>
-        <source>Structs</source>
+        <source>Directory scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subdirectories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>msec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text documents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save result</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>DialogXStructChooser</name>
+    <name>DialogXScanSort</name>
     <message>
-        <source>Dialog</source>
+        <source>Collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
+        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1323,10 +1316,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>It is not a valid file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cannot open file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1350,41 +1339,6 @@
     </message>
     <message>
         <source>Search values</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>NFDOptionsWidget</name>
-    <message>
-        <source>Scan after open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Recursive scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Deep scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Heuristic scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Verbose</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All types</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Format result</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Highlight</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1436,33 +1390,6 @@
     </message>
     <message>
         <source>Value</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>NFD_Widget</name>
-    <message>
-        <source>Info</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Flags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>msec</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1645,7 +1572,263 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>File format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Operation system</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header bytes text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry point bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry point signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry point signature relative</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay bytes text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE TimeDateStamp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE MajorLinkerVersion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE MinorLinkerVersion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE NumberOfSections</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE first section name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE first section size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE first section entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE second section name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE second section size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE second section entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE third section name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE third section size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE third section entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE next-to-last section name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE next-to-last section size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE next-to-last section entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE last section name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE last section size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE last section entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE first import name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE first import NumberOfFunctions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE second import name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE second import NumberOfFunctions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE third import name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE third import NumberOfFunctions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE next-to-last import name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE next-to-last import NumberOfFunctions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE last import name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE last import NumberOfFunctions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE import hash 32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE import hash 64</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE resource</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE exception</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE security</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE base reloc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE debug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE architecture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE global ptr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE TLS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE load config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE bound import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE IAT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE delay import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PE COM descriptor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NFD linker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NFD compiler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NFD wrapper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DiE linker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DiE compiler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DiE wrapper</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1837,7 +2020,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Info</source>
+        <source>Command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1861,6 +2044,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Offset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1878,10 +2065,6 @@
     </message>
     <message>
         <source>Address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ASCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1906,6 +2089,34 @@
     </message>
     <message>
         <source>Method</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ansi string</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unicode string</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Function</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ordinal</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2055,27 +2266,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Searching...</source>
+        <source>Searching</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 strings found</source>
+        <source>strings found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sorting...</source>
+        <source>Sorting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 strings found (%2 ms)</source>
+        <source>msec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 / %2 strings (%3 ms)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 / %2 strings</source>
+        <source>strings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2164,6 +2371,17 @@
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XASAR</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2270,6 +2488,18 @@
         <source>extender</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Cannot create CRC verification buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot clear unpacked output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write unpacked output</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XAtariST</name>
@@ -2283,10 +2513,6 @@
     </message>
     <message>
         <source>Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>BSS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2375,6 +2601,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Unrepresentable result size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Regions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2404,6 +2634,30 @@
     </message>
     <message>
         <source>Invalid signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRC check requires a readable output device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid CRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write unpacked output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create temporary file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRC check failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2439,11 +2693,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Default</source>
+        <source>Custom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>ARM</source>
+        <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2526,6 +2780,17 @@
     </message>
 </context>
 <context>
+    <name>XCLIAssembly</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XCOM</name>
     <message>
         <source>Unknown</source>
@@ -2538,6 +2803,10 @@
 </context>
 <context>
     <name>XCPIO</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
@@ -2637,7 +2906,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Segment %1</source>
+        <source>Segment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2657,6 +2926,10 @@
     </message>
     <message>
         <source>Invalid size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Seek error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2705,6 +2978,14 @@
 </context>
 <context>
     <name>XDecompress</name>
+    <message>
+        <source>CRC check requires a readable output device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot seek output for CRC check</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>Invalid CRC</source>
         <translation type="unfinished"></translation>
@@ -2773,7 +3054,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Elapsed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Advanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remaining:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3048,6 +3337,82 @@
     </message>
 </context>
 <context>
+    <name>XFFlagsDialog</name>
+    <message>
+        <source>Edit Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFListDialog</name>
+    <message>
+        <source>Select Value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFModel</name>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFModel_table</name>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XFREEARC</name>
     <message>
         <source>Header</source>
@@ -3055,6 +3420,260 @@
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFSizeDialog</name>
+    <message>
+        <source>Edit Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFStringDialog</name>
+    <message>
+        <source>Edit String</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFTableView</name>
+    <message>
+        <source>Reset filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorting/filtering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot save file: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFTreeModel</name>
+    <message>
+        <source>Visualization</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disasm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nauz File Detector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signatures</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Memory map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extractor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Symbols</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resources</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFValueDialog</name>
+    <message>
+        <source>Edit Value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFWidget</name>
+    <message>
+        <source>Show Offsets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Presentation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFWidgetAdvanced</name>
+    <message>
+        <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFWidget_Strings</name>
+    <message>
+        <source>Min length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Max length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Searching</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>strings found</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFWidget_Table</name>
+    <message>
+        <source>Show Offsets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Presentation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Symbols</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resources</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFileInfoValues</name>
+    <message>
+        <source>File info values</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3116,92 +3735,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Path traversal detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Cannot decompress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cannot create</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>XGenericArchiveWidget</name>
-    <message>
-        <source>Archive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Compressed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Method</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>XGenericHeaderWidget</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Offset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Value</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Comment</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>XGenericTableWidget</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3272,6 +3814,21 @@
     </message>
     <message>
         <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XHandler</name>
+    <message>
+        <source>Cannot remove file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot copy file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot move file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3477,6 +4034,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Info database update URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Open directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3507,8 +4072,19 @@
         <source>All files</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="XBinary::getDeviceDirectory(m_pXInfoDB->getDevice());">
+    <message>
         <source>Open file</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XInnoSetup</name>
+    <message>
+        <source>CRC check requires a readable output device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid CRC</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3578,6 +4154,17 @@
     </message>
 </context>
 <context>
+    <name>XKWAJ</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compressed Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XLE</name>
     <message>
         <source>Unknown</source>
@@ -3589,6 +4176,10 @@
     </message>
     <message>
         <source>Object</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3604,6 +4195,36 @@
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XLZ4</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XLZMA</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3656,6 +4277,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Concatenated members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Stream</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3665,6 +4290,14 @@
     </message>
     <message>
         <source>Footer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot initialize CRC check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRC check failed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3730,10 +4363,6 @@
 </context>
 <context>
     <name>XMP4</name>
-    <message>
-        <source>Boxes</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Header</source>
         <translation type="unfinished"></translation>
@@ -3869,33 +4498,6 @@
     </message>
 </context>
 <context>
-    <name>XModel_Binary</name>
-    <message>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Offset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Value</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Comment</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>XModel_Extractor</name>
     <message>
         <source>Offset</source>
@@ -3970,7 +4572,7 @@
     </message>
 </context>
 <context>
-    <name>XModel_XSymbol</name>
+    <name>XModel_XInfoDBSymbol</name>
     <message>
         <source>Offset</source>
         <translation type="unfinished"></translation>
@@ -4285,7 +4887,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Color palette (PAL)</source>
+        <source>Color palette</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4407,9 +5009,32 @@
     </message>
 </context>
 <context>
+    <name>XRPM</name>
+    <message>
+        <source>Lead</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Payload</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XRar</name>
     <message>
         <source>Signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4477,10 +5102,6 @@
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Chunks</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>XSEAARC</name>
@@ -4495,10 +5116,6 @@
 </context>
 <context>
     <name>XSZDD</name>
-    <message>
-        <source>SZDD Header</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Header</source>
         <translation type="unfinished"></translation>
@@ -4515,6 +5132,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Offset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4524,6 +5145,46 @@
     </message>
     <message>
         <source>Last error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Architecture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MD5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original file name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original file base name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original file extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4540,6 +5201,10 @@
     </message>
     <message>
         <source>Archive scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>First Wrapper Only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4572,22 +5237,6 @@
     </message>
     <message>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Device scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Memory scan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Directory scan</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4671,6 +5320,10 @@
     </message>
     <message>
         <source>Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4834,10 +5487,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>SFX</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>SFX data</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4871,6 +5520,96 @@
     </message>
 </context>
 <context>
+    <name>XScanEngineProcess</name>
+    <message>
+        <source>File scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Device scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Memory scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XScanEngineWidget</name>
+    <message>
+        <source>Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Collection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signatures</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Endianness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Architecture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scan directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elapsed time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot load database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>msec</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XScanSortWidget</name>
     <message>
         <source>Form</source>
@@ -4878,6 +5617,42 @@
     </message>
     <message>
         <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Subdirectories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read buffer size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File buffer size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Main</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4893,6 +5668,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Result</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4905,7 +5684,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Remove source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move to first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4913,23 +5704,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save Result</source>
+        <source>Please select a directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>All Files (*.*);;JSON (*.json);;XML (*.xml);;CSV (*.csv);;TSV (*.tsv)</source>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resume scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Continue from this file?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>XSearchProcess</name>
     <message>
-        <source>Please select a directory.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Directory does not exist.</source>
+        <source>Search strings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4948,11 +5758,219 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Unexpected end of 7z header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Invalid data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Invalid additional 7z metadata streams</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z archive property</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z pack position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z pack-stream count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z folder count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid or excessive 7z coder count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z coder flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid, excessive, or unsupported 7z coder stream count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z folder stream count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z coder output count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z coder bond</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z packed-stream topology</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z implicit packed stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z packed-stream index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External 7z folder streams are not supported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z substream count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid or excessive 7z stream size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z packed-data range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid or excessive 7z coder output size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z file count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Unexpected end of data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z file property ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Truncated 7z file property</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z file property size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z file property</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>7z file-name count does not match FilesInfo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z empty-stream bitmap size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z empty-file bitmap size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z file-name property size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unterminated 7z file name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid UTF-16 in 7z file name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z file-name data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External 7z file-name streams are not supported</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z file-name external flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inconsistent 7z header counts or packed-data range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z empty-stream bitmap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>7z parsing canceled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z empty-file bitmap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z per-folder substream count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z folder topology</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported 7z coder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported 7z coder chain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z coder unpack-size count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z folder substream count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Excessive 7z data-file count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Missing 7z substream size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z substream sizes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z pack-stream allocation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inconsistent 7z file, folder, or stream counts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z packed-data offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z packed-data stream range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid or canceled 7z file map</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5243,10 +6261,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CPU</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Log</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5426,37 +6440,6 @@
     </message>
 </context>
 <context>
-    <name>XStructWidget</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hex</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sync</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Readonly</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Next visited</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Previous visited</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>XSymbolsWidget</name>
     <message>
         <source>Form</source>
@@ -5497,16 +6480,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Header + Table Directory</source>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>XText</name>
-    <message>
-        <source>BOM</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Text content</source>
         <translation type="unfinished"></translation>
@@ -5545,6 +6528,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5559,8 +6546,11 @@
         <source>Data</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>XVirusTotal</name>
     <message>
-        <source>Overlay</source>
+        <source>Invalid upload URL</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5734,6 +6724,52 @@
     </message>
 </context>
 <context>
+    <name>XWIM</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset Table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>XML Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Boot Metadata</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Integrity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compressed</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XXAR</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TOC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Heap</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XXM</name>
     <message>
         <source>Header</source>
@@ -5762,7 +6798,50 @@
 <context>
     <name>XYara</name>
     <message>
+        <source>Invalid YARA compiler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot open rules file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create YARA compiler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No YARA rules were loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>YARA rules path not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot build YARA rules</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot open scan target</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>YARA scan failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XZOO</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5793,6 +6872,18 @@
     </message>
     <message>
         <source>Adler32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot initialize CRC check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRC check failed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

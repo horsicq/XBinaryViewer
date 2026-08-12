@@ -17,12 +17,12 @@ include(../../dep/build_tools/cmake/init_translation.cmake)
 endif()
 
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/FormatWidgets/XFWidgets/xfwidgets.cmake)
+# XDemangleWidget and XVirusTotalWidget now come in via xfwidgets.cmake
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XOptions/xoptionswidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XAboutWidget/xaboutwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XStyles/xstyles.cmake)
 # Options widgets shown in DialogOptions (Hex/Disasm/Signatures come in via xfwidgets already)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XScanEngine/xscanwidgets.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XOnlineTools/xvirustotalwidget.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XInfoDB/dialogxinfodbtransferprocess.cmake)
 
 set(PROJECT_SOURCES
@@ -31,7 +31,6 @@ set(PROJECT_SOURCES
         ${XABOUTWIDGET_SOURCES}
         ${XSTYLES_SOURCES}
         ${XSCANWIDGETS_SOURCES}
-        ${XVIRUSTOTALWIDGET_SOURCES}
         ${DIALOGXINFODBTRANSFERPROCESS_SOURCES}
         dialogabout.cpp
         dialogabout.h

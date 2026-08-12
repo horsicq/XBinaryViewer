@@ -1319,6 +1319,22 @@
         <source>Cannot open file</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Copy file path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drag &amp; drop a file here or use File -&gt; Open</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HashProcess</name>
@@ -2117,6 +2133,170 @@
     </message>
     <message>
         <source>Ordinal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Demangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accessed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Solid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Solid block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRC type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Window size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream unpacked size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Substream offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Opt header offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Opt header size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UUID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra field offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra field length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comment offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comment length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resource ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File MD5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read-only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Archive attribute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Has comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compress properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2925,15 +3105,34 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Seek error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot resize</source>
+        <source>Read error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown method</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XDataConvertorDecompress</name>
+    <message>
+        <source>Cannot decompress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2973,6 +3172,22 @@
     </message>
     <message>
         <source>Output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reverse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Decompress</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3177,6 +3392,14 @@
     </message>
     <message>
         <source>Flags register</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debugger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current instruction pointer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3507,10 +3730,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nauz File Detector</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Hash</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3556,6 +3775,18 @@
     </message>
     <message>
         <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Demangle</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3609,6 +3840,10 @@
     <name>XFWidgetAdvanced</name>
     <message>
         <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File type</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3667,6 +3902,117 @@
     </message>
     <message>
         <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Demangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raw</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFWidget_Tools</name>
+    <message>
+        <source>File size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New size (bytes)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add / Replace...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dump...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append data from file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>present</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot open file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot save file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the file may be partially modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3909,6 +4255,34 @@
     </message>
     <message>
         <source>Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>click to change</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entropy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte density</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zeros</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4328,6 +4702,14 @@
     <name>XMACH</name>
     <message>
         <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Symbol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4892,6 +5274,74 @@
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encrypted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>empty user password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>owner password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>user password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Decrypted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Metadata</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>encrypted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>JavaScript</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>JavaScript payload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>JavaScript API</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Linearized</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>declared</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>actual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Suspicious</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Embedded file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

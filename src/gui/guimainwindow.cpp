@@ -20,6 +20,15 @@
  */
 #include "guimainwindow.h"
 
+#include <QAction>
+#include <QApplication>
+#include <QClipboard>
+#include <QDir>
+#include <QFileInfo>
+#include <QMenu>
+#include <QMessageBox>
+#include <QUrl>
+
 #include "ui_guimainwindow.h"
 
 GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui::GuiMainWindow)
@@ -34,6 +43,14 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 
     // g_pFile = nullptr;
     // g_pXInfo = nullptr;
+
+    g_pActionOpen = nullptr;
+    g_pActionClose = nullptr;
+    g_pActionExit = nullptr;
+    g_pActionCopyPath = nullptr;
+    g_bSplitterRestored = false;
+
+    ui->labelStartHint->setText(tr("Drag & drop a file here or use File -> Open"));
 
     ui->stackedWidget->setCurrentIndex(0);
 
@@ -51,10 +68,11 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_xOptions.addID(XOptions::ID_VIEW_FONT_TREEVIEWS, XOptions::getDefaultFont().toString());
     g_xOptions.addID(XOptions::ID_VIEW_FONT_TEXTEDITS, XOptions::getMonoFont().toString());
     g_xOptions.addID(XOptions::ID_VIEW_STAYONTOP, false);
-    g_xOptions.addID(XOptions::ID_VIEW_SHOWLOGO, false);
+    g_xOptions.addID(XOptions::ID_VIEW_SHOWLOGO, true);
     g_xOptions.addID(XOptions::ID_FILE_SAVELASTDIRECTORY, true);
     g_xOptions.addID(XOptions::ID_FILE_SAVEBACKUP, true);
     g_xOptions.addID(XOptions::ID_FILE_SAVERECENTFILES, true);
+    g_xOptions.addID(XOptions::ID_VIEW_SIZES, "");
 
     g_xOptions.addID(XOptions::ID_FEATURE_READBUFFERSIZE, 8 * 1024);
     g_xOptions.addID(XOptions::ID_FEATURE_FILEBUFFERSIZE, 2 * 1024 * 1024);
@@ -89,6 +107,10 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_xShortcuts.addGroup(XShortcuts::GROUPID_DISASM);
     g_xShortcuts.addGroup(XShortcuts::GROUPID_TABLE);
 
+    g_xShortcuts.addId(X_ID_FILE_OPEN);
+    g_xShortcuts.addId(X_ID_FILE_CLOSE);
+    g_xShortcuts.addId(X_ID_FILE_EXIT);
+
     g_xShortcuts.load();
 
     // g_pInfoMenu = new XInfoMenu(&g_xShortcuts, &g_xOptions);
@@ -96,10 +118,31 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     ui->widgetViewer->setGlobal(&g_xShortcuts, &g_xOptions);
 
     connect(&g_xOptions, SIGNAL(openFile(QString)), this, SLOT(processFile(QString)));
+    connect(&g_xOptions, SIGNAL(errorMessage(QString)), this, SLOT(errorMessageSlot(QString)));
+    connect(ui->widgetViewer, SIGNAL(headerSelected(XBinary::XFHEADER)), this, SLOT(onViewerHeaderSelected(XBinary::XFHEADER)));
 
     createMenus();
+    updateShortcuts();
+
+    g_pLabelFile = new QLabel(this);
+    g_pLabelStructure = new QLabel(this);
+    g_pLabelSize = new QLabel(this);
+    g_pLabelType = new QLabel(this);
+
+    ui->statusbar->addWidget(g_pLabelFile, 1);
+    ui->statusbar->addPermanentWidget(g_pLabelStructure);
+    ui->statusbar->addPermanentWidget(g_pLabelSize);
+    ui->statusbar->addPermanentWidget(g_pLabelType);
 
     adjustView();
+
+    {
+        QByteArray baGeometry = g_xOptions.getSizeRecord("MainWindow");
+
+        if (!baGeometry.isEmpty()) {
+            restoreGeometry(baGeometry);
+        }
+    }
 
     if (QCoreApplication::arguments().count() > 1) {
         QString sFileName = QCoreApplication::arguments().at(1);
@@ -134,31 +177,71 @@ void GuiMainWindow::createMenus()
     ui->menubar->addAction(pMenuTools->menuAction());
     ui->menubar->addAction(pMenuHelp->menuAction());
 
-    QAction *pActionOpen = new QAction(tr("Open"), this);
-    QAction *pActionClose = new QAction(tr("Close"), this);
-    QAction *pActionExit = new QAction(tr("Exit"), this);
+    g_pActionOpen = new QAction(tr("Open"), this);
+    g_pActionClose = new QAction(tr("Close"), this);
+    g_pActionExit = new QAction(tr("Exit"), this);
+    g_pActionCopyPath = new QAction(tr("Copy file path"), this);
+    g_pActionCopyPath->setEnabled(false);
     QAction *pActionOptions = new QAction(tr("Options"), this);
     QAction *pActionAbout = new QAction(tr("About"), this);
     QAction *pActionShortcuts = new QAction(tr("Shortcuts"), this);
     QAction *pActionDemangle = new QAction(tr("Demangle"), this);
 
-    pMenuFile->addAction(pActionOpen);
+    pMenuFile->addAction(g_pActionOpen);
     pMenuFile->addMenu(g_xOptions.createRecentFilesMenu(this));
     // pMenuFile->addMenu(g_pInfoMenu->createMenu(this));
-    pMenuFile->addAction(pActionClose);
-    pMenuFile->addAction(pActionExit);
+    pMenuFile->addAction(g_pActionCopyPath);
+    pMenuFile->addAction(g_pActionClose);
+    pMenuFile->addAction(g_pActionExit);
     pMenuTools->addAction(pActionDemangle);
     pMenuTools->addAction(pActionShortcuts);
     pMenuTools->addAction(pActionOptions);
     pMenuHelp->addAction(pActionAbout);
 
-    connect(pActionOpen, SIGNAL(triggered()), this, SLOT(actionOpenSlot()));
-    connect(pActionClose, SIGNAL(triggered()), this, SLOT(actionCloseSlot()));
-    connect(pActionExit, SIGNAL(triggered()), this, SLOT(actionExitSlot()));
+    connect(g_pActionOpen, SIGNAL(triggered()), this, SLOT(actionOpenSlot()));
+    connect(g_pActionClose, SIGNAL(triggered()), this, SLOT(actionCloseSlot()));
+    connect(g_pActionExit, SIGNAL(triggered()), this, SLOT(actionExitSlot()));
+    connect(g_pActionCopyPath, SIGNAL(triggered()), this, SLOT(actionCopyPathSlot()));
     connect(pActionOptions, SIGNAL(triggered()), this, SLOT(actionOptionsSlot()));
     connect(pActionAbout, SIGNAL(triggered()), this, SLOT(actionAboutSlot()));
     connect(pActionShortcuts, SIGNAL(triggered()), this, SLOT(actionShortcutsSlot()));
     connect(pActionDemangle, SIGNAL(triggered()), this, SLOT(actionDemangleSlot()));
+}
+
+void GuiMainWindow::updateShortcuts()
+{
+    g_pActionOpen->setShortcut(g_xShortcuts.getShortcut(X_ID_FILE_OPEN));
+    g_pActionClose->setShortcut(g_xShortcuts.getShortcut(X_ID_FILE_CLOSE));
+    g_pActionExit->setShortcut(g_xShortcuts.getShortcut(X_ID_FILE_EXIT));
+}
+
+void GuiMainWindow::actionCopyPathSlot()
+{
+    if (!g_sCurrentFilePath.isEmpty()) {
+        QApplication::clipboard()->setText(QDir::toNativeSeparators(g_sCurrentFilePath));
+    }
+}
+
+void GuiMainWindow::onViewerHeaderSelected(const XBinary::XFHEADER &xfHeader)
+{
+    // Command nodes (Hex, Strings, Entropy...) are tools, not file structures - no offset to show
+    if (xfHeader.xfType == XBinary::XFTYPE_COMMAND) {
+        g_pLabelStructure->clear();
+        return;
+    }
+
+    QString sText = tr("Offset") + QString(": 0x%1").arg(QString::number(xfHeader.xLoc.nLocation, 16));
+
+    if (xfHeader.nSize > 0) {
+        sText += QString(" ") + tr("Size") + QString(": 0x%1").arg(QString::number(xfHeader.nSize, 16));
+    }
+
+    g_pLabelStructure->setText(sText);
+}
+
+void GuiMainWindow::errorMessageSlot(const QString &sText)
+{
+    QMessageBox::critical(this, tr("Error"), sText);
 }
 
 void GuiMainWindow::actionOpenSlot()
@@ -280,10 +363,24 @@ void GuiMainWindow::processFile(const QString &sFileName)
 
         adjustView();
 
-        setWindowTitle(sFileName);
+        g_sCurrentFilePath = sFileName;
+        g_pActionCopyPath->setEnabled(true);
+
+        setWindowTitle(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION) + QString(" - ") + QDir::toNativeSeparators(sFileName));
+        setWindowFilePath(sFileName);
+
+        g_pLabelFile->setText(QDir::toNativeSeparators(sFileName));
+        g_pLabelSize->setText(XBinary::bytesCountToString(QFileInfo(sFileName).size()));
+        g_pLabelType->setText(XBinary::fileTypeIdToString(inData.fileType));
+
         ui->stackedWidget->setCurrentIndex(1);
+
+        if (!g_bSplitterRestored) {
+            ui->widgetViewer->restoreSplitterState(g_xOptions.getSizeRecord("Splitter"));
+            g_bSplitterRestored = true;
+        }
     } else {
-        QMessageBox::critical(this, tr("Error"), tr("Cannot open file"));
+        QMessageBox::critical(this, tr("Error"), tr("Cannot open file") + QString(": %1").arg(QDir::toNativeSeparators(sFileName)));
     }
 }
 
@@ -306,17 +403,65 @@ void GuiMainWindow::closeCurrentFile()
     ui->stackedWidget->setCurrentIndex(0);
     ui->widgetViewer->clear();
 
+    g_sCurrentFilePath = "";
+
+    if (g_pActionCopyPath) {
+        g_pActionCopyPath->setEnabled(false);
+    }
+
+    if (g_pLabelFile) {
+        g_pLabelFile->clear();
+        g_pLabelSize->clear();
+        g_pLabelType->clear();
+        g_pLabelStructure->clear();
+    }
+
+    setWindowFilePath("");
     setWindowTitle(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION));
+}
+
+void GuiMainWindow::closeEvent(QCloseEvent *pEvent)
+{
+    // All window/widget sizes go through XOptions (serialized into ID_VIEW_SIZES),
+    // so they honor the same native-vs-portable storage as every other option.
+    g_xOptions.setSizeRecord("MainWindow", saveGeometry());
+
+    // Only persist the splitter if a file was actually shown this session;
+    // otherwise the never-laid-out default sizes would clobber the saved state.
+    if (g_bSplitterRestored) {
+        g_xOptions.setSizeRecord("Splitter", ui->widgetViewer->saveSplitterState());
+    }
+
+    QMainWindow::closeEvent(pEvent);
+}
+
+static bool _isLocalFileDrag(const QMimeData *pMimeData)
+{
+    bool bResult = false;
+
+    if (pMimeData->hasUrls()) {
+        QList<QUrl> urlList = pMimeData->urls();
+
+        if (urlList.count() && urlList.at(0).isLocalFile()) {
+            bResult = true;
+        }
+    }
+
+    return bResult;
 }
 
 void GuiMainWindow::dragEnterEvent(QDragEnterEvent *pEvent)
 {
-    pEvent->acceptProposedAction();
+    if (_isLocalFileDrag(pEvent->mimeData())) {
+        pEvent->acceptProposedAction();
+    }
 }
 
 void GuiMainWindow::dragMoveEvent(QDragMoveEvent *pEvent)
 {
-    pEvent->acceptProposedAction();
+    if (_isLocalFileDrag(pEvent->mimeData())) {
+        pEvent->acceptProposedAction();
+    }
 }
 
 void GuiMainWindow::dropEvent(QDropEvent *pEvent)
@@ -329,9 +474,13 @@ void GuiMainWindow::dropEvent(QDropEvent *pEvent)
         if (urlList.count()) {
             QString sFileName = urlList.at(0).toLocalFile();
 
-            sFileName = XBinary::convertFileName(sFileName);
+            if (!sFileName.isEmpty()) {
+                sFileName = XBinary::convertFileName(sFileName);
 
-            processFile(sFileName);
+                pEvent->acceptProposedAction();
+
+                processFile(sFileName);
+            }
         }
     }
 }
@@ -345,12 +494,13 @@ void GuiMainWindow::actionShortcutsSlot()
     dialogShortcuts.exec();
 
     adjustView();
+    updateShortcuts();
 }
 
 void GuiMainWindow::actionDemangleSlot()
 {
-    // DialogDemangle dialogDemangle(this);
-    // dialogDemangle.setGlobal(&g_xShortcuts, &g_xOptions);
+    DialogDemangle dialogDemangle(this);
+    dialogDemangle.setGlobal(&g_xShortcuts, &g_xOptions);
 
-    // dialogDemangle.exec();
+    dialogDemangle.exec();
 }

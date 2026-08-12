@@ -21,14 +21,17 @@
 #ifndef GUIMAINWINDOW_H
 #define GUIMAINWINDOW_H
 
+#include <QCloseEvent>
 #include <QDragEnterEvent>
 #include <QFileDialog>
+#include <QLabel>
 #include <QMainWindow>
 #include <QMimeData>
 
 #include "../global.h"
 // #include "xmainwidget.h"
 #include "dialogabout.h"
+#include "dialogdemangle.h"
 #include "dialogoptions.h"
 #include "dialogshortcuts.h"
 // #include "xinfomenu.h"
@@ -47,9 +50,11 @@ public:
 
 private slots:
     void createMenus();
+    void updateShortcuts();
     void actionOpenSlot();
     void actionCloseSlot();
     void actionExitSlot();
+    void actionCopyPathSlot();
     void actionDemangleSlot();
     void actionShortcutsSlot();
     void actionOptionsSlot();
@@ -57,8 +62,11 @@ private slots:
     void adjustView();
     void processFile(const QString &sFileName);
     void closeCurrentFile();
+    void onViewerHeaderSelected(const XBinary::XFHEADER &xfHeader);
+    void errorMessageSlot(const QString &sText);
 
 protected:
+    void closeEvent(QCloseEvent *pEvent) override;
     void dragEnterEvent(QDragEnterEvent *pEvent) override;
     void dragMoveEvent(QDragMoveEvent *pEvent) override;
     void dropEvent(QDropEvent *pEvent) override;
@@ -68,6 +76,16 @@ private:
     // XInfoMenu *g_pInfoMenu;
     XOptions g_xOptions;
     XShortcuts g_xShortcuts;
+    QAction *g_pActionOpen;
+    QAction *g_pActionClose;
+    QAction *g_pActionExit;
+    QAction *g_pActionCopyPath;
+    QLabel *g_pLabelFile;
+    QLabel *g_pLabelSize;
+    QLabel *g_pLabelType;
+    QLabel *g_pLabelStructure;
+    QString g_sCurrentFilePath;
+    bool g_bSplitterRestored;
 
     // XInfoDB *g_pXInfo;
 };

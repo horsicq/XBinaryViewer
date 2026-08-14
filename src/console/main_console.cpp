@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
         return printError(QString("File not found: %1").arg(sFileName));
     }
 
-    XBinary::FT fileType = XFormats::getPrefFileType(sFileName, true);
+    XBinary::FT fileType = XFormats::getPrefFileType(sFileName, XBinary::FT_FLAG_FORMATS);
 
     XFormats::INDATA inData = XFormats::createINDATA(fileType, sFileName);
 

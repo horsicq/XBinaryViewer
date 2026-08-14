@@ -27,6 +27,7 @@
 #include <QLabel>
 #include <QMainWindow>
 #include <QMimeData>
+#include <QToolBar>
 
 #include "../global.h"
 // #include "xmainwidget.h"
@@ -80,6 +81,7 @@ private:
     QAction *g_pActionClose;
     QAction *g_pActionExit;
     QAction *g_pActionCopyPath;
+    QToolBar *g_pMainToolBar;
     QLabel *g_pLabelFile;
     QLabel *g_pLabelSize;
     QLabel *g_pLabelType;

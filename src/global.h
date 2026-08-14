@@ -25,7 +25,7 @@
 
 #define X_APPLICATIONDISPLAYNAME "XBinaryViewer"
 #define X_APPLICATIONNAME "xbinaryviewer"
-#define X_APPLICATIONVERSION "0.01"
+#define X_APPLICATIONVERSION "0.1.0"
 #define X_ORGANIZATIONNAME "NTInfo"
 #define X_ORGANIZATIONDOMAIN "ntinfo.biz"
 #define X_OPTIONSFILE "xbinaryviewer.ini"

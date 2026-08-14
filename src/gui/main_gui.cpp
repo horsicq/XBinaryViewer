@@ -19,15 +19,55 @@
  * SOFTWARE.
  */
 #include <QApplication>
+#include <QFile>
+#include <QIcon>
+#include <QPalette>
 #include <QStyleFactory>
 
 #include "guimainwindow.h"
+
+static void applyDefaultTheme()
+{
+    QPalette palette;
+
+    palette.setColor(QPalette::Window, QColor("#f4f7fb"));
+    palette.setColor(QPalette::WindowText, QColor("#1f2937"));
+    palette.setColor(QPalette::Base, QColor("#ffffff"));
+    palette.setColor(QPalette::AlternateBase, QColor("#f8fafc"));
+    palette.setColor(QPalette::ToolTipBase, QColor("#172033"));
+    palette.setColor(QPalette::ToolTipText, QColor("#ffffff"));
+    palette.setColor(QPalette::Text, QColor("#1f2937"));
+    palette.setColor(QPalette::Button, QColor("#ffffff"));
+    palette.setColor(QPalette::ButtonText, QColor("#1f2937"));
+    palette.setColor(QPalette::BrightText, QColor("#b42318"));
+    palette.setColor(QPalette::Link, QColor("#245fca"));
+    palette.setColor(QPalette::LinkVisited, QColor("#6941c6"));
+    palette.setColor(QPalette::Highlight, QColor("#2f6feb"));
+    palette.setColor(QPalette::HighlightedText, QColor("#ffffff"));
+    palette.setColor(QPalette::Light, QColor("#ffffff"));
+    palette.setColor(QPalette::Midlight, QColor("#edf1f7"));
+    palette.setColor(QPalette::Mid, QColor("#cbd5e1"));
+    palette.setColor(QPalette::Dark, QColor("#64748b"));
+    palette.setColor(QPalette::Shadow, QColor("#0f172a"));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+    palette.setColor(QPalette::PlaceholderText, QColor("#718096"));
+#endif
+
+    qApp->setPalette(palette);
+
+    QFile styleSheetFile(QStringLiteral(":/styles/modern.qss"));
+
+    if (styleSheetFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qApp->setStyleSheet(QString::fromUtf8(styleSheetFile.readAll()));
+    }
+}
 
 int main(int argc, char *argv[])
 {
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
 #endif
 #ifdef Q_OS_MAC
@@ -52,7 +92,7 @@ int main(int argc, char *argv[])
 #endif
 
     QApplication a(argc, argv);
-    // TODO set main image
+    a.setWindowIcon(QIcon(QStringLiteral(":/images/app-icon.png")));
 
     XOptions xOptions;
 
@@ -65,6 +105,13 @@ int main(int argc, char *argv[])
     xOptions.load();
 
     XOptions::adjustApplicationView(X_APPLICATIONNAME, &xOptions);
+
+    // Keep explicit user themes untouched. The bundled default provides a
+    // polished, complete baseline even in a portable/debug build where the
+    // optional external QSS database is not installed.
+    if (xOptions.getValue(XOptions::ID_VIEW_QSS).toString().isEmpty()) {
+        applyDefaultTheme();
+    }
 
     GuiMainWindow w;
     w.show();

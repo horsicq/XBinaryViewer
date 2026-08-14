@@ -20,60 +20,61 @@
  */
 #include "dialogabout.h"
 
+#include <QPixmap>
+
 #include "ui_dialogabout.h"
 
 DialogAbout::DialogAbout(QWidget *pParent) : XShortcutsDialog(pParent), ui(new Ui::DialogAbout)
 {
     ui->setupUi(this);
 
-    setWindowFlags(Qt::Window);
+    setWindowTitle(tr("About %1").arg(X_APPLICATIONDISPLAYNAME));
+    setWindowModality(Qt::WindowModal);
 
-    ui->labelVersion->setText(QString("<span style=\" font-weight:600;\">%1</span>").arg(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION)));
+    QPixmap logoPixmap(QStringLiteral(":/images/about.png"));
+    ui->labelLogo->setPixmap(logoPixmap.scaled(QSize(210, 228), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->labelLogo->setAccessibleName(tr("XBinaryViewer logo"));
 
-    ui->labelBugreports->setText(
-        QString("<html><head/><body><p><span style=\" font-weight:600;\">%1</span>: <a href=\"mailto:horsicq@gmail.com\"><span style=\" text-decoration: "
-                "underline; color:#ff0000;\">horsicq@gmail.com</span></a></p></body></html>")
-            .arg(tr("Bugreports")));
-    ui->labelWebsite->setText(
-        QString("<html><head/><body><p><span style=\" font-weight:600;\">%1</span>: <a href=\"http://ntinfo.biz\"><span style=\" text-decoration: underline; "
-                "color:#ff0000;\">http://ntinfo.biz</span></a></p></body></html>")
-            .arg(tr("Website")));
-    ui->labelDonate->setText(QString("<html><head/><body><p><span style=\" font-weight:600;\">%1(Paypal): </span><a href=\"mailto:ntinfo.re@gmail.com\"><span style=\" "
-                                     "text-decoration: underline; color:#ff0000;\">ntinfo.re@gmail.com</span></a></p></body></html>")
-                                 .arg(tr("Donate")));
+    ui->labelVersion->setText(QString("<span style=\"font-size:18px; font-weight:600;\">%1</span>").arg(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION)));
+    ui->labelCopyright->setText(tr("Copyright (C) 2019-2026 hors"));
+
+    ui->labelBugreports->setText(QString("<b>%1:</b> <a href=\"mailto:horsicq@gmail.com\">horsicq@gmail.com</a>").arg(tr("Bug reports")));
+    ui->labelWebsite->setText(QString("<b>%1:</b> <a href=\"https://ntinfo.biz\">ntinfo.biz</a>").arg(tr("Website")));
+    ui->labelDonate->setText(QString("<b>%1 (PayPal):</b> <a href=\"mailto:ntinfo.re@gmail.com\">ntinfo.re@gmail.com</a>").arg(tr("Donate")));
     ui->labelSourceCode->setText(
-        QString("<html><head/><body><p><span style=\" font-weight:600;\">%1: </span><a href=\"https://github.com/horsicq/XELFViewer\"><span style=\" "
-                "text-decoration: underline; color:#ff0000;\">https://github.com/horsicq/XELFViewer</span></a></p></body></html>")
-            .arg(tr("Source code")));
+        QString("<b>%1:</b> <a href=\"https://github.com/horsicq/XBinaryViewer\">github.com/horsicq/XBinaryViewer</a>").arg(tr("Source code")));
     ui->labelThanks->setText(
         QString("<html><head/><body>"
                 "<p align=\"center\"><span style=\" font-weight:600;\">%1:</span></p>"
                 "<p align=\"center\">"
-                "<a href=\"https://www.mentebinaria.com.br/\"><span style=\" text-decoration: underline; color:#ff0000; \">Fernando Mercês</span></a>, "
-                "<a href=\"http://sandsprite.com/\"><span style=\" text-decoration: underline; color:#ff0000;\">David Zimmer</span></a>, "
-                "<a href=\"https://github.com/miso-xyz\"><span style=\" text-decoration: underline; color:#ff0000;\">misonothx</span></a>, "
+                "<a href=\"https://www.mentebinaria.com.br/\">Fernando Mercês</a>, "
+                "<a href=\"https://sandsprite.com/\">David Zimmer</a>, "
+                "<a href=\"https://github.com/miso-xyz\">misonothx</a>, "
                 "</p>"
                 "<p align=\"center\">"
-                "<a href=\"https://twitter.com/frenchyeti\"><span style=\" text-decoration: underline; color:#ff0000;\">FrenchYeti</span></a>, "
-                "<a href=\"https://github.com/fr0zenbag\"><span style=\" text-decoration: underline; color:#ff0000;\">fr0zenbag</span></a>, "
-                "<a href=\"https://github.com/AandersonL\"><span style=\" text-decoration: underline; color:#ff0000;\">Anderson Leite</span></a>, "
+                "<a href=\"https://twitter.com/frenchyeti\">FrenchYeti</a>, "
+                "<a href=\"https://github.com/fr0zenbag\">fr0zenbag</a>, "
+                "<a href=\"https://github.com/AandersonL\">Anderson Leite</a>, "
                 "</p>"
                 "<p align=\"center\">"
-                "<a href=\"https://github.com/filipnavara\"><span style=\" text-decoration: underline; color:#ff0000;\">Filip Navara</span></a>, "
-                "<a href=\"https://www.ashemery.com/\"><span style=\" text-decoration: underline; color:#ff0000;\">Ali Hadi</span></a>, "
-                "<a href=\"http://mrexodia.re/\"><span style=\" text-decoration: underline; color:#ff0000;\">Duncan Ogilvie</span></a>, "
+                "<a href=\"https://github.com/filipnavara\">Filip Navara</a>, "
+                "<a href=\"https://www.ashemery.com/\">Ali Hadi</a>, "
+                "<a href=\"https://mrexodia.re/\">Duncan Ogilvie</a>, "
                 "</p>"
                 "<p align=\"center\">"
-                "<a href=\"https://github.com/leandrofroes\"><span style=\" text-decoration: underline; color:#ff0000;\">Leandro Fróes</span></a>, "
-                "<a href=\"https://www.leavesongs.com/\"><span style=\" text-decoration: underline; color:#ff0000;\">phithon</span></a>, "
-                "<a href=\"https://github.com/clayne/\"><span style=\" text-decoration: underline; color:#ff0000;\">Christopher Layne</span></a>, "
+                "<a href=\"https://github.com/leandrofroes\">Leandro Fróes</a>, "
+                "<a href=\"https://www.leavesongs.com/\">phithon</a>, "
+                "<a href=\"https://github.com/clayne/\">Christopher Layne</a>, "
                 "</p>"
                 "<p align=\"center\">"
-                "<a href=\"http://dfirnotes.net/\"><span style=\" text-decoration: underline; color:#ff0000;\">Adric Net</span></a>, "
-                "<a href=\"https://greich.com/\"><span style=\" text-decoration: underline; color:#ff0000;\">Gilad Reich</span></a>"
+                "<a href=\"https://dfirnotes.net/\">Adric Net</a>, "
+                "<a href=\"https://greich.com/\">Gilad Reich</a>"
                 "</p>"
                 "</body></html>")
             .arg(tr("Thanks")));
+
+    ui->pushButtonOK->setAccessibleName(tr("Close About dialog"));
+    ui->pushButtonOK->setFocus();
 }
 
 DialogAbout::~DialogAbout()
@@ -88,5 +89,5 @@ void DialogAbout::adjustView()
 
 void DialogAbout::on_pushButtonOK_clicked()
 {
-    this->close();
+    accept();
 }

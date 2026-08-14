@@ -184,11 +184,39 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>msec</source>
+        <source>Copy as</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copy as</source>
+        <source>Signature timings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scanning. Timing results will be available when the scan completes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scanning...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 ms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View 1 per-script timing record. Total scan time: %1 ms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View %1 per-script timing records. Total scan time: %2 ms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No per-script timing details were recorded. Total scan time: %1 ms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No signature timing data is available.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -209,18 +237,6 @@
 <context>
     <name>DialogAbout</name>
     <message>
-        <source>About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bugreports</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Website</source>
         <translation type="unfinished"></translation>
     </message>
@@ -234,6 +250,34 @@
     </message>
     <message>
         <source>Thanks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About XBinaryViewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>XBinaryViewer logo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2019-2026 hors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bug reports</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close About dialog</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -444,19 +488,87 @@
 <context>
     <name>DialogDIESignaturesElapsed</name>
     <message>
-        <source>Elapsed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signature timings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Signature timings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No timing data loaded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy selected timing rows (Ctrl+C)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duration (ms)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signature timing results</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sortable table of elapsed time in milliseconds and script name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select one or more rows to copy their timing details.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summary of the available signature timing data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy the selected timing rows to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close the signature timing dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Timing results are unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 milliseconds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1 timing record.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 timing records.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 Total scan time: %2 ms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No per-script timing data was recorded. Total scan time: %1 ms.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -467,23 +579,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Readonly</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Endianness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Offset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -500,6 +596,234 @@
     </message>
     <message>
         <source>Binary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data inspector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inspect selected bytes as numeric, text, and binary values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Endianness:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose how multi-byte numeric and Unicode values are interpreted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose the byte order used for multi-byte values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read-only mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When checked, interpreted values cannot be edited.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prevent changes to the inspected data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read-only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Offset:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selection offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starting byte offset of the inspected selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selection size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number of bytes available in the inspected selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interpreted data values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Values at the selected offset shown in several numeric, text, and binary formats. Use the arrow keys to navigate rows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inspect the selected bytes in several formats. Use the arrow keys to navigate rows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inspector status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reports the current selection state and whether values can be edited.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close data inspector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close this data inspector window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close the data inspector.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append-mode devices can be inspected but not edited.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Values are shown in read-only mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Values can be edited.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 interpretation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected bytes interpreted as %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No data device is available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The data device belongs to a different thread.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An open, readable data device is required.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sequential devices cannot be inspected by byte offset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text-mode devices cannot be inspected by byte offset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The data device does not report a usable size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selection is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selection starts outside the available data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected data could not be read.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The device position could not be restored.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Showing %1 bytes at offset 0x%2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selection was clipped to the available data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text previews are limited to the first %1 bytes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only %1 bytes could be read.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append-mode devices are view-only.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read-only mode is active.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The value cannot be written to this selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected write range is no longer available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The device position is unavailable, so the value was not changed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A backup could not be created, so the value was not changed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The original value could not be read, so no change was attempted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The value was updated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The value could not be written.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The value could not be written completely. The original bytes were restored.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The write and its rollback were incomplete. The display was refreshed from the device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The value could not be written completely, but the original bytes remain intact.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -528,27 +852,115 @@
 <context>
     <name>DialogEditString</name>
     <message>
-        <source>String</source>
+        <source>Edit String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Keep size</source>
+        <source>&amp;Encoding:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Null-terminated</source>
+        <source>Text encoding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>OK</source>
+        <source>&amp;Text:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cancel</source>
+        <source>String text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bytes available</source>
+        <source>Limit the encoded value, including any terminator, to the original byte span.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Limit to original byte span</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append the encoding&apos;s null terminator within the available byte span.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Null-terminate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte usage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ANSI / Latin-1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UTF-16 LE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UTF-8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>String information is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The target device is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The target device is not open for writing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sequential devices cannot be edited by offset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The target device size is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The string offset is outside the target device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The original string span is outside the target device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The original string size exceeds its writable span.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a supported text encoding.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter text or enable null termination.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ANSI / Latin-1 cannot represent every character in the text.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoded value needs %1 bytes; maximum is %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses %1 of %2 bytes (%3 available).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text is encoded before it is written. %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -585,31 +997,11 @@
 <context>
     <name>DialogGoToAddress</name>
     <message>
-        <source>Go to address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hex</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Virtual address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -621,7 +1013,111 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid</source>
+        <source>Go to Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter unsigned hexadecimal digits without a 0x prefix.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checked values use hexadecimal; unchecked values use decimal.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use &amp;hexadecimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Allowed range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a destination value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Go to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Go to Virtual Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Virtual address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Go to Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Offset:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Go to Relative Virtual Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Relative virtual address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter an unsigned decimal value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Memory-map information is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a valid file offset backed by mapped data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a relative virtual address backed by mapped data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter an address backed by mapped data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The maximum supported value is %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Allowed range: %1 to %2 (inclusive).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The allowed range is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready to go to %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a valid unsigned 64-bit value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value must not exceed %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The value does not identify mapped physical data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value must be between %1 and %2 (inclusive).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -629,10 +1125,6 @@
     <name>DialogHash</name>
     <message>
         <source>Hash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -650,31 +1142,143 @@
 <context>
     <name>DialogHexSignature</name>
     <message>
-        <source>Signature</source>
+        <source>Hex Signature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Spaces</source>
+        <source>Selection summary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Upper</source>
+        <source>Bytes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Wildcard</source>
+        <source>Select bytes to replace with wildcard tokens. Use the arrow keys to move and Space to toggle.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Scan</source>
+        <source>C&amp;lear wildcards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copy</source>
+        <source>Bytes in the selected range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>OK</source>
+        <source>Click a byte, or press Space, to toggle whether it is matched exactly or replaced by a wildcard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Generated signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Signature preview:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Generated hex signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Separate bytes with s&amp;paces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Uppercase hexadecimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Quote printable ASCII runs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Wildcard character:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wildcard character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use ? or . to match any byte. The character is repeated for each wildcarded byte.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Find matches…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No bytes were selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected source offset is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The source device is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No bytes could be read at offset 0x%1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset 0x%1 — showing the first %2 bytes of %3 selected (limit: %4).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset 0x%1 — read %2 bytes of %3 selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset 0x%1 — selected bytes: %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte %1 at offset 0x%2, original value 0x%3: wildcarded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte %1, original value %2, wildcarded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte %1 at offset 0x%2, value 0x%3: exact match.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte %1, value %2, exact match</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No signature can be generated because no bytes were read.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter ? or . as the wildcard character for the selected bytes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The generated signature is invalid. Choose a supported wildcard character.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bytes: %1; wildcarded: %2. The signature is valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signature copied to the clipboard.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -806,31 +1410,91 @@
 <context>
     <name>DialogRemove</name>
     <message>
-        <source>Remove</source>
+        <source>Remove Bytes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Offset</source>
+        <source>Remove a byte range. All following data will shift left.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Size</source>
+        <source>Data size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hex</source>
+        <source>0 bytes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>OK</source>
+        <source>&amp;Offset:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cancel</source>
+        <source>Removal start offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid</source>
+        <source>&amp;Number of bytes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number of bytes to remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Hexadecimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show and enter offsets and sizes in hexadecimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The data range is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are no bytes to remove.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter the offset where removal should begin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter the number of bytes to remove.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The offset cannot be negative.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The number of bytes must be greater than zero.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The offset must be before the end of the data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The range extends past the end of the data. At most %1 bytes can be removed from this offset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 bytes (0x%2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unavailable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove %1 bytes at offsets %2–%3. New data size: %4 bytes.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -841,27 +1505,85 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Size</source>
+        <source>Current size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hex</source>
+        <source>0 bytes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>OK</source>
+        <source>&amp;New size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cancel</source>
+        <source>New size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Error</source>
+        <source>Enter the new size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The new size is too large.</source>
+        <source>&amp;Hexadecimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show and enter the size in hexadecimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reducing the size from %1 to %2 will permanently remove %3 from the end.
+
+Continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirm shrinking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unavailable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resize information is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The current size is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Warning: shrinking will remove %1 from the end.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file will grow by %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The size is unchanged.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a new size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The new size must be between 0 and %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x%1 (%2 B)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 B (0x%2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -876,10 +1598,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Match case</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Signature</source>
         <translation type="unfinished"></translation>
     </message>
@@ -888,35 +1606,327 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>OK</source>
+        <source>&amp;Search from:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cancel</source>
+        <source>Search starting point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search from</source>
+        <source>&amp;Text to find:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Type</source>
+        <source>Text to find</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Endianness</source>
+        <source>Enter text to search for</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hex</source>
+        <source>Match &amp;case</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Begin</source>
+        <source>&amp;Encoding:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cursor</source>
+        <source>Text encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Byte signature:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>e.g. 4D 5A ?? 00</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter hexadecimal byte pairs. Use ?? to match any byte.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter up to 8 hexadecimal digits.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Endianness:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byte order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoded &amp;bytes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoded bytes in hexadecimal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter text to search for.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beginning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ANSI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UTF-16 LE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UTF-8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hexadecimal byte (8-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hexadecimal word (16-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hexadecimal dword (32-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hexadecimal qword (64-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signed integer (8-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsigned integer (8-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signed integer (16-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsigned integer (16-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signed integer (32-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsigned integer (32-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signed integer (64-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsigned integer (64-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Floating point (32-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Floating point (64-bit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>00 to FF</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter 1 or 2 hexadecimal digits.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0000 to FFFF</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter up to 4 hexadecimal digits.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>e.g. DEADBEEF</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>e.g. 0123456789ABCDEF</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter up to 16 hexadecimal digits.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>e.g. 3.14159</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a finite decimal number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>e.g. -42</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a signed decimal integer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>e.g. 255</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter an unsigned decimal integer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search settings are unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready. The 256-character limit has been reached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready. %1 of 256 characters used.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a byte signature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use hexadecimal byte pairs and ?? wildcards, for example 4D 5A ?? 00.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signature is valid. The 256-character limit has been reached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signature is valid. %1 of 256 characters used.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready to search for 1 byte.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready to search for %1 bytes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a hexadecimal value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a decimal value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a hexadecimal value from 00 to FF.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a hexadecimal value from 0000 to FFFF.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a hexadecimal value of up to 8 digits.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a hexadecimal value of up to 16 digits.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a decimal integer from -128 to 127.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a decimal integer from 0 to 255.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a decimal integer from -32768 to 32767.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a decimal integer from 0 to 65535.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a decimal integer from -2147483648 to 2147483647.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a decimal integer from 0 to 4294967295.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a signed 64-bit decimal integer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter an unsigned 64-bit decimal integer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a finite 32-bit decimal number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter a finite 64-bit decimal number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a supported value type.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -991,22 +2001,6 @@
 <context>
     <name>DialogShowData</name>
     <message>
-        <source>Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Hex</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1014,19 +2008,119 @@
         <source>Plain Text</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Copy Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selection summary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Output format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose how the selected bytes are formatted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Preview:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Formatted data preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read-only preview of the selected bytes in the chosen format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wrap formatted bytes into lines of the selected length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Wrap into lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Bytes per line:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bytes per line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy the complete preview to the clipboard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy &amp;output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No readable data is available for this selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The source device is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected source range is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The source device is not readable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected source range is outside the available data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No bytes were selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No bytes are available at offset 0x%1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No bytes could be read at offset 0x%1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset 0x%1 — read %2 of %3 requested bytes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset 0x%1 — showing the first %2 of %3 selected bytes (limit: %4).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset 0x%1 — showing %2 bytes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The source position could not be restored.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogTextInfo</name>
     <message>
         <source>Info</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1039,6 +2133,82 @@
     </message>
     <message>
         <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Information:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Wrap long lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No information to display.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read-only information content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wrap long lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Content status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read the selected file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A readable random-access device is required.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The device size or position is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The information is too large to display.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The device cannot be read from the beginning.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The device position could not be restored.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read the complete information from the device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The archive record is empty or cannot be read.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A readable archive device is required.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot save file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 characters, %2 lines.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1268,42 +2438,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Exit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Demangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Open file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1320,10 +2454,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copy file path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Offset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1332,7 +2462,147 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Drag &amp; drop a file here or use File -&gt; Open</source>
+        <source>Explore a binary file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inspect structures, headers, strings, signatures, disassembly, and more in one workspace.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open File...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>or drag and drop a local file anywhere in this window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>XBinaryViewer logo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open a binary file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a local file to inspect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Detected file type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready — open or drop a file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No file is open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Open File...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy File &amp;Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open a local file for binary analysis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close the current file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy the full path of the current file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exit XBinaryViewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;About XBinaryViewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Keyboard Shortcuts...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Demangle Symbol...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Configure appearance, analysis, and file handling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Review and customize keyboard shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Convert a mangled symbol to a readable name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show version, project, and contributor information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open &amp;Recent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Main toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2299,6 +3569,54 @@
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Memory allocation error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Write error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot determine device position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Source device was destroyed or replaced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid XOR range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flush error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Temporary buffer write error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Temporary buffer read error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot restore device position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cannot restore device position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>XOR rollback failed; device may be partially modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rollback failed; device may be partially modified</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QwtPlotRenderer</name>
@@ -2465,6 +3783,14 @@
         <source>strings</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Cannot save file and could not fully restore the original bytes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot save file; the original bytes were restored.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SearchValuesWidget</name>
@@ -2520,11 +3846,19 @@
 <context>
     <name>XACE</name>
     <message>
-        <source>Header</source>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Overlay</source>
+        <source>Archive header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recovery record</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2669,15 +4003,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot create CRC verification buffer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot clear unpacked output</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot write unpacked output</source>
+        <source>Cannot create unpack verification buffer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2924,6 +4250,22 @@
         <source>Total</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Allocation error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid search result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Incomplete CRC16 read</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create temporary buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XBrotli</name>
@@ -2989,6 +4331,10 @@
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trailer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3072,6 +4418,37 @@
     </message>
 </context>
 <context>
+    <name>XDMG</name>
+    <message>
+        <source>KOLY header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data fork</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resource fork</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>XML metadata</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Code signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Partition %1 stream %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XDOS16</name>
     <message>
         <source>Loader</source>
@@ -3109,10 +4486,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Read error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Empty key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3122,6 +4495,34 @@
     </message>
     <message>
         <source>Unknown method</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Memory allocation error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Internal state error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input is too large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No result data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Canceled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3252,6 +4653,22 @@
     </message>
     <message>
         <source>Dump</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot remove bytes, and the original data could not be fully restored</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot remove bytes. The original data was restored</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot remove bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create the backup. No bytes were removed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3714,6 +5131,38 @@
         <source>Cannot save file: %1</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Binary data table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Structured fields and values for the current selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table operation progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear filters and sorting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear all table filters and restore the original order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export the current table to a file</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XFTreeModel</name>
@@ -3791,6 +5240,17 @@
     </message>
 </context>
 <context>
+    <name>XFTreeView</name>
+    <message>
+        <source>File structures and analysis tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a structure or analysis tool to show its details</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XFValueDialog</name>
     <message>
         <source>Edit Value</source>
@@ -3844,6 +5304,30 @@
     </message>
     <message>
         <source>File type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interpret as:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File type interpretation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File structures and analysis tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload current file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Re-read the current file using the selected interpretation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose how the file should be parsed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3920,27 +5404,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New size (bytes)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Resize</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Overlay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Add / Replace...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dump...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3948,71 +5412,295 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Append data from file...</source>
+        <source>Current file size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Current size</source>
+        <source>&amp;New size (bytes):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Offset</source>
+        <source>New file size label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Size</source>
+        <source>New file size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>present</source>
+        <source>Enter the new file size in decimal bytes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>none</source>
+        <source>Enter a non-negative decimal size in bytes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Error</source>
+        <source>&amp;Resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot open file</source>
+        <source>Resize the loaded file to the specified number of bytes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid value</source>
+        <source>Overlay information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>bytes</source>
+        <source>&amp;Replace...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tools</source>
+        <source>Replace the current overlay with data from another file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot save file</source>
+        <source>Re&amp;move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Open file</source>
+        <source>Remove the current overlay from the file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>All files</source>
+        <source>&amp;Save As...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save file</source>
+        <source>Save the current overlay to a separate file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>the file may be partially modified</source>
+        <source>&amp;Append data from file...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Append</source>
+        <source>Append the contents of another file to the loaded file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tools status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current size: %1 bytes (0x%2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current size: unavailable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset: 0x%1 | Size: %2 bytes (0x%3) | %4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Present</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No file loaded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File is unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Read-only view.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No writable file is loaded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot open file: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create backup.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create backup: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The new size must be zero or greater.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot determine the current file size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot resize file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This file has no editable overlay.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No overlay source file was selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The loaded file no longer has an editable overlay.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot open overlay source: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected overlay source is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The loaded file cannot be used as its own overlay source.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The replacement overlay is too large.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot stage the current overlay for a safe update.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay update failed and the file may be partially modified.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot update overlay.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No overlay is present.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No overlay is available to save.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot open the loaded file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The loaded file no longer has an overlay to save.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot inspect the existing destination: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The overlay cannot replace the loaded file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot save overlay: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected file is empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A file cannot be appended to itself.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The loaded file changed or the resulting file would be too large.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append failed and the file may be partially modified.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot append data to the file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resize failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shrink the file from %1 to %2 bytes? Data beyond the new end will be permanently removed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grow the file from %1 to %2 bytes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resize file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open overlay file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replace overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replace the current overlay with %1 bytes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay update failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay removal failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove the %1-byte overlay from this file?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save overlay as</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open data file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append %1 bytes to this file?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append failed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4220,11 +5908,103 @@
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&amp;Type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Mode:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>M&amp;ethod:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Offset:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Si&amp;ze:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Re&amp;load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Hash:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No readable data is available for hashing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Re&amp;gions:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Calculated hash for the selected range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hashes for regions inside the selected range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A readable random-access device is required.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected range does not contain data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The selected range cannot be read.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No compatible hashing options are available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ready. Press Reload to calculate hashes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A readable random-access device and a non-empty range are required.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The source device or selected range became unavailable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hash calculation was canceled or failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Calculated %1 for %2 bytes.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XHeaderView</name>
     <message>
-        <source>Filter</source>
+        <source>column %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4317,6 +6097,18 @@
     </message>
     <message>
         <source>Base</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1 byte</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selection: %1 - %2 | Size: %3 (%4)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4664,10 +6456,6 @@
     </message>
     <message>
         <source>Footer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot initialize CRC check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5186,10 +6974,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Default</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5227,6 +7011,26 @@
     </message>
     <message>
         <source>Please restart the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore Defaults...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options categories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore every option to its default value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore all options to their default values?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6963,11 +8767,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Data</source>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Overlay</source>
+        <source>IFD table</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7203,6 +9007,14 @@
         <source>Compressed</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Metadata Resource %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data Resource %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XXAR</name>
@@ -7372,10 +9184,6 @@
     </message>
     <message>
         <source>Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

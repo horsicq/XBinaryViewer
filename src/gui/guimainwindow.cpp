@@ -27,6 +27,8 @@
 #include <QFileInfo>
 #include <QMenu>
 #include <QMessageBox>
+#include <QPixmap>
+#include <QStyle>
 #include <QUrl>
 
 #include "ui_guimainwindow.h"
@@ -48,9 +50,17 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_pActionClose = nullptr;
     g_pActionExit = nullptr;
     g_pActionCopyPath = nullptr;
+    g_pMainToolBar = nullptr;
     g_bSplitterRestored = false;
 
-    ui->labelStartHint->setText(tr("Drag & drop a file here or use File -> Open"));
+    QPixmap logoPixmap(QStringLiteral(":/images/about.png"));
+    ui->labelLogo->setPixmap(logoPixmap.scaled(QSize(190, 207), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->labelLogo->setAccessibleName(tr("XBinaryViewer logo"));
+    ui->welcomeCard->setAccessibleName(tr("Open a binary file"));
+    ui->pushButtonOpen->setIcon(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_OPEN)));
+    ui->pushButtonOpen->setAccessibleDescription(tr("Choose a local file to inspect"));
+    ui->pushButtonOpen->setToolTip(tr("Choose a local file to inspect"));
+    connect(ui->pushButtonOpen, SIGNAL(clicked()), this, SLOT(actionOpenSlot()));
 
     ui->stackedWidget->setCurrentIndex(0);
 
@@ -129,6 +139,22 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_pLabelSize = new QLabel(this);
     g_pLabelType = new QLabel(this);
 
+    g_pLabelFile->setObjectName(QStringLiteral("statusFile"));
+    g_pLabelStructure->setObjectName(QStringLiteral("statusSelection"));
+    g_pLabelSize->setObjectName(QStringLiteral("statusSize"));
+    g_pLabelType->setObjectName(QStringLiteral("statusType"));
+    g_pLabelStructure->setProperty("statusSegment", true);
+    g_pLabelSize->setProperty("statusSegment", true);
+    g_pLabelType->setProperty("statusSegment", true);
+    g_pLabelFile->setAccessibleName(tr("Current file"));
+    g_pLabelStructure->setAccessibleName(tr("Current selection"));
+    g_pLabelSize->setAccessibleName(tr("File size"));
+    g_pLabelType->setAccessibleName(tr("Detected file type"));
+    g_pLabelFile->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    g_pLabelStructure->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    g_pLabelFile->setText(tr("Ready — open or drop a file"));
+    g_pLabelFile->setToolTip(tr("No file is open"));
+
     ui->statusbar->addWidget(g_pLabelFile, 1);
     ui->statusbar->addPermanentWidget(g_pLabelStructure);
     ui->statusbar->addPermanentWidget(g_pLabelSize);
@@ -169,34 +195,66 @@ GuiMainWindow::~GuiMainWindow()
 
 void GuiMainWindow::createMenus()
 {
-    QMenu *pMenuFile = new QMenu(tr("File"), ui->menubar);
-    QMenu *pMenuTools = new QMenu(tr("Tools"), ui->menubar);
-    QMenu *pMenuHelp = new QMenu(tr("Help"), ui->menubar);
+    QMenu *pMenuFile = new QMenu(tr("&File"), ui->menubar);
+    QMenu *pMenuTools = new QMenu(tr("&Tools"), ui->menubar);
+    QMenu *pMenuHelp = new QMenu(tr("&Help"), ui->menubar);
 
     ui->menubar->addAction(pMenuFile->menuAction());
     ui->menubar->addAction(pMenuTools->menuAction());
     ui->menubar->addAction(pMenuHelp->menuAction());
 
-    g_pActionOpen = new QAction(tr("Open"), this);
-    g_pActionClose = new QAction(tr("Close"), this);
-    g_pActionExit = new QAction(tr("Exit"), this);
-    g_pActionCopyPath = new QAction(tr("Copy file path"), this);
+    g_pActionOpen = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_OPEN)), tr("&Open File..."), this);
+    g_pActionClose = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_REMOVE)), tr("&Close File"), this);
+    g_pActionExit = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_EXIT)), tr("E&xit"), this);
+    g_pActionCopyPath = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_COPY)), tr("Copy File &Path"), this);
+    g_pActionOpen->setStatusTip(tr("Open a local file for binary analysis"));
+    g_pActionClose->setStatusTip(tr("Close the current file"));
+    g_pActionCopyPath->setStatusTip(tr("Copy the full path of the current file"));
+    g_pActionExit->setStatusTip(tr("Exit XBinaryViewer"));
+    g_pActionClose->setEnabled(false);
     g_pActionCopyPath->setEnabled(false);
-    QAction *pActionOptions = new QAction(tr("Options"), this);
-    QAction *pActionAbout = new QAction(tr("About"), this);
-    QAction *pActionShortcuts = new QAction(tr("Shortcuts"), this);
-    QAction *pActionDemangle = new QAction(tr("Demangle"), this);
+    g_pActionExit->setMenuRole(QAction::QuitRole);
+
+    QAction *pActionOptions = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_OPTION)), tr("&Options..."), this);
+    QAction *pActionAbout = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_INFO)), tr("&About XBinaryViewer"), this);
+    QAction *pActionShortcuts = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_SHORTCUT)), tr("&Keyboard Shortcuts..."), this);
+    QAction *pActionDemangle = new QAction(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_DEMANGLE)), tr("&Demangle Symbol..."), this);
+    pActionOptions->setStatusTip(tr("Configure appearance, analysis, and file handling"));
+    pActionShortcuts->setStatusTip(tr("Review and customize keyboard shortcuts"));
+    pActionDemangle->setStatusTip(tr("Convert a mangled symbol to a readable name"));
+    pActionAbout->setStatusTip(tr("Show version, project, and contributor information"));
+    pActionOptions->setMenuRole(QAction::PreferencesRole);
+    pActionAbout->setMenuRole(QAction::AboutRole);
 
     pMenuFile->addAction(g_pActionOpen);
-    pMenuFile->addMenu(g_xOptions.createRecentFilesMenu(this));
+    QMenu *pRecentFilesMenu = g_xOptions.createRecentFilesMenu(this);
+    pRecentFilesMenu->setTitle(tr("Open &Recent"));
+    pRecentFilesMenu->setIcon(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_FILE)));
+    pMenuFile->addMenu(pRecentFilesMenu);
+    pMenuFile->addSeparator();
     // pMenuFile->addMenu(g_pInfoMenu->createMenu(this));
     pMenuFile->addAction(g_pActionCopyPath);
     pMenuFile->addAction(g_pActionClose);
+    pMenuFile->addSeparator();
     pMenuFile->addAction(g_pActionExit);
     pMenuTools->addAction(pActionDemangle);
     pMenuTools->addAction(pActionShortcuts);
+    pMenuTools->addSeparator();
     pMenuTools->addAction(pActionOptions);
     pMenuHelp->addAction(pActionAbout);
+
+    g_pMainToolBar = addToolBar(tr("Main toolbar"));
+    g_pMainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+    g_pMainToolBar->setWindowTitle(tr("Main toolbar"));
+    g_pMainToolBar->setMovable(false);
+    g_pMainToolBar->setFloatable(false);
+    g_pMainToolBar->setIconSize(QSize(16, 16));
+    g_pMainToolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    g_pMainToolBar->addAction(g_pActionOpen);
+    g_pMainToolBar->addAction(g_pActionClose);
+    g_pMainToolBar->addAction(g_pActionCopyPath);
+    g_pMainToolBar->addSeparator();
+    g_pMainToolBar->addAction(pActionOptions);
 
     connect(g_pActionOpen, SIGNAL(triggered()), this, SLOT(actionOpenSlot()));
     connect(g_pActionClose, SIGNAL(triggered()), this, SLOT(actionCloseSlot()));
@@ -230,7 +288,7 @@ void GuiMainWindow::onViewerHeaderSelected(const XBinary::XFHEADER &xfHeader)
         return;
     }
 
-    QString sText = tr("Offset") + QString(": 0x%1").arg(QString::number(xfHeader.xLoc.nLocation, 16));
+    QString sText = tr("Selection") + QString(" — ") + tr("Offset") + QString(": 0x%1").arg(QString::number(xfHeader.xLoc.nLocation, 16));
 
     if (xfHeader.nSize > 0) {
         sText += QString(" ") + tr("Size") + QString(": 0x%1").arg(QString::number(xfHeader.nSize, 16));
@@ -302,7 +360,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
 
         closeCurrentFile();
 
-        XFormats::INDATA inData = XFormats::createINDATA(XFormats::getPrefFileType(sFileName, true), sFileName);
+        XFormats::INDATA inData = XFormats::createINDATA(XFormats::getPrefFileType(sFileName, XBinary::FT_FLAG_FORMATS), sFileName);
 
         // g_pFile = new QFile;
         // // g_pXInfo = new XInfoDB;
@@ -364,14 +422,17 @@ void GuiMainWindow::processFile(const QString &sFileName)
         adjustView();
 
         g_sCurrentFilePath = sFileName;
+        g_pActionClose->setEnabled(true);
         g_pActionCopyPath->setEnabled(true);
 
         setWindowTitle(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION) + QString(" - ") + QDir::toNativeSeparators(sFileName));
         setWindowFilePath(sFileName);
 
-        g_pLabelFile->setText(QDir::toNativeSeparators(sFileName));
-        g_pLabelSize->setText(XBinary::bytesCountToString(QFileInfo(sFileName).size()));
-        g_pLabelType->setText(XBinary::fileTypeIdToString(inData.fileType));
+        QString sNativePath = QDir::toNativeSeparators(sFileName);
+        g_pLabelFile->setText(tr("File") + QString(": ") + sNativePath);
+        g_pLabelFile->setToolTip(sNativePath);
+        g_pLabelSize->setText(tr("Size") + QString(": ") + XBinary::bytesCountToString(QFileInfo(sFileName).size()));
+        g_pLabelType->setText(tr("Type") + QString(": ") + XBinary::fileTypeIdToString(inData.fileType));
 
         ui->stackedWidget->setCurrentIndex(1);
 
@@ -409,8 +470,13 @@ void GuiMainWindow::closeCurrentFile()
         g_pActionCopyPath->setEnabled(false);
     }
 
+    if (g_pActionClose) {
+        g_pActionClose->setEnabled(false);
+    }
+
     if (g_pLabelFile) {
-        g_pLabelFile->clear();
+        g_pLabelFile->setText(tr("Ready — open or drop a file"));
+        g_pLabelFile->setToolTip(tr("No file is open"));
         g_pLabelSize->clear();
         g_pLabelType->clear();
         g_pLabelStructure->clear();
@@ -442,7 +508,7 @@ static bool _isLocalFileDrag(const QMimeData *pMimeData)
     if (pMimeData->hasUrls()) {
         QList<QUrl> urlList = pMimeData->urls();
 
-        if (urlList.count() && urlList.at(0).isLocalFile()) {
+        if (urlList.count() && urlList.at(0).isLocalFile() && QFileInfo(urlList.at(0).toLocalFile()).isFile()) {
             bResult = true;
         }
     }

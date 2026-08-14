@@ -35,22 +35,22 @@ DialogOptions::DialogOptions(QWidget *pParent, XOptions *pOptions, XOptions::GRO
 
     ui->widgetOptions->setOptions(pOptions, X_APPLICATIONDISPLAYNAME);
 
-    ui->widgetOptions->addPage(g_pScanEngineOptionsWidget, tr("Scan"));
+    ui->widgetOptions->addPage(g_pScanEngineOptionsWidget, tr("Scan"), XOptions::ICONTYPE_SCAN);
     g_pScanEngineOptionsWidget->setOptions(pOptions);
 
-    ui->widgetOptions->addPage(g_pSearchSignaturesOptionsWidget, tr("Signatures"));
+    ui->widgetOptions->addPage(g_pSearchSignaturesOptionsWidget, tr("Signatures"), XOptions::ICONTYPE_SIGNATURE);
     g_pSearchSignaturesOptionsWidget->setOptions(pOptions);
 
-    ui->widgetOptions->addPage(g_pXHexViewOptionsWidget, tr("Hex"));
+    ui->widgetOptions->addPage(g_pXHexViewOptionsWidget, tr("Hex"), XOptions::ICONTYPE_HEX);
     g_pXHexViewOptionsWidget->setOptions(pOptions);
 
-    ui->widgetOptions->addPage(g_pXDisasmViewOptionsWidget, tr("Disasm"));
+    ui->widgetOptions->addPage(g_pXDisasmViewOptionsWidget, tr("Disasm"), XOptions::ICONTYPE_DISASM);
     g_pXDisasmViewOptionsWidget->setOptions(pOptions);
 
-    ui->widgetOptions->addPage(g_pXOnlineToolsOptionsWidget, tr("Online tools"));
+    ui->widgetOptions->addPage(g_pXOnlineToolsOptionsWidget, tr("Online tools"), XOptions::ICONTYPE_TOOL);
     g_pXOnlineToolsOptionsWidget->setOptions(pOptions);
 
-    ui->widgetOptions->addPage(g_pXInfoDBOptionsWidget, tr("Info"));
+    ui->widgetOptions->addPage(g_pXInfoDBOptionsWidget, tr("Info"), XOptions::ICONTYPE_INFO);
     g_pXInfoDBOptionsWidget->setOptions(pOptions);
 
     ui->widgetOptions->setCurrentPage(groupId);

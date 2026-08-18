@@ -82,10 +82,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Extra database</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Custom database</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3617,6 +3613,18 @@ Continue?</source>
         <source>rollback failed; device may be partially modified</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Archive record index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Archive record token</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Archive stream</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QwtPlotRenderer</name>
@@ -4006,6 +4014,17 @@ Continue?</source>
         <source>Cannot create unpack verification buffer</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Archive record does not belong to the archive device</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XArchives</name>
+    <message>
+        <source>Cannot create temporary directory</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XAtariST</name>
@@ -4264,6 +4283,10 @@ Continue?</source>
     </message>
     <message>
         <source>Cannot create temporary buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot resolve output path</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6378,6 +6401,37 @@ Continue?</source>
         <source>Stream</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XLZ5</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XLZMA</name>
@@ -6429,6 +6483,29 @@ Continue?</source>
     </message>
     <message>
         <source>TiB</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XLizard</name>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7486,10 +7563,6 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Extra</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Custom</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7578,10 +7651,6 @@ Continue?</source>
     </message>
     <message>
         <source>Update</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Extra database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7899,10 +7968,6 @@ Continue?</source>
     </message>
     <message>
         <source>Main</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Extra</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8233,6 +8298,10 @@ Continue?</source>
     </message>
     <message>
         <source>Invalid format data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid 7z coder property size</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

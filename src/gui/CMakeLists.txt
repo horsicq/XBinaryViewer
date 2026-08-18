@@ -84,6 +84,11 @@ target_link_libraries(XBinaryViewer PRIVATE bzip2)
 target_link_libraries(XBinaryViewer PRIVATE lzma)
 target_link_libraries(XBinaryViewer PRIVATE zlib)
 target_link_libraries(XBinaryViewer PRIVATE ppmd)
+# libzstd_static is no longer built by XArchive: a symbol-level check showed
+# nothing referenced it. zstd support comes from the Algos amalgamations
+# (zstddeclib.cpp, zstd_xxhash.cpp, zstdlegacy_v04-v07.cpp) compiled into this
+# target through XArchive's source list.
+target_link_libraries(XBinaryViewer PRIVATE xarchive_7zip)
 target_link_libraries(XBinaryViewer PRIVATE capstone)
 target_link_libraries(XBinaryViewer PRIVATE cppfilt)
 target_link_libraries(XBinaryViewer PRIVATE yara)

@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
 
 file (STRINGS ${CMAKE_CURRENT_LIST_DIR}/../release_version.txt X_PROJECT_VERSION)
-project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
+# C is required as well as CXX: XArchive now contributes C translation units
+# directly (the Algos bzip2/zlib/zstd/7-Zip amalgamations), where those
+# sources previously lived in subprojects that enabled C themselves.
+project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES C CXX)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
 

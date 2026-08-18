@@ -16,9 +16,9 @@ endif()
 
 # XCppfilt/XCapstone/XArchive/XYara/xsimd targets already exist from the
 # add_subdirectory() calls in ../CMakeLists.txt (shared with the gui target).
-include(${CMAKE_CURRENT_LIST_DIR}/../../../_mylibs/Formats/xformats.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/../../../_mylibs/Formats/xfmodel.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/../../../_mylibs/XOptions/xoptions.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/Formats/xformats.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/Formats/xfmodel.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XOptions/xoptions.cmake)
 
 if(UNIX AND NOT APPLE)
     include(GNUInstallDirs)

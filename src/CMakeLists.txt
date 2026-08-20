@@ -5,6 +5,7 @@ file (STRINGS ${CMAKE_CURRENT_LIST_DIR}/../release_version.txt X_PROJECT_VERSION
 # directly (the Algos bzip2/zlib/zstd/7-Zip amalgamations), where those
 # sources previously lived in subprojects that enabled C themselves.
 project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES C CXX)
+option(USE_DIE "Enable Detect It Easy integration" ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
 

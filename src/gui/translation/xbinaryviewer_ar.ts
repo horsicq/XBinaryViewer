@@ -3625,6 +3625,26 @@ Continue?</source>
         <source>Archive stream</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reported method</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Host OS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checksum</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checksum type</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QwtPlotRenderer</name>
@@ -3897,6 +3917,17 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XARX</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XASAR</name>
     <message>
         <source>Header</source>
@@ -4018,11 +4049,35 @@ Continue?</source>
         <source>Archive record does not belong to the archive device</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Extraction transaction failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recovery path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XArchives</name>
     <message>
         <source>Cannot create temporary directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid unpacked-output limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Static unpacker extraction failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Static unpacker test failed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4287,6 +4342,18 @@ Continue?</source>
     </message>
     <message>
         <source>Cannot resolve output path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid unpacked-output limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid unpacked output size</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4631,6 +4698,18 @@ Continue?</source>
     </message>
     <message>
         <source>Unknown compression method</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid unpacked-output limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encrypted input exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5803,6 +5882,14 @@ Continue?</source>
         <source>Cannot create</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Extraction transaction failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recovery path</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XGif</name>
@@ -6153,6 +6240,10 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Payload unavailable: ISO extent block %1, declared size %2 is outside the selected volume</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XIcon</name>
@@ -6274,6 +6365,118 @@ Continue?</source>
     </message>
     <message>
         <source>Invalid CRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid legacy Inno Setup code page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Legacy Inno Setup password bytes exceed the supported size limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid checksum</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inno Setup solid chunk exceeds the shared memory limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inno Setup filtered file exceeds the shared memory limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Inno Setup block header CRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid historical Inno Setup block size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Inno Setup block compression flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inno Setup header block exceeds the supported size limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Inno Setup block CRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Inno Setup header encryption parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Inno Setup encryption-header CRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Inno Setup encryption mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raw password bytes are supported only by legacy Inno Setup ARC4 encryption</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported Inno Setup key-derivation iteration count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not derive the Inno Setup encryption key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wrong Inno Setup password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid legacy Inno Setup encryption parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid legacy Inno Setup password metadata</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ambiguous legacy Inno Setup password encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported Inno Setup encryption mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid encrypted Inno Setup data entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External Inno Setup slices require a file-backed installer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inno Setup uses too many external slices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Missing Inno Setup external slice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ambiguous Inno Setup external-slice naming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Inno Setup external-slice header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inno Setup compressed chunk exceeds the shared memory limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8753,6 +8956,17 @@ Continue?</source>
 </context>
 <context>
     <name>XSquashfs</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XStk</name>
     <message>
         <source>Header</source>
         <translation type="unfinished"></translation>

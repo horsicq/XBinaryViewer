@@ -50,7 +50,6 @@ target_link_libraries(xbinaryviewerc PRIVATE ppmd)
 # nothing referenced it. zstd support comes from the Algos amalgamations
 # (zstddeclib.cpp, zstd_xxhash.cpp, zstdlegacy_v04-v07.cpp) compiled into this
 # target through XArchive's source list.
-target_link_libraries(xbinaryviewerc PRIVATE xarchive_7zip)
 target_link_libraries(xbinaryviewerc PRIVATE capstone)
 target_link_libraries(xbinaryviewerc PRIVATE cppfilt)
 

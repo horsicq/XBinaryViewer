@@ -35,43 +35,42 @@ DialogAbout::DialogAbout(QWidget *pParent) : XShortcutsDialog(pParent), ui(new U
     ui->labelLogo->setPixmap(logoPixmap.scaled(QSize(210, 228), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->labelLogo->setAccessibleName(tr("XBinaryViewer logo"));
 
-    ui->labelVersion->setText(QString("<span style=\"font-size:18px; font-weight:600;\">%1</span>").arg(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION)));
+    ui->labelVersion->setText(
+        QString("<span style=\"font-size:18px; font-weight:600;\">%1</span>").arg(XOptions::getTitle(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION)));
     ui->labelCopyright->setText(tr("Copyright (C) 2019-2026 hors"));
 
     ui->labelBugreports->setText(QString("<b>%1:</b> <a href=\"mailto:horsicq@gmail.com\">horsicq@gmail.com</a>").arg(tr("Bug reports")));
     ui->labelWebsite->setText(QString("<b>%1:</b> <a href=\"https://ntinfo.biz\">ntinfo.biz</a>").arg(tr("Website")));
     ui->labelDonate->setText(QString("<b>%1 (PayPal):</b> <a href=\"mailto:ntinfo.re@gmail.com\">ntinfo.re@gmail.com</a>").arg(tr("Donate")));
-    ui->labelSourceCode->setText(
-        QString("<b>%1:</b> <a href=\"https://github.com/horsicq/XBinaryViewer\">github.com/horsicq/XBinaryViewer</a>").arg(tr("Source code")));
-    ui->labelThanks->setText(
-        QString("<html><head/><body>"
-                "<p align=\"center\"><span style=\" font-weight:600;\">%1:</span></p>"
-                "<p align=\"center\">"
-                "<a href=\"https://www.mentebinaria.com.br/\">Fernando Mercês</a>, "
-                "<a href=\"https://sandsprite.com/\">David Zimmer</a>, "
-                "<a href=\"https://github.com/miso-xyz\">misonothx</a>, "
-                "</p>"
-                "<p align=\"center\">"
-                "<a href=\"https://twitter.com/frenchyeti\">FrenchYeti</a>, "
-                "<a href=\"https://github.com/fr0zenbag\">fr0zenbag</a>, "
-                "<a href=\"https://github.com/AandersonL\">Anderson Leite</a>, "
-                "</p>"
-                "<p align=\"center\">"
-                "<a href=\"https://github.com/filipnavara\">Filip Navara</a>, "
-                "<a href=\"https://www.ashemery.com/\">Ali Hadi</a>, "
-                "<a href=\"https://mrexodia.re/\">Duncan Ogilvie</a>, "
-                "</p>"
-                "<p align=\"center\">"
-                "<a href=\"https://github.com/leandrofroes\">Leandro Fróes</a>, "
-                "<a href=\"https://www.leavesongs.com/\">phithon</a>, "
-                "<a href=\"https://github.com/clayne/\">Christopher Layne</a>, "
-                "</p>"
-                "<p align=\"center\">"
-                "<a href=\"https://dfirnotes.net/\">Adric Net</a>, "
-                "<a href=\"https://greich.com/\">Gilad Reich</a>"
-                "</p>"
-                "</body></html>")
-            .arg(tr("Thanks")));
+    ui->labelSourceCode->setText(QString("<b>%1:</b> <a href=\"https://github.com/horsicq/XBinaryViewer\">github.com/horsicq/XBinaryViewer</a>").arg(tr("Source code")));
+    ui->labelThanks->setText(QString("<html><head/><body>"
+                                     "<p align=\"center\"><span style=\" font-weight:600;\">%1:</span></p>"
+                                     "<p align=\"center\">"
+                                     "<a href=\"https://www.mentebinaria.com.br/\">Fernando Mercês</a>, "
+                                     "<a href=\"https://sandsprite.com/\">David Zimmer</a>, "
+                                     "<a href=\"https://github.com/miso-xyz\">misonothx</a>, "
+                                     "</p>"
+                                     "<p align=\"center\">"
+                                     "<a href=\"https://twitter.com/frenchyeti\">FrenchYeti</a>, "
+                                     "<a href=\"https://github.com/fr0zenbag\">fr0zenbag</a>, "
+                                     "<a href=\"https://github.com/AandersonL\">Anderson Leite</a>, "
+                                     "</p>"
+                                     "<p align=\"center\">"
+                                     "<a href=\"https://github.com/filipnavara\">Filip Navara</a>, "
+                                     "<a href=\"https://www.ashemery.com/\">Ali Hadi</a>, "
+                                     "<a href=\"https://mrexodia.re/\">Duncan Ogilvie</a>, "
+                                     "</p>"
+                                     "<p align=\"center\">"
+                                     "<a href=\"https://github.com/leandrofroes\">Leandro Fróes</a>, "
+                                     "<a href=\"https://www.leavesongs.com/\">phithon</a>, "
+                                     "<a href=\"https://github.com/clayne/\">Christopher Layne</a>, "
+                                     "</p>"
+                                     "<p align=\"center\">"
+                                     "<a href=\"https://dfirnotes.net/\">Adric Net</a>, "
+                                     "<a href=\"https://greich.com/\">Gilad Reich</a>"
+                                     "</p>"
+                                     "</body></html>")
+                                 .arg(tr("Thanks")));
 
     ui->pushButtonOK->setAccessibleName(tr("Close About dialog"));
     ui->pushButtonOK->setFocus();

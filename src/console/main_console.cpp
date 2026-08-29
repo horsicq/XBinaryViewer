@@ -80,21 +80,19 @@ int main(int argc, char *argv[])
     QCoreApplication app(argc, argv);
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(
-        QString("%1 v%2 — console mode: prints a file's structure as a header tree").arg(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION));
+    parser.setApplicationDescription(QString("%1 v%2 — console mode: prints a file's structure as a header tree").arg(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION));
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addPositionalArgument("file", "File to analyze");
 
     QCommandLineOption formatOption(QStringList() << "f"
-                                                   << "format",
-                                     "Output format: text (default), formatted, xml, json, csv, tsv", "format", "text");
+                                                  << "format",
+                                    "Output format: text (default), formatted, xml, json, csv, tsv", "format", "text");
     parser.addOption(formatOption);
 
     QCommandLineOption structOption(QStringList() << "S"
                                                   << "struct",
-                                    "Show a specific structure/table record, e.g. \"ELF32::ELF_SHDR32?type=TABLE&offset=0x00080af0&size=0xf0&rows=0x06\"",
-                                    "struct");
+                                    "Show a specific structure/table record, e.g. \"ELF32::ELF_SHDR32?type=TABLE&offset=0x00080af0&size=0xf0&rows=0x06\"", "struct");
     parser.addOption(structOption);
 
     parser.process(app);

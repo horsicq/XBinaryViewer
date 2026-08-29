@@ -407,7 +407,6 @@ void GuiMainWindow::processFile(const QString &sFileName)
 
         //     //     // ui->widgetViewer->reload();
 
-                
         //     // } else {
         //     //     QMessageBox::critical(this, tr("Error"), tr("It is not a valid file"));
         //     // }

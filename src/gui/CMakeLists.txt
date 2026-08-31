@@ -4,8 +4,6 @@ project(XBinaryViewer VERSION ${X_PROJECT_VERSION} LANGUAGES CXX)
 
 include(../../dep/build_tools/cmake/cpp_standart_setup.cmake)
 
-add_definitions(-DUSE_DEX)
-add_definitions(-DUSE_PDF)
 # Adds the xjs* sources to XPDF and defines USE_PDFJSEMUL (see xpdf.cmake)
 option(WITH_PDFJSEMUL "Use PDF JavaScript emulator" ON)
 add_definitions(-DUSE_ARCHIVE)

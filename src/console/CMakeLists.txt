@@ -3,7 +3,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_definitions(-DUSE_ARCHIVE)
 
 # Windows <windows.h> defines min()/max() macros that break std::numeric_limits<>::max()
 # used in the shared Formats sources (e.g. xftree_model.cpp). The gui target gets this via

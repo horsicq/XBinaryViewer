@@ -2188,6 +2188,10 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Cannot read the selected archive.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The archive record is empty or cannot be read.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3645,34 +3649,8 @@ Continue?</source>
         <source>Checksum type</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>QwtPlotRenderer</name>
     <message>
-        <source>Documents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Images</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export File Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QwtPolarRenderer</name>
-    <message>
-        <source>Documents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Images</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export File Name</source>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3908,11 +3886,42 @@ Continue?</source>
 <context>
     <name>XARJ</name>
     <message>
+        <source>Archive header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XARQ</name>
+    <message>
+        <source>Container header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Member header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crusher ARQ; packed member CRCs verified</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3935,6 +3944,24 @@ Continue?</source>
     </message>
     <message>
         <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XASPACK</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XAUTOIT</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4028,6 +4055,25 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XAncient</name>
+    <message>
+        <source>Legacy stream checksum verification failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not enough memory to decompress legacy stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Legacy stream decompression failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XArchive</name>
     <message>
         <source>Unknown</source>
@@ -4058,6 +4104,10 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Invalid unpacked-output limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4070,14 +4120,6 @@ Continue?</source>
     </message>
     <message>
         <source>Invalid unpacked-output limit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Static unpacker extraction failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Static unpacker test failed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4101,6 +4143,13 @@ Continue?</source>
     </message>
     <message>
         <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XBIGF</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4229,6 +4278,10 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>unnamed archive member</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Cannot create temporary file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4238,6 +4291,22 @@ Continue?</source>
     </message>
     <message>
         <source>Cannot write file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot unpack archive member</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unknown reason</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 additional skipped member(s) not shown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some archive members were skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4358,6 +4427,13 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XBoxedApp</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XBrotli</name>
     <message>
         <source>Unknown</source>
@@ -4388,6 +4464,10 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4446,6 +4526,17 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XClickteam</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XComboBoxEx</name>
@@ -4474,6 +4565,24 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XCopyQM</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XCreateInstall</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4508,6 +4617,53 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XDMA</name>
+    <message>
+        <source>Interface version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Format revision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Footer offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry point %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Module image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Footer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XDMG</name>
     <message>
         <source>KOLY header</source>
@@ -4537,6 +4693,10 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XDOS16</name>
@@ -4562,6 +4722,53 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XDTC</name>
+    <message>
+        <source>Interface version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Format revision</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Footer offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry point %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Module image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Footer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4923,6 +5130,33 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XDskExp</name>
+    <message>
+        <source>Executable stub and Disk eXPress header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disk eXPress header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Track data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disk eXPress data CRC mismatch</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XELF</name>
     <message>
         <source>Overlay</source>
@@ -4946,6 +5180,13 @@ Continue?</source>
     </message>
     <message>
         <source>Symbol table</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XEnigmaVB</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5019,8 +5260,127 @@ Continue?</source>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>XExternalArchive</name>
     <message>
-        <source>Strings</source>
+        <source>External archive helper operation timed out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid unpacked-output policy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 helper was not found. Install PeaZip or set XFU_PEAZIP_ROOT.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create a private extraction directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify either a text or byte archive password, not both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External archive helper passwords cannot contain NUL bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External archive helper password bytes must be valid UTF-8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External archive helper passwords cannot contain NUL characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create a private FreeArc password file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External archive input must be seekable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot materialize archive input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZPAQ directory exceeds safety limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read ZPAQ directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read the LPAQ8 header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LPAQ8 memory requirement exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Declared output exceeds safety limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FreeArc directory exceeds safety limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read FreeArc directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PEA helper did not verify the archive stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot expand %1 archive directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create archive extraction stage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FreeArc helper did not verify the archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracted archive directory failed safety checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracted archive directory does not match its listing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create member extraction stage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracted member failed safety checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External helper returned an unexpected member set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracted member size is invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extracted member escaped its private stage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5162,6 +5522,13 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFSG</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5883,11 +6250,26 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Detection budget exceeded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Extraction transaction failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Recovery path</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XFpakArchive</name>
+    <message>
+        <source>FoxPro FPAK continuation volume is missing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6223,6 +6605,49 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XISCab</name>
+    <message>
+        <source>InstallShield cabinet catalog is not embedded; DATA1.HDR is required</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield cabinet catalog was not found; DATA1.HDR is required</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield companion volume is missing; only the cabinet catalog is present</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield cabinet volume is missing or invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield member data is stored outside the cabinet (external media file)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield cabinet deflate block is invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield cabinet member checksum mismatch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield cabinet chunk terminator was not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>InstallShield cabinet deflate chunk is invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XISO9660</name>
     <message>
         <source>Reserved</source>
@@ -6380,11 +6805,31 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Inno Setup solid chunk exceeds the shared memory limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Inno Setup filtered file exceeds the shared memory limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid legacy Inno Setup block header Adler-32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid legacy Inno Setup block size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not decompress legacy Inno Setup block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid legacy Inno Setup block data Adler-32</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6481,6 +6926,13 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XInstallShield</name>
+    <message>
+        <source>InstallShield embedded media requires a file-backed source</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XJAR</name>
     <message>
         <source>Universal</source>
@@ -6546,6 +6998,13 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XJugglor</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XKWAJ</name>
     <message>
         <source>Header</source>
@@ -6553,6 +7012,13 @@ Continue?</source>
     </message>
     <message>
         <source>Compressed Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XKwajSFX</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6612,6 +7078,10 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XLZ5</name>
@@ -6635,6 +7105,10 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XLZMA</name>
@@ -6648,6 +7122,13 @@ Continue?</source>
     </message>
     <message>
         <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XLegacyEncoded</name>
+    <message>
+        <source>BinHex member failed CRC verification (truncated or damaged)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6711,6 +7192,10 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XLzip</name>
@@ -6739,6 +7224,10 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>CRC check failed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6763,6 +7252,10 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6801,6 +7294,52 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XMDH</name>
+    <message>
+        <source>Track data offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active record count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Track data size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Record %1 code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Record %1 maximum level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Record table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Track data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XMEW</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XMP3</name>
     <message>
         <source>Header</source>
@@ -6823,6 +7362,121 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XMPQ</name>
+    <message>
+        <source>MPQ single-unit member is too large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read MPQ member data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MPQ encrypted single-unit member needs its original filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot decrypt MPQ member</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported or damaged MPQ compression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Truncated MPQ member</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write unpacked MPQ member</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid MPQ sector geometry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid MPQ sector table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read MPQ sector table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot recover MPQ sector encryption key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot decrypt MPQ sector table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read extended MPQ sector table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot decrypt extended MPQ sector table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Damaged MPQ sector table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Damaged MPQ sector offsets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read MPQ sector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot decrypt MPQ sector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported or damaged MPQ sector compression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid MPQ sector size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write unpacked MPQ sector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Truncated stored MPQ member</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MPQ encrypted stored member needs its original filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read stored MPQ sector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot decrypt stored MPQ sector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write stored MPQ sector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked MPQ member exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XMSDOS</name>
     <message>
         <source>Header</source>
@@ -6838,6 +7492,68 @@ Continue?</source>
     </message>
     <message>
         <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XMSI</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XMUS</name>
+    <message>
+        <source>Palladix music driver</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interface entry count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Footer offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Module type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Driver image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NS footer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zero padding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6884,6 +7600,10 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>No file data at this location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Find</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6909,10 +7629,6 @@ Continue?</source>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6944,6 +7660,10 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7122,6 +7842,20 @@ Continue?</source>
     </message>
     <message>
         <source>Package</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XNSIS</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XNSPACK</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7428,6 +8162,10 @@ Continue?</source>
         <source>Embedded file</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XPE</name>
@@ -7513,6 +8251,52 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XPETITE</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XPMA</name>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active channel count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Channel %1 offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Channel table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Program data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XPNG</name>
     <message>
         <source>Signature</source>
@@ -7539,6 +8323,21 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XRIB</name>
+    <message>
+        <source>RIB output exceeds the configured in-memory limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid RIB compressed stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7577,6 +8376,10 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7644,6 +8447,160 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XSFX</name>
+    <message>
+        <source>Cannot create a private SFX member stage</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XSHAR</name>
+    <message>
+        <source>Unsafe or shell-expanded target was not extracted: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsafe or shell-expanded SHAR target cannot be extracted: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XSM8</name>
+    <message>
+        <source>Codec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bits per sample</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PCM byte count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PIT divisor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sample rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bitrate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PCM data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XSND</name>
+    <message>
+        <source>Palladix sound driver</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Interface entry count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Footer offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Module type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entry-point table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Driver image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NS footer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zero padding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XSPIS</name>
+    <message>
+        <source>SPIS output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SPIS byte-sum mismatch</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XSQZ</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7656,6 +8613,10 @@ Continue?</source>
     </message>
     <message>
         <source>Compressed Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8262,6 +9223,13 @@ Continue?</source>
     <name>XSearchProcess</name>
     <message>
         <source>Search strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XSetupFactory</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8955,6 +9923,13 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XSmartInstall</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XSquashfs</name>
     <message>
         <source>Header</source>
@@ -9026,6 +10001,13 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XTarma</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XText</name>
     <message>
         <source>Text content</source>
@@ -9072,15 +10054,34 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XUPX</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>Header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XUU</name>
+    <message>
+        <source>Invalid unpacked-output limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9261,6 +10262,17 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XWASM</name>
+    <message>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XWIM</name>
     <message>
         <source>Header</source>
@@ -9284,6 +10296,10 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9339,6 +10355,17 @@ Continue?</source>
         <source>Overlay</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XYODA</name>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>XYara</name>
@@ -9391,6 +10418,13 @@ Continue?</source>
     </message>
 </context>
 <context>
+    <name>XZPAQ</name>
+    <message>
+        <source>Encrypted ZPAQ archive password is required</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>XZip</name>
     <message>
         <source>Stream</source>
@@ -9424,6 +10458,10 @@ Continue?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Unpacked output exceeds the configured limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Cannot initialize CRC check</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9452,6 +10490,10 @@ Continue?</source>
     </message>
     <message>
         <source>Overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unpacked output exceeds the configured limit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

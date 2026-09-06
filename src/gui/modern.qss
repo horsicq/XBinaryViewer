@@ -9,6 +9,10 @@ QWidget {
     selection-color: #ffffff;
 }
 
+QWidget:disabled {
+    color: #98a2b3;
+}
+
 QFrame#welcomeCard {
     background-color: #ffffff;
     border: 1px solid #d8e0eb;
@@ -34,6 +38,16 @@ QToolButton {
     border-radius: 5px;
     background-color: #ffffff;
     color: #1f2937;
+}
+
+/* Tool buttons are often 24px-wide glyph buttons ("<", ">", "..."): the
+   push-button padding would clip them. */
+QToolButton {
+    padding: 4px 5px;
+}
+
+QToolButton:focus {
+    padding: 3px 4px;
 }
 
 QPushButton:hover,
@@ -62,20 +76,37 @@ QToolButton:disabled {
     color: #98a2b3;
 }
 
-QPushButton:default,
+/* :default is a colour-only accent: QDialog moves the default state to whichever
+   button has focus, so it must not change the metrics (min-height/padding/font)
+   or the button is repainted in its old geometry with the label clipped. */
+QPushButton:default {
+    border-color: #2f6feb;
+    background-color: #2f6feb;
+    color: #ffffff;
+}
+
 QPushButton#pushButtonOpen {
     min-height: 30px;
     padding: 6px 20px;
     border-color: #2f6feb;
     background-color: #2f6feb;
     color: #ffffff;
-    font-weight: 600;
 }
 
 QPushButton:default:hover,
 QPushButton#pushButtonOpen:hover {
     border-color: #245fca;
     background-color: #245fca;
+}
+
+/* The QLineEdit clear button is a QToolButton; the generic button metrics
+   above would make it taller than the edit itself. */
+QLineEdit QToolButton {
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
 }
 
 QLineEdit,
@@ -148,12 +179,92 @@ QKeySequenceEdit:disabled {
     color: #98a2b3;
 }
 
+/* Narrow combos ("32-bit", "LE"): keep the text area as wide as possible. */
+QComboBox {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
 QComboBox QAbstractItemView {
     padding: 3px;
     border: 1px solid #cbd5e1;
     background-color: #ffffff;
     selection-background-color: #e8f0ff;
     selection-color: #172033;
+}
+
+/* Sub-controls must be styled explicitly once the border is customised;
+   otherwise Qt falls back to the platform style's bevel/arrows. */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 18px;
+    border-left: 1px solid #cbd5e1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/images/arrow-down.svg);
+    width: 10px;
+    height: 6px;
+}
+
+QComboBox::down-arrow:disabled {
+    image: url(:/images/arrow-down-disabled.svg);
+}
+
+QSpinBox::up-button,
+QDoubleSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 18px;
+    border-left: 1px solid #cbd5e1;
+    border-top-right-radius: 5px;
+}
+
+QSpinBox::down-button,
+QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 18px;
+    border-left: 1px solid #cbd5e1;
+    border-bottom-right-radius: 5px;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover,
+QDoubleSpinBox::up-button:hover,
+QDoubleSpinBox::down-button:hover {
+    background-color: #f0f5ff;
+}
+
+QSpinBox::up-arrow,
+QDoubleSpinBox::up-arrow {
+    image: url(:/images/arrow-up.svg);
+    width: 10px;
+    height: 6px;
+}
+
+QSpinBox::down-arrow,
+QDoubleSpinBox::down-arrow {
+    image: url(:/images/arrow-down.svg);
+    width: 10px;
+    height: 6px;
+}
+
+QSpinBox::up-arrow:disabled,
+QSpinBox::up-arrow:off,
+QDoubleSpinBox::up-arrow:disabled,
+QDoubleSpinBox::up-arrow:off {
+    image: url(:/images/arrow-up-disabled.svg);
+}
+
+QSpinBox::down-arrow:disabled,
+QSpinBox::down-arrow:off,
+QDoubleSpinBox::down-arrow:disabled,
+QDoubleSpinBox::down-arrow:off {
+    image: url(:/images/arrow-down-disabled.svg);
 }
 
 QMenuBar {
@@ -266,11 +377,10 @@ QListWidget#listWidgetOptions::item {
 QListWidget#listWidgetOptions::item:selected {
     background-color: #dce8ff;
     color: #174ea6;
-    font-weight: 600;
 }
 
 QHeaderView::section {
-    padding: 6px 8px;
+    padding: 4px 6px;
     border: 0;
     border-right: 1px solid #d8e0eb;
     border-bottom: 1px solid #d8e0eb;
@@ -318,7 +428,6 @@ QGroupBox {
     border: 1px solid #d8e0eb;
     border-radius: 6px;
     background-color: #ffffff;
-    font-weight: 600;
 }
 
 QGroupBox::title {
@@ -384,7 +493,7 @@ QScrollBar::sub-page {
 }
 
 QProgressBar {
-    min-height: 18px;
+    min-height: 14px;
     border: 1px solid #cbd5e1;
     border-radius: 4px;
     background-color: #ffffff;

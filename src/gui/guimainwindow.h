@@ -30,13 +30,10 @@
 #include <QToolBar>
 
 #include "../global.h"
-// #include "xmainwidget.h"
 #include "dialogabout.h"
 #include "dialogdemangle.h"
 #include "dialogoptions.h"
 #include "dialogshortcuts.h"
-// #include "xinfomenu.h"
-// #include "xyara.h"  // TODO remove
 
 namespace Ui {
 class GuiMainWindow;
@@ -64,6 +61,7 @@ private slots:
     void processFile(const QString &sFileName);
     void closeCurrentFile();
     void onViewerHeaderSelected(const XBinary::XFHEADER &xfHeader);
+    void onViewerFileTypeChanged(XBinary::FT fileType);
     void errorMessageSlot(const QString &sText);
 
 protected:
@@ -71,10 +69,13 @@ protected:
     void dragEnterEvent(QDragEnterEvent *pEvent) override;
     void dragMoveEvent(QDragMoveEvent *pEvent) override;
     void dropEvent(QDropEvent *pEvent) override;
+    bool eventFilter(QObject *pObject, QEvent *pEvent) override;
 
 private:
+    void setFileLabelText(const QString &sText);
+    void updateFileLabelText();
+
     Ui::GuiMainWindow *ui;
-    // XInfoMenu *g_pInfoMenu;
     XOptions g_xOptions;
     XShortcuts g_xShortcuts;
     QAction *g_pActionOpen;
@@ -87,9 +88,8 @@ private:
     QLabel *g_pLabelType;
     QLabel *g_pLabelStructure;
     QString g_sCurrentFilePath;
+    QString g_sFileLabelText;  // full (unelided) status-bar text; the label shows an elided copy
     bool g_bSplitterRestored;
-
-    // XInfoDB *g_pXInfo;
 };
 
 #endif  // GUIMAINWINDOW_H

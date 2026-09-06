@@ -31,7 +31,13 @@
 #include <QStyle>
 #include <QUrl>
 
+#include <limits>
+
 #include "ui_guimainwindow.h"
+
+#ifdef USE_YARA
+#include "xyara.h"
+#endif
 
 GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui::GuiMainWindow)
 {
@@ -41,16 +47,23 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     xsimd_init();
 #endif
 
-    // XYara::initialize();
-
-    // g_pFile = nullptr;
-    // g_pXInfo = nullptr;
+#ifdef USE_YARA
+    // libyara keeps process-wide state (its heap, in particular); every scan that
+    // reaches yr_compiler_create() faults unless yr_initialize() ran first. The
+    // Yara panel and the DiE scan engine (which runs Yara when it is enabled in
+    // the options) both go through XYara::scanFile().
+    XYara::initialize();
+#endif
 
     g_pActionOpen = nullptr;
     g_pActionClose = nullptr;
     g_pActionExit = nullptr;
     g_pActionCopyPath = nullptr;
     g_pMainToolBar = nullptr;
+    g_pLabelFile = nullptr;
+    g_pLabelSize = nullptr;
+    g_pLabelType = nullptr;
+    g_pLabelStructure = nullptr;
     g_bSplitterRestored = false;
 
     QPixmap logoPixmap(QStringLiteral(":/images/about.png"));
@@ -123,13 +136,12 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
 
     g_xShortcuts.load();
 
-    // g_pInfoMenu = new XInfoMenu(&g_xShortcuts, &g_xOptions);
-
     ui->widgetViewer->setGlobal(&g_xShortcuts, &g_xOptions);
 
     connect(&g_xOptions, SIGNAL(openFile(QString)), this, SLOT(processFile(QString)));
     connect(&g_xOptions, SIGNAL(errorMessage(QString)), this, SLOT(errorMessageSlot(QString)));
     connect(ui->widgetViewer, SIGNAL(headerSelected(XBinary::XFHEADER)), this, SLOT(onViewerHeaderSelected(XBinary::XFHEADER)));
+    connect(ui->widgetViewer, SIGNAL(fileTypeChanged(XBinary::FT)), this, SLOT(onViewerFileTypeChanged(XBinary::FT)));
 
     createMenus();
     updateShortcuts();
@@ -152,7 +164,13 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
     g_pLabelType->setAccessibleName(tr("Detected file type"));
     g_pLabelFile->setTextInteractionFlags(Qt::TextSelectableByMouse);
     g_pLabelStructure->setTextInteractionFlags(Qt::TextSelectableByMouse);
-    g_pLabelFile->setText(tr("Ready — open or drop a file"));
+    // The file label must never push the permanent segments off the right edge:
+    // let the layout shrink it freely (Ignored ignores the text-based size hints)
+    // and show an elided copy of the full path instead (see eventFilter()).
+    g_pLabelFile->setMinimumWidth(0);
+    g_pLabelFile->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+    g_pLabelFile->installEventFilter(this);
+    setFileLabelText(tr("Ready — open or drop a file"));
     g_pLabelFile->setToolTip(tr("No file is open"));
 
     ui->statusbar->addWidget(g_pLabelFile, 1);
@@ -170,10 +188,21 @@ GuiMainWindow::GuiMainWindow(QWidget *pParent) : QMainWindow(pParent), ui(new Ui
         }
     }
 
-    if (QCoreApplication::arguments().count() > 1) {
-        QString sFileName = QCoreApplication::arguments().at(1);
+    {
+        // Open the first non-option argument (options such as --help are handled
+        // in main_gui.cpp; anything after the file name is ignored). The parse is
+        // queued so the window is shown before the file is loaded.
+        QStringList listArguments = QCoreApplication::arguments();
+        qint32 nNumberOfArguments = listArguments.count();
 
-        processFile(sFileName);
+        for (qint32 i = 1; i < nNumberOfArguments; i++) {
+            QString sFileName = listArguments.at(i);
+
+            if (!sFileName.startsWith("-")) {
+                QMetaObject::invokeMethod(this, "processFile", Qt::QueuedConnection, Q_ARG(QString, sFileName));
+                break;
+            }
+        }
     }
 }
 
@@ -183,10 +212,11 @@ GuiMainWindow::~GuiMainWindow()
     g_xOptions.save();
     g_xShortcuts.save();
 
-    // delete g_pInfoMenu;
     delete ui;
 
-    // XYara::finalize();
+#ifdef USE_YARA
+    XYara::finalize();
+#endif
 
 #ifdef USE_XSIMD
     xsimd_cleanup();
@@ -232,7 +262,6 @@ void GuiMainWindow::createMenus()
     pRecentFilesMenu->setIcon(QIcon(XOptions::getIconPath(XOptions::ICONTYPE_FILE)));
     pMenuFile->addMenu(pRecentFilesMenu);
     pMenuFile->addSeparator();
-    // pMenuFile->addMenu(g_pInfoMenu->createMenu(this));
     pMenuFile->addAction(g_pActionCopyPath);
     pMenuFile->addAction(g_pActionClose);
     pMenuFile->addSeparator();
@@ -290,11 +319,59 @@ void GuiMainWindow::onViewerHeaderSelected(const XBinary::XFHEADER &xfHeader)
 
     QString sText = tr("Selection") + QString(" — ") + tr("Offset") + QString(": 0x%1").arg(QString::number(xfHeader.xLoc.nLocation, 16));
 
-    if (xfHeader.nSize > 0) {
-        sText += QString(" ") + tr("Size") + QString(": 0x%1").arg(QString::number(xfHeader.nSize, 16));
+    qint64 nSize = xfHeader.nSize;
+
+    // A TABLE node's nSize is the size of one row; show the whole table
+    // (mirrors XFTreeModel::getItemSize)
+    if ((nSize > 0) && (xfHeader.xfType == XBinary::XFTYPE_TABLE) && !xfHeader.listRowLocations.isEmpty()) {
+        qint64 nRows = xfHeader.listRowLocations.count();
+
+        if (nSize <= std::numeric_limits<qint64>::max() / nRows) {
+            nSize *= nRows;
+        }
+    }
+
+    if (nSize > 0) {
+        sText += QString(" ") + tr("Size") + QString(": 0x%1").arg(QString::number(nSize, 16));
     }
 
     g_pLabelStructure->setText(sText);
+}
+
+void GuiMainWindow::onViewerFileTypeChanged(XBinary::FT fileType)
+{
+    if (g_pLabelType) {
+        g_pLabelType->setText(tr("Type") + QString(": ") + XBinary::fileTypeIdToString(fileType));
+    }
+}
+
+void GuiMainWindow::setFileLabelText(const QString &sText)
+{
+    g_sFileLabelText = sText;
+
+    updateFileLabelText();
+}
+
+void GuiMainWindow::updateFileLabelText()
+{
+    if (g_pLabelFile) {
+        qint32 nWidth = g_pLabelFile->contentsRect().width();
+
+        if (nWidth > 0) {
+            g_pLabelFile->setText(g_pLabelFile->fontMetrics().elidedText(g_sFileLabelText, Qt::ElideMiddle, nWidth));
+        } else {
+            g_pLabelFile->setText(g_sFileLabelText);
+        }
+    }
+}
+
+bool GuiMainWindow::eventFilter(QObject *pObject, QEvent *pEvent)
+{
+    if ((pObject == g_pLabelFile) && (pEvent->type() == QEvent::Resize)) {
+        updateFileLabelText();
+    }
+
+    return QMainWindow::eventFilter(pObject, pEvent);
 }
 
 void GuiMainWindow::errorMessageSlot(const QString &sText)
@@ -346,6 +423,8 @@ void GuiMainWindow::adjustView()
     g_xOptions.adjustStayOnTop(this);
     g_xOptions.adjustWidget(this, XOptions::ID_VIEW_FONT_CONTROLS);
 
+    updateFileLabelText();  // the font (and so the elision width) may have changed
+
     if (g_xOptions.isShowLogo()) {
         ui->labelLogo->show();
     } else {
@@ -360,63 +439,16 @@ void GuiMainWindow::processFile(const QString &sFileName)
 
         closeCurrentFile();
 
+        // The parse runs on the GUI thread; at least show the user it is busy
+        QApplication::setOverrideCursor(Qt::WaitCursor);
+
         XFormats::INDATA inData = XFormats::createINDATA(XFormats::getPrefFileType(sFileName, XBinary::FT_FLAG_FORMATS), sFileName);
-
-        // g_pFile = new QFile;
-        // // g_pXInfo = new XInfoDB;
-
-        // g_pFile->setFileName(sFileName);
-
-        // if (!g_pFile->open(QIODevice::ReadWrite)) {
-        //     if (!g_pFile->open(QIODevice::ReadOnly)) {
-        //         closeCurrentFile();
-        //     }
-        // }
-
-        // if (!g_pFile->open(QIODevice::ReadOnly)) {
-        //     closeCurrentFile();
-        // }
-
-        // if (g_pFile) {
-        //     XFWidgetAdvanced::OPTIONS formatOptions = {};
-
-        //     ui->widgetViewer->setData(g_pFile, formatOptions);
-
-        //     adjustView();
-
-        //     setWindowTitle(sFileName);
-        //     ui->stackedWidget->setCurrentIndex(1);
-        //     // XBinary xbinary(g_pFile);
-        //     // if (xbinary.isValid()) {
-        //     //     // g_pInfoMenu->setData(g_pXInfo, g_pFile, sFileName + ".db");
-        //     //     // g_pInfoMenu->tryToLoad();
-
-        //     //     // XFW_DEF::OPTIONS formatOptions = {};
-
-        //     //     // formatOptions.bIsImage = false;
-        //     //     // formatOptions.nImageBase = -1;
-        //     //     // formatOptions.vmode = XFW_DEF::VMODE_FILETYPE;
-        //     //     // // formatOptions.nStartType = SBINARY::TYPE_INFO;
-
-        //     //     // XMainWidget::OPTIONS formatOptions = {};
-        //     //     // formatOptions.bIsImage = false;
-        //     //     // formatOptions.nImageBase = -1;
-        //     //     // formatOptions.bGlobalHexEnable = true;
-
-        //     //     // ui->widgetViewer->setData(g_pFile, g_pXInfo, formatOptions);
-
-        //     //     // ui->widgetViewer->reload();
-
-        //     // } else {
-        //     //     QMessageBox::critical(this, tr("Error"), tr("It is not a valid file"));
-        //     // }
-        // } else {
-        //     QMessageBox::critical(this, tr("Error"), tr("Cannot open file"));
-        // }
 
         XFWidgetAdvanced::OPTIONS formatOptions = {};
 
         ui->widgetViewer->setData(inData, formatOptions);
+
+        QApplication::restoreOverrideCursor();
 
         adjustView();
 
@@ -428,7 +460,7 @@ void GuiMainWindow::processFile(const QString &sFileName)
         setWindowFilePath(sFileName);
 
         QString sNativePath = QDir::toNativeSeparators(sFileName);
-        g_pLabelFile->setText(tr("File") + QString(": ") + sNativePath);
+        setFileLabelText(tr("File") + QString(": ") + sNativePath);
         g_pLabelFile->setToolTip(sNativePath);
         g_pLabelSize->setText(tr("Size") + QString(": ") + XBinary::bytesCountToString(QFileInfo(sFileName).size()));
         g_pLabelType->setText(tr("Type") + QString(": ") + XBinary::fileTypeIdToString(inData.fileType));
@@ -446,20 +478,6 @@ void GuiMainWindow::processFile(const QString &sFileName)
 
 void GuiMainWindow::closeCurrentFile()
 {
-    // if (g_pXInfo) {
-    //     g_pInfoMenu->tryToSave();
-
-    //     delete g_pXInfo;
-    //     g_pXInfo = nullptr;
-    //     g_pInfoMenu->reset();
-    // }
-
-    // if (g_pFile) {
-    //     g_pFile->close();
-    //     delete g_pFile;
-    //     g_pFile = nullptr;
-    // }
-
     ui->stackedWidget->setCurrentIndex(0);
     ui->widgetViewer->clear();
 
@@ -474,7 +492,7 @@ void GuiMainWindow::closeCurrentFile()
     }
 
     if (g_pLabelFile) {
-        g_pLabelFile->setText(tr("Ready — open or drop a file"));
+        setFileLabelText(tr("Ready — open or drop a file"));
         g_pLabelFile->setToolTip(tr("No file is open"));
         g_pLabelSize->clear();
         g_pLabelType->clear();

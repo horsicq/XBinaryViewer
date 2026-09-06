@@ -6,6 +6,14 @@ include(../../dep/build_tools/cmake/cpp_standart_setup.cmake)
 
 # Adds the xjs* sources to XPDF and defines USE_PDFJSEMUL (see xpdf.cmake)
 option(WITH_PDFJSEMUL "Use PDF JavaScript emulator" ON)
+# USE_ARCHIVE gates the archive formats that remain in XArchive (7z, RAR, XZ,
+# CAB, LHA, ...) inside XFormats (#ifdef USE_ARCHIVE in xformats.cpp) and
+# xtarcompressed.cpp. The sources were already compiled into this target
+# through xscanengine.cmake -> xarchives.cmake, but without the define
+# xformats.cpp never probed them and those files opened as plain "Binary".
+# Must precede the include() chain below: xformats.cmake reads the directory
+# COMPILE_DEFINITIONS at include time to decide xarchives.cmake vs xzip.cmake.
+add_definitions(-DUSE_ARCHIVE)
 add_definitions(-DUSE_YARA)
 add_definitions(-DUSE_XSIMD)
 
@@ -21,6 +29,11 @@ include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XStyles/xstyles.cmake)
 # Options widgets shown in DialogOptions (Hex/Disasm/Signatures come in via xfwidgets already)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XScanEngine/xscanwidgets.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../../dep/XInfoDB/dialogxinfodbtransferprocess.cmake)
+
+# In-process GUI smoke test (src/gui/smoke). OFF for shipping builds; when ON the
+# binary walks every tree node / panel / dialog / control when the XBV_SMOKE
+# environment variable names a report directory (see smoke/xbvsmoke.h).
+option(XBV_SMOKE_TEST "Compile the in-process GUI smoke-test driver into XBinaryViewer" OFF)
 
 set(PROJECT_SOURCES
         ${XFWIDGETS_SOURCES}
@@ -41,6 +54,10 @@ set(PROJECT_SOURCES
         guimainwindow.ui
         rsrc.qrc
 )
+
+if(XBV_SMOKE_TEST)
+    list(APPEND PROJECT_SOURCES smoke/xbvsmoke.cpp smoke/xbvsmoke.h)
+endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
 include(../../dep/build_tools/cmake/create_translation.cmake)
@@ -74,6 +91,14 @@ endif()
 if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
     if(APPLE)
         include(../../dep/build_tools/cmake/macdeployqt.cmake)
+    endif()
+endif()
+
+if(XBV_SMOKE_TEST)
+    target_compile_definitions(XBinaryViewer PRIVATE XBV_SMOKE_TEST)
+    if(WIN32)
+        # symbolised crash stacks in the smoke report
+        target_link_libraries(XBinaryViewer PRIVATE dbghelp)
     endif()
 endif()
 

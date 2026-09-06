@@ -83,7 +83,7 @@ DialogAbout::~DialogAbout()
 
 void DialogAbout::adjustView()
 {
-    // TODO
+    getGlobalOptions()->adjustWidget(this, XOptions::ID_VIEW_FONT_CONTROLS);
 }
 
 void DialogAbout::on_pushButtonOK_clicked()

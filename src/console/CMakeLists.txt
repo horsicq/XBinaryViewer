@@ -1,5 +1,5 @@
 set(CMAKE_AUTOMOC ON)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -10,6 +10,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 if(WIN32)
     add_definitions(-DNOMINMAX)
 endif()
+
+# USE_ARCHIVE gates the archive formats that remain in XArchive (7z, RAR, XZ,
+# CAB, LHA, ...) inside XFormats (#ifdef USE_ARCHIVE in xformats.cpp) and
+# xtarcompressed.cpp; without it those files are reported as plain "Binary".
+# Must precede include(xformats.cmake): it reads the directory
+# COMPILE_DEFINITIONS at include time and composes XFORMATS_SOURCES from
+# xarchives.cmake (all archive formats) instead of xzip.cmake (ZIP core only),
+# so XARCHIVES_SOURCES arrives through XFORMATS_SOURCES and is not listed again.
+add_definitions(-DUSE_ARCHIVE)
 
 # XCppfilt/XCapstone/XArchive/XYara/xsimd targets already exist from the
 # add_subdirectory() calls in ../CMakeLists.txt (shared with the gui target).

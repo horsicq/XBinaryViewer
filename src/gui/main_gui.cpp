@@ -26,6 +26,10 @@
 
 #include "guimainwindow.h"
 
+#ifdef XBV_SMOKE_TEST
+#include "smoke/xbvsmoke.h"
+#endif
+
 static void applyDefaultTheme()
 {
     QPalette palette;
@@ -80,15 +84,37 @@ int main(int argc, char *argv[])
     QCoreApplication::setApplicationName(X_APPLICATIONNAME);
     QCoreApplication::setApplicationVersion(X_APPLICATIONVERSION);
 
-    if ((argc == 2) && ((QString(argv[1]) == "--version") || (QString(argv[1]) == "-v"))) {
-        QString sInfo = QString("%1 v%2").arg(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION);
-        printf("%s\n", sInfo.toUtf8().data());
+    for (int i = 1; i < argc; i++) {
+        QString sArgument = QString(argv[i]);
 
-        return 0;
+        if ((sArgument == "--version") || (sArgument == "-v")) {
+            QString sInfo = QString("%1 v%2").arg(X_APPLICATIONDISPLAYNAME, X_APPLICATIONVERSION);
+            printf("%s\n", sInfo.toUtf8().data());
+
+            return 0;
+        }
+
+        if ((sArgument == "--help") || (sArgument == "-h")) {
+            printf("Usage: %s [options] [file]\n", X_APPLICATIONDISPLAYNAME);
+            printf("Options:\n");
+            printf("  -h, --help     Show this help and exit\n");
+            printf("  -v, --version  Show version information and exit\n");
+
+            return 0;
+        }
     }
 
 #ifndef QT_DEBUG
     qputenv("QT_LOGGING_RULES", "qt.*=false");
+#endif
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 7, 0)
+    // Once an application style sheet is installed, Qt stops propagating fonts and
+    // palettes from parent widgets to children (QWidget::setFont on the main
+    // window never reaches the controls), which silently disables Options ->
+    // Fonts under the bundled theme. This attribute restores the propagation and
+    // must be set before the QApplication is constructed.
+    QCoreApplication::setAttribute(Qt::AA_UseStyleSheetPropagationInWidgetStyles, true);
 #endif
 
     QApplication a(argc, argv);
@@ -108,13 +134,30 @@ int main(int argc, char *argv[])
 
     // Keep explicit user themes untouched. The bundled default provides a
     // polished, complete baseline even in a portable/debug build where the
-    // optional external QSS database is not installed.
-    if (xOptions.getValue(XOptions::ID_VIEW_QSS).toString().isEmpty()) {
+    // optional external QSS database is not installed, or when the theme named
+    // in the options cannot be loaded (adjustApplicationView then leaves the
+    // application style sheet empty).
+    if (qApp->styleSheet().isEmpty()) {
         applyDefaultTheme();
     }
 
     GuiMainWindow w;
     w.show();
+
+#ifdef XBV_SMOKE_TEST
+    {
+        // Environment-activated GUI smoke test (see smoke/xbvsmoke.h). Runs the
+        // whole sweep inside this process and exits with the failure count.
+        XBVSmoke::OPTIONS smokeOptions;
+
+        if (XBVSmoke::optionsFromEnvironment(&smokeOptions)) {
+            QApplication::setAttribute(Qt::AA_DontUseNativeDialogs);
+            XBVSmoke smoke(&w, smokeOptions);
+
+            return smoke.run();
+        }
+    }
+#endif
 
     return a.exec();
 }

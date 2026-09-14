@@ -15,8 +15,8 @@ endif()
 # CAB, LHA, ...) inside XFormats (#ifdef USE_ARCHIVE in xformats.cpp) and
 # xtarcompressed.cpp; without it those files are reported as plain "Binary".
 # Must precede include(xformats.cmake): it reads the directory
-# COMPILE_DEFINITIONS at include time and composes XFORMATS_SOURCES from
-# xarchives.cmake (all archive formats) instead of xzip.cmake (ZIP core only),
+# COMPILE_DEFINITIONS at include time and adds xarchives.cmake (all archive
+# formats) on top of the ZIP core it always composes,
 # so XARCHIVES_SOURCES arrives through XFORMATS_SOURCES and is not listed again.
 add_definitions(-DUSE_ARCHIVE)
 
@@ -48,10 +48,6 @@ target_link_libraries(xbinaryviewerc PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
 )
 
-target_link_libraries(xbinaryviewerc PRIVATE bzip2)
-target_link_libraries(xbinaryviewerc PRIVATE lzma)
-target_link_libraries(xbinaryviewerc PRIVATE zlib)
-target_link_libraries(xbinaryviewerc PRIVATE ppmd)
 # libzstd_static is no longer built by XArchive: a symbol-level check showed
 # nothing referenced it. zstd support comes from the Algos amalgamations
 # (zstddeclib.cpp, zstd_xxhash.cpp, zstdlegacy_v04-v07.cpp) compiled into this

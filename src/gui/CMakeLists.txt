@@ -12,7 +12,8 @@ option(WITH_PDFJSEMUL "Use PDF JavaScript emulator" ON)
 # through xscanengine.cmake -> xarchives.cmake, but without the define
 # xformats.cpp never probed them and those files opened as plain "Binary".
 # Must precede the include() chain below: xformats.cmake reads the directory
-# COMPILE_DEFINITIONS at include time to decide xarchives.cmake vs xzip.cmake.
+# COMPILE_DEFINITIONS at include time to decide whether xarchives.cmake is
+# added on top of the ZIP core xformats.cmake always composes.
 add_definitions(-DUSE_ARCHIVE)
 add_definitions(-DUSE_YARA)
 add_definitions(-DUSE_XSIMD)
@@ -102,10 +103,6 @@ if(XBV_SMOKE_TEST)
     endif()
 endif()
 
-target_link_libraries(XBinaryViewer PRIVATE bzip2)
-target_link_libraries(XBinaryViewer PRIVATE lzma)
-target_link_libraries(XBinaryViewer PRIVATE zlib)
-target_link_libraries(XBinaryViewer PRIVATE ppmd)
 # libzstd_static is no longer built by XArchive: a symbol-level check showed
 # nothing referenced it. zstd support comes from the Algos amalgamations
 # (zstddeclib.cpp, zstd_xxhash.cpp, zstdlegacy_v04-v07.cpp) compiled into this

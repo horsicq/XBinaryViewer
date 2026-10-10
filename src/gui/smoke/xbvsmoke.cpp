@@ -314,15 +314,16 @@ bool isViewportLike(QWidget *pWidget)
 bool isIgnorableWidget(QWidget *pWidget)
 {
     return pWidget->inherits("QSizeGrip") || pWidget->inherits("QRubberBand") || pWidget->inherits("QMenu") || pWidget->inherits("QScrollBar") ||
-           pWidget->inherits("QToolTip") || pWidget->inherits("QFocusFrame") || pWidget->inherits("QSplitterHandle") || pWidget->inherits("QDesktopWidget") ||
-           pWidget->objectName().startsWith(QLatin1String("qt_")) || pWidget->inherits("QWidgetResizeHandler") || pWidget->inherits("QAbstractItemView") ||
-           pWidget->inherits("QLineEdit") ? false : false;
+                   pWidget->inherits("QToolTip") || pWidget->inherits("QFocusFrame") || pWidget->inherits("QSplitterHandle") || pWidget->inherits("QDesktopWidget") ||
+                   pWidget->objectName().startsWith(QLatin1String("qt_")) || pWidget->inherits("QWidgetResizeHandler") || pWidget->inherits("QAbstractItemView") ||
+                   pWidget->inherits("QLineEdit")
+               ? false
+               : false;
 }
 }  // namespace
 
 XBVSmoke::XBVSmoke(GuiMainWindow *pMainWindow, const OPTIONS &options, QObject *pParent)
-    : QObject(pParent), m_pMainWindow(pMainWindow), m_options(options), m_nSteps(0), m_nFails(0), m_nChecks(0), m_nQtWarnings(0), m_bInHandler(false),
-      m_bOffscreen(false)
+    : QObject(pParent), m_pMainWindow(pMainWindow), m_options(options), m_nSteps(0), m_nFails(0), m_nChecks(0), m_nQtWarnings(0), m_bInHandler(false), m_bOffscreen(false)
 {
     s_pInstance = this;
     m_sentinel.setInterval(120);
@@ -609,8 +610,8 @@ void XBVSmoke::onSentinel()
             record("messagebox", object);
 
             QAbstractButton *pButton = nullptr;
-            const QMessageBox::StandardButton order[] = {QMessageBox::Cancel, QMessageBox::No, QMessageBox::Close, QMessageBox::Abort, QMessageBox::Ok,
-                                                         QMessageBox::Ignore, QMessageBox::Yes};
+            const QMessageBox::StandardButton order[] = {QMessageBox::Cancel, QMessageBox::No,     QMessageBox::Close, QMessageBox::Abort,
+                                                         QMessageBox::Ok,     QMessageBox::Ignore, QMessageBox::Yes};
             for (QMessageBox::StandardButton button : order) {
                 pButton = pMessageBox->button(button);
                 if (pButton) {
@@ -838,7 +839,8 @@ void XBVSmoke::layoutChecks(QWidget *pRoot, const QString &sContext)
         // Icon buttons with at most a one-character label (the 24px "<" ">" glyph
         // buttons) draw their icon centred whatever the style padding says.
         bool bIconGlyphButton = pButton && !pButton->icon().isNull() && (pButton->text().size() <= 1);
-        bool bLeaf = (pLabel && !pLabel->wordWrap() && !pLabel->text().isEmpty() && !bLabelHasPixmap) || (pButton && !pButton->text().isEmpty() && !bIconGlyphButton) || pCombo;
+        bool bLeaf =
+            (pLabel && !pLabel->wordWrap() && !pLabel->text().isEmpty() && !bLabelHasPixmap) || (pButton && !pButton->text().isEmpty() && !bIconGlyphButton) || pCombo;
 
         if (bLeaf) {
             QSize sizeHint = pWidget->minimumSizeHint();
@@ -1956,8 +1958,8 @@ int XBVSmoke::run()
     SymSetOptions(SYMOPT_UNDNAME | SYMOPT_DEFERRED_LOADS | SYMOPT_LOAD_LINES);
     {
         // Our own PDB sits next to the exe; Qt's debug PDBs sit next to the Qt DLLs.
-        QString sSearchPath = QCoreApplication::applicationDirPath() + ";" + QLibraryInfo::location(QLibraryInfo::BinariesPath) + ";" +
-                              QLibraryInfo::location(QLibraryInfo::LibrariesPath);
+        QString sSearchPath =
+            QCoreApplication::applicationDirPath() + ";" + QLibraryInfo::location(QLibraryInfo::BinariesPath) + ";" + QLibraryInfo::location(QLibraryInfo::LibrariesPath);
         QByteArray baSearchPath = QDir::toNativeSeparators(sSearchPath).toLocal8Bit();
         SymInitialize(GetCurrentProcess(), baSearchPath.constData(), TRUE);
     }
